@@ -145,12 +145,12 @@
   },
   {
     "file": "/gifs/tear.gif",
-    "height": 512,
+    "height": 480,
+    "poster": "/gifs/tear.jpg",
     "slug": "tear",
     "tags": ["tear", "sad", "cry", "emotional"],
     "title": "Tear",
-    "width": 640,
-    "poster": "/gifs/tear.jpg"
+    "width": 608
   },
   {
     "file": "/gifs/thankyou.gif",
