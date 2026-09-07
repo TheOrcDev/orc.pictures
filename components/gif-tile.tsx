@@ -4,54 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-import { toast } from "@/components/ui/toast";
-import { gifAbsoluteUrl, gifMarkdown } from "@/lib/gif-share";
+import { GifCopyButtons } from "@/components/gif-copy-buttons";
 import type { Gif } from "@/lib/gifs";
 
 interface GifTileProps {
   gif: Gif;
 }
 
-const copyText = async (value: string): Promise<void> => {
-  await navigator.clipboard.writeText(value);
-};
-
-const copyMarkdown = async (markdown: string): Promise<void> => {
-  await copyText(markdown);
-  toast.add({
-    title: "Copied markdown",
-    type: "success",
-  });
-};
-
 const GifTile = ({ gif }: GifTileProps) => {
   const [playing, setPlaying] = useState(false);
-
-  const onCopy = async (): Promise<void> => {
-    const url = gifAbsoluteUrl(gif.file, window.location.origin);
-    const markdown = gifMarkdown(gif.title, url);
-
-    try {
-      await copyText(url);
-      toast.add({
-        actionProps: {
-          children: "Markdown",
-          onClick: () => {
-            void copyMarkdown(markdown);
-          },
-        },
-        description: gif.title,
-        title: "Copied GIF URL",
-        type: "success",
-      });
-    } catch {
-      toast.add({
-        description: "The browser blocked clipboard access.",
-        title: "Could not copy",
-        type: "error",
-      });
-    }
-  };
 
   return (
     <article className="flex flex-col gap-2">
@@ -60,7 +21,9 @@ const GifTile = ({ gif }: GifTileProps) => {
         onBlur={() => {
           setPlaying(false);
         }}
-        onClick={onCopy}
+        onClick={() => {
+          setPlaying((current) => !current);
+        }}
         onFocus={() => {
           setPlaying(true);
         }}
@@ -82,11 +45,12 @@ const GifTile = ({ gif }: GifTileProps) => {
             unoptimized
           />
         </div>
-        <span className="sr-only">Copy {gif.title}</span>
+        <span className="sr-only">Play {gif.title}</span>
       </button>
       <Link className="truncate text-sm font-medium" href={`/${gif.slug}`}>
         {gif.title}
       </Link>
+      <GifCopyButtons gif={gif} size="xs" />
     </article>
   );
 };
