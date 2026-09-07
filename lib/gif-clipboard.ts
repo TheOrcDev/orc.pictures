@@ -43,14 +43,6 @@ export const shareGifFile = async (file: File): Promise<void> => {
   await navigator.share({ files: [file] });
 };
 
-export const copyGifFile = async (file: File): Promise<void> => {
-  await navigator.clipboard.write([
-    new ClipboardItem({
-      "image/gif": file,
-    }),
-  ]);
-};
-
 export const addGifToDataTransfer = (
   dataTransfer: DataTransfer,
   file: File

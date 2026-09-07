@@ -8,7 +8,6 @@ import { toast } from "@/components/ui/toast";
 import {
   addGifToDataTransfer,
   canShareGifFile,
-  copyGifFile,
   copyGifUrl,
   isShareAbort,
   loadGifFile,
@@ -22,8 +21,16 @@ interface GifCopyButtonsProps {
   size?: "default" | "xs";
 }
 
+const showDragHint = (): void => {
+  toast.add({
+    description: "Drag the GIF onto the X composer.",
+    title: "Drag the GIF",
+    type: "error",
+  });
+};
+
 const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
-  const [copyingFile, setCopyingFile] = useState(false);
+  const [busy, setBusy] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const filename = `${gif.slug}.gif`;
 
@@ -64,11 +71,27 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
   };
 
   const onCopyGif = async (): Promise<void> => {
-    if (copyingFile) {
+    if (busy) {
       return;
     }
 
-    setCopyingFile(true);
+    const readyFile = file;
+
+    if (readyFile && canShareGifFile(readyFile)) {
+      try {
+        await shareGifFile(readyFile);
+        return;
+      } catch (error) {
+        if (error instanceof DOMException && isShareAbort(error)) {
+          return;
+        }
+      }
+
+      showDragHint();
+      return;
+    }
+
+    setBusy(true);
 
     try {
       const nextFile = await ensureFile();
@@ -76,30 +99,25 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
       if (canShareGifFile(nextFile)) {
         try {
           await shareGifFile(nextFile);
-          setCopyingFile(false);
+          setBusy(false);
           return;
         } catch (error) {
           if (error instanceof DOMException && isShareAbort(error)) {
-            setCopyingFile(false);
+            setBusy(false);
             return;
           }
         }
       }
 
-      await copyGifFile(nextFile);
-      toast.add({
-        description: "Paste it into X.",
-        title: "Copied GIF",
-        type: "success",
-      });
-      setCopyingFile(false);
+      showDragHint();
+      setBusy(false);
     } catch {
       toast.add({
-        description: "Drag this GIF onto X. Browsers cannot copy GIF files.",
-        title: "Drag the GIF",
+        description: "Could not load this GIF.",
+        title: "Copy failed",
         type: "error",
       });
-      setCopyingFile(false);
+      setBusy(false);
     }
   };
 
@@ -126,10 +144,11 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
 
           addGifToDataTransfer(event.dataTransfer, file);
         }}
+        onPointerDown={prefetchFile}
       >
         <Button
           className="flex-1"
-          disabled={copyingFile}
+          disabled={busy}
           onClick={onCopyGif}
           size={size}
           type="button"
