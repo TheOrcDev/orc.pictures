@@ -127,12 +127,12 @@
   },
   {
     "file": "/gifs/spotted.gif",
-    "height": 512,
+    "height": 480,
+    "poster": "/gifs/spotted.jpg",
     "slug": "spotted",
     "tags": ["spotted", "seen", "caught", "look"],
     "title": "Spotted",
-    "width": 640,
-    "poster": "/gifs/spotted.jpg"
+    "width": 608
   },
   {
     "file": "/gifs/stars.gif",
