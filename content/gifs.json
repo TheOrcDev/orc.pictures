@@ -63,6 +63,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/morning.gif",
+    "height": 544,
+    "poster": "/gifs/morning.jpg",
+    "slug": "morning",
+    "tags": ["morning", "good-morning", "coffee", "hello"],
+    "title": "Good morning",
+    "width": 544
+  },
+  {
     "file": "/gifs/nod.gif",
     "height": 544,
     "poster": "/gifs/nod.jpg",
