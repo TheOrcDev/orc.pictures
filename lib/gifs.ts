@@ -13,6 +13,11 @@ export interface Gif {
 // SAFETY: content/gifs.json is authored by scripts/import-gif.ts in the Gif shape.
 export const gifs: Gif[] = catalog;
 
+export const getGifBySlug = (
+  slug: string,
+  catalogItems: Gif[] = gifs
+): Gif | undefined => catalogItems.find((gif) => gif.slug === slug);
+
 export const searchGifs = (
   query: string,
   catalogItems: Gif[] = gifs
