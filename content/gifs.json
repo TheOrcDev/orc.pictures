@@ -1,12 +1,12 @@
 [
   {
     "file": "/gifs/cooked.gif",
-    "height": 800,
+    "height": 608,
+    "poster": "/gifs/cooked.jpg",
     "slug": "cooked",
     "tags": ["cooked", "done", "finished", "toast"],
     "title": "Cooked",
-    "width": 640,
-    "poster": "/gifs/cooked.jpg"
+    "width": 480
   },
   {
     "file": "/gifs/doubt.gif",
