@@ -100,12 +100,12 @@
   },
   {
     "file": "/gifs/seriously.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/seriously.jpg",
     "slug": "seriously",
     "tags": ["seriously", "unamused", "stare", "really"],
     "title": "Seriously",
-    "width": 640,
-    "poster": "/gifs/seriously.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/sir.gif",
