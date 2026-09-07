@@ -54,7 +54,7 @@ const PROMPTS: Record<string, string> = {
   sleep:
     "The orc sleeps, chest rising and falling, a tiny sleepy sway. Soft breathing motion. Locked camera.",
   smash:
-    "The orc slams his fist down hard, wood jumping, a short smash, fierce look holding. Locked camera.",
+    "The orc slams his fist down hard onto the laptop, keys and shards flying, a short smash, fierce look holding. Locked camera.",
   spotted:
     "The orc's eyes widen as he realizes he has been seen, a small caught flinch toward the camera. Locked camera.",
   stars:

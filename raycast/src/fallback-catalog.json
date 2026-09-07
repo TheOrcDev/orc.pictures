@@ -166,7 +166,15 @@
     "height": 544,
     "poster": "/gifs/smash.jpg",
     "slug": "smash",
-    "tags": ["smash", "slam", "crush", "pound", "smash-it"],
+    "tags": [
+      "smash",
+      "slam",
+      "crush",
+      "pound",
+      "smash-it",
+      "laptop",
+      "computer"
+    ],
     "title": "Smash",
     "width": 544
   },
