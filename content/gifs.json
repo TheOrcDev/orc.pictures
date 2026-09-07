@@ -173,10 +173,10 @@
   {
     "file": "/gifs/victory.gif",
     "height": 426,
+    "poster": "/gifs/victory.jpg",
     "slug": "victory",
     "tags": ["victory", "win", "celebrate", "yes"],
     "title": "Victory",
-    "width": 640,
-    "poster": "/gifs/victory.jpg"
+    "width": 640
   }
 ]
