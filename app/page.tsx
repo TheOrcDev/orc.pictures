@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 
 import { GifPicker } from "@/components/gif-picker";
-import { RaycastInstall } from "@/components/raycast-install";
 import { SiteBrand } from "@/components/site-brand";
 import { gifs } from "@/lib/gifs";
 
@@ -17,14 +16,11 @@ const Page = async ({ searchParams }: PageProps) => {
 
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-10 px-6 py-16">
-      <header className="flex flex-col items-center gap-4 text-center">
-        <div className="flex flex-col items-center gap-2">
-          <SiteBrand />
-          <p className="text-muted-foreground text-sm">
-            Search orc reaction gifs
-          </p>
-        </div>
-        <RaycastInstall />
+      <header className="flex flex-col items-center gap-2 text-center">
+        <SiteBrand />
+        <p className="text-muted-foreground text-sm">
+          Search orc reaction gifs
+        </p>
       </header>
       <Suspense>
         <GifPicker gifs={gifs} initialQuery={q} />
