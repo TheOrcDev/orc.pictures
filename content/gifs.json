@@ -136,12 +136,12 @@
   },
   {
     "file": "/gifs/stars.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/stars.jpg",
     "slug": "stars",
     "tags": ["stars", "wow", "amazed", "sparkle"],
     "title": "Stars",
-    "width": 640,
-    "poster": "/gifs/stars.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/tear.gif",
