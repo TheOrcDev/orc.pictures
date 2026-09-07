@@ -162,6 +162,15 @@
     "width": 608
   },
   {
+    "file": "/gifs/smash.gif",
+    "height": 544,
+    "poster": "/gifs/smash.jpg",
+    "slug": "smash",
+    "tags": ["smash", "slam", "crush", "pound", "smash-it"],
+    "title": "Smash",
+    "width": 544
+  },
+  {
     "file": "/gifs/spotted.gif",
     "height": 480,
     "poster": "/gifs/spotted.jpg",
