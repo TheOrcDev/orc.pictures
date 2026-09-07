@@ -19,12 +19,12 @@
   },
   {
     "file": "/gifs/ew.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/ew.jpg",
     "slug": "ew",
     "tags": ["ew", "gross", "nope", "dislike"],
     "title": "Ew",
-    "width": 640,
-    "poster": "/gifs/ew.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/gold.gif",
