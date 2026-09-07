@@ -82,12 +82,12 @@
   },
   {
     "file": "/gifs/ready.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/ready.jpg",
     "slug": "ready",
     "tags": ["ready", "lets-go", "go", "prepared"],
     "title": "Ready",
-    "width": 640,
-    "poster": "/gifs/ready.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/salute.gif",
