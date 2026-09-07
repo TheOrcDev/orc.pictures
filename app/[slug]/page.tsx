@@ -33,6 +33,7 @@ export const generateMetadata = async ({
 
   const description = `Copy or download the ${gif.title} reaction gif.`;
   const title = `${gif.title} · ${SITE_NAME}`;
+  const cardImage = `/cards/${gif.slug}.jpg`;
 
   return {
     description,
@@ -41,10 +42,10 @@ export const generateMetadata = async ({
       images: [
         {
           alt: gif.title,
-          height: gif.height,
+          height: 630,
           type: "image/jpeg",
-          url: gif.poster,
-          width: gif.width,
+          url: cardImage,
+          width: 1200,
         },
       ],
       title,
@@ -55,7 +56,7 @@ export const generateMetadata = async ({
     twitter: {
       card: "summary_large_image",
       description,
-      images: [gif.poster],
+      images: [cardImage],
       title,
     },
   };
