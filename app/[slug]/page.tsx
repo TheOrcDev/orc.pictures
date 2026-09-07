@@ -38,6 +38,15 @@ export const generateMetadata = async ({
     description,
     openGraph: {
       description,
+      images: [
+        {
+          alt: gif.title,
+          height: gif.height,
+          type: "image/jpeg",
+          url: gif.poster,
+          width: gif.width,
+        },
+      ],
       title,
       type: "website",
       url: `/${gif.slug}`,
@@ -46,6 +55,7 @@ export const generateMetadata = async ({
     twitter: {
       card: "summary_large_image",
       description,
+      images: [gif.poster],
       title,
     },
   };
