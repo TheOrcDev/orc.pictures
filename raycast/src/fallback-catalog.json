@@ -18,6 +18,15 @@
     "width": 480
   },
   {
+    "file": "/gifs/curious.gif",
+    "height": 544,
+    "poster": "/gifs/curious.jpg",
+    "slug": "curious",
+    "tags": ["curious", "wonder", "inspect", "peek", "what"],
+    "title": "Curious",
+    "width": 544
+  },
+  {
     "file": "/gifs/doubt.gif",
     "height": 544,
     "poster": "/gifs/doubt.jpg",
