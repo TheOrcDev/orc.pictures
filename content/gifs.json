@@ -10,12 +10,12 @@
   },
   {
     "file": "/gifs/doubt.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/doubt.jpg",
     "slug": "doubt",
     "tags": ["doubt", "skeptical", "hmm", "side-eye"],
     "title": "Doubt",
-    "width": 640,
-    "poster": "/gifs/doubt.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/ew.gif",
