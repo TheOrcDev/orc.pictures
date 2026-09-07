@@ -14,7 +14,7 @@ const fontMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  description: "orc.pictures",
+  description: "Search and copy personal orc reaction gifs.",
   title: "orc.pictures",
 };
 

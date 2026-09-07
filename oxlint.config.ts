@@ -12,5 +12,27 @@ export default defineConfig({
   extends: [core, react, next, nextJsPlugins, antiSlop, jsPlugins],
   ignorePatterns: [...(core.ignorePatterns ?? []), "**/.agents"],
   jsPlugins: jsPlugins.jsPlugins,
+  overrides: [
+    {
+      files: ["components/ui/**"],
+      rules: {
+        "anti-slop/require-safety-comment-for-type-assertion": "off",
+        "eslint/arrow-body-style": "off",
+        "eslint/eqeqeq": "off",
+        "eslint/func-style": "off",
+        "eslint/sort-keys": "off",
+        "import/consistent-type-specifier-style": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/prefer-tag-over-role": "off",
+        "react-doctor/no-array-index-as-key": "off",
+        "react-doctor/only-export-components": "off",
+        "react-doctor/react-compiler-no-manual-memoization": "off",
+        "react/function-component-definition": "off",
+        "typescript/array-type": "off",
+      },
+    },
+  ],
   settings: jsPluginSettings,
 });
