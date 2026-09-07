@@ -1,1 +1,162 @@
-[]
+[
+  {
+    "file": "/gifs/cooked.gif",
+    "height": 800,
+    "slug": "cooked",
+    "tags": ["cooked", "done", "finished", "toast"],
+    "title": "Cooked",
+    "width": 640
+  },
+  {
+    "file": "/gifs/doubt.gif",
+    "height": 640,
+    "slug": "doubt",
+    "tags": ["doubt", "skeptical", "hmm", "side-eye"],
+    "title": "Doubt",
+    "width": 640
+  },
+  {
+    "file": "/gifs/ew.gif",
+    "height": 640,
+    "slug": "ew",
+    "tags": ["ew", "gross", "nope", "dislike"],
+    "title": "Ew",
+    "width": 640
+  },
+  {
+    "file": "/gifs/gold.gif",
+    "height": 512,
+    "slug": "gold",
+    "tags": ["gold", "rich", "money", "treasure"],
+    "title": "Gold",
+    "width": 640
+  },
+  {
+    "file": "/gifs/nod.gif",
+    "height": 640,
+    "slug": "nod",
+    "tags": ["nod", "yes", "approve", "thumbs-up", "ok"],
+    "title": "Nod",
+    "width": 640
+  },
+  {
+    "file": "/gifs/online.gif",
+    "height": 606,
+    "slug": "online",
+    "tags": ["online", "here", "available", "wave"],
+    "title": "Online",
+    "width": 640
+  },
+  {
+    "file": "/gifs/orc-smile.gif",
+    "height": 164,
+    "slug": "orc-smile",
+    "tags": ["orc-smile", "smile", "grin", "happy", "orc"],
+    "title": "Orc smile",
+    "width": 220
+  },
+  {
+    "file": "/gifs/popcorn.gif",
+    "height": 640,
+    "slug": "popcorn",
+    "tags": ["popcorn", "watching", "drama", "snack"],
+    "title": "Popcorn",
+    "width": 640
+  },
+  {
+    "file": "/gifs/proud.gif",
+    "height": 800,
+    "slug": "proud",
+    "tags": ["proud", "smile", "happy", "good"],
+    "title": "Proud",
+    "width": 640
+  },
+  {
+    "file": "/gifs/ready.gif",
+    "height": 640,
+    "slug": "ready",
+    "tags": ["ready", "lets-go", "go", "prepared"],
+    "title": "Ready",
+    "width": 640
+  },
+  {
+    "file": "/gifs/salute.gif",
+    "height": 640,
+    "slug": "salute",
+    "tags": ["salute", "respect", "sir", "agree", "hello"],
+    "title": "Salute",
+    "width": 640
+  },
+  {
+    "file": "/gifs/seriously.gif",
+    "height": 640,
+    "slug": "seriously",
+    "tags": ["seriously", "unamused", "stare", "really"],
+    "title": "Seriously",
+    "width": 640
+  },
+  {
+    "file": "/gifs/sir.gif",
+    "height": 800,
+    "slug": "sir",
+    "tags": ["sir", "yes-sir", "respect", "officer"],
+    "title": "Sir",
+    "width": 640
+  },
+  {
+    "file": "/gifs/sleep.gif",
+    "height": 512,
+    "slug": "sleep",
+    "tags": ["sleep", "tired", "zzz", "night"],
+    "title": "Sleep",
+    "width": 640
+  },
+  {
+    "file": "/gifs/spotted.gif",
+    "height": 512,
+    "slug": "spotted",
+    "tags": ["spotted", "seen", "caught", "look"],
+    "title": "Spotted",
+    "width": 640
+  },
+  {
+    "file": "/gifs/stars.gif",
+    "height": 640,
+    "slug": "stars",
+    "tags": ["stars", "wow", "amazed", "sparkle"],
+    "title": "Stars",
+    "width": 640
+  },
+  {
+    "file": "/gifs/tear.gif",
+    "height": 512,
+    "slug": "tear",
+    "tags": ["tear", "sad", "cry", "emotional"],
+    "title": "Tear",
+    "width": 640
+  },
+  {
+    "file": "/gifs/thankyou.gif",
+    "height": 640,
+    "slug": "thankyou",
+    "tags": ["thankyou", "thanks", "grateful"],
+    "title": "Thank you",
+    "width": 640
+  },
+  {
+    "file": "/gifs/toldyou.gif",
+    "height": 640,
+    "slug": "toldyou",
+    "tags": ["toldyou", "told-you", "smug", "knew-it"],
+    "title": "Told you",
+    "width": 640
+  },
+  {
+    "file": "/gifs/victory.gif",
+    "height": 426,
+    "slug": "victory",
+    "tags": ["victory", "win", "celebrate", "yes"],
+    "title": "Victory",
+    "width": 640
+  }
+]
