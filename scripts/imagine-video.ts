@@ -28,7 +28,7 @@ const PROMPTS: Record<string, string> = {
     "The orc slowly stirs the pot, steam rising. He looks exhausted and done, a tired blink, the word COOKED staying readable. Natural character motion, locked camera.",
   doubt:
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
-  ew: "The orc recoils slightly, wrinkles his nose in disgust, and gives a small shake of the head. The EW text stays put. Locked camera.",
+  ew: "The orc recoils slightly, wrinkles his nose in disgust, and gives a small shake of the head. Locked camera.",
   gold: "The orc sits on the treasure and grins richer as coins shift and glint. A small satisfied chuckle in the shoulders. Locked camera.",
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. Natural character animation, locked camera, no zoom or pan.",
   online:
@@ -39,7 +39,7 @@ const PROMPTS: Record<string, string> = {
     "The orc puffs his chest, proud smile widening, hair and fur moving in a light breeze. Heroic but subtle. Locked camera.",
   ready:
     "The armored orc tightens his grip on the axe and shifts into a ready stance, determined breath. Locked camera.",
-  sad: "The orc looks downcast, a slow sad blink, a tear welling, a small sniff and slump of the shoulders. The SAD text stays put. Locked camera.",
+  sad: "The orc looks downcast, a slow sad blink, a tear welling, a small sniff and slump of the shoulders. Locked camera.",
   salute:
     "The orc holds a firm military salute, a slight blink, armor catching light. Respectful, locked camera.",
   seriously:
