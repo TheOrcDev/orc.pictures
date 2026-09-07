@@ -154,12 +154,12 @@
   },
   {
     "file": "/gifs/thankyou.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/thankyou.jpg",
     "slug": "thankyou",
     "tags": ["thankyou", "thanks", "grateful"],
     "title": "Thank you",
-    "width": 640,
-    "poster": "/gifs/thankyou.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/toldyou.gif",
