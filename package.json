@@ -13,6 +13,7 @@
     "check": "ultracite check",
     "fix": "ultracite fix",
     "gif:import": "node --experimental-strip-types scripts/import-gif.ts",
+    "gif:imagine": "node --experimental-strip-types scripts/imagine-video.ts",
     "prepare": "husky"
   },
   "dependencies": {

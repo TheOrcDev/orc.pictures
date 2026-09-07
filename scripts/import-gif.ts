@@ -13,6 +13,11 @@ interface Gif {
 }
 
 const MAX_WIDTH = 640;
+const STILL_FPS = 8;
+const STILL_FRAMES = 8;
+const STILL_WORK_WIDTH = 800;
+const STILL_CROP = 0.9;
+const STILL_COLORS = 48;
 const CATALOG_PATH = path.join(process.cwd(), "content/gifs.json");
 const DEFAULT_OUT_DIR = path.join(process.cwd(), "public/gifs");
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -152,13 +157,20 @@ const scaleFilter = `scale='min(${MAX_WIDTH},iw)':-2:flags=lanczos`;
 
 const convertStill = async (input: string, output: string): Promise<void> => {
   const scaled = `${output}.scaled.png`;
+  const motion = `${output}.motion.mkv`;
+  const poster = output.replace(/\.gif$/u, ".jpg");
+  const pan = [
+    `crop=iw*${STILL_CROP}:ih*${STILL_CROP}`,
+    `'(iw-ow)/2+((iw-ow)/2)*sin(2*PI*n/${STILL_FRAMES})'`,
+    `'(ih-oh)/2+((ih-oh)/2)*sin(2*PI*n/${STILL_FRAMES}+PI/2)'`,
+  ].join(":");
 
   await run("ffmpeg", [
     "-y",
     "-i",
     input,
     "-vf",
-    scaleFilter,
+    `scale='min(${STILL_WORK_WIDTH},iw)':-2:flags=lanczos`,
     "-frames:v",
     "1",
     "-update",
@@ -166,33 +178,45 @@ const convertStill = async (input: string, output: string): Promise<void> => {
     scaled,
   ]);
 
-  const poster = output.replace(/\.gif$/u, ".jpg");
-
   try {
     await run("ffmpeg", [
       "-y",
       "-loop",
       "1",
       "-framerate",
-      "8",
-      "-t",
-      "0.75",
+      String(STILL_FPS),
       "-i",
       scaled,
+      "-frames:v",
+      String(STILL_FRAMES),
       "-vf",
-      "eq=brightness='0.03*gt(mod(n\\,2)\\,0)',split[s0][s1];[s0]palettegen=max_colors=96:stats_mode=single[p];[s1][p]paletteuse=dither=bayer:bayer_scale=2",
-      output,
+      `${pan},${scaleFilter}`,
+      "-c:v",
+      "png",
+      motion,
     ]);
     await run("ffmpeg", [
       "-y",
       "-i",
-      scaled,
-      "-q:v",
-      "5",
-      poster,
+      motion,
+      "-gifflags",
+      "+transdiff",
+      "-vf",
+      `split[s0][s1];[s0]palettegen=max_colors=${STILL_COLORS}:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle`,
+      output,
     ]);
+    await run("gifsicle", [
+      "-O3",
+      "--lossy=80",
+      `--colors=${STILL_COLORS}`,
+      output,
+      "-o",
+      output,
+    ]);
+    await writePoster(output, poster);
   } finally {
     await unlink(scaled).catch(() => undefined);
+    await unlink(motion).catch(() => undefined);
   }
 };
 
@@ -217,9 +241,17 @@ const convertAnimated = async (input: string, output: string): Promise<void> => 
     "-i",
     input,
     "-vf",
-    `${scaleFilter},split[s0][s1];[s0]palettegen=max_colors=96:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=2`,
+    `fps=12,${scaleFilter},split[s0][s1];[s0]palettegen=max_colors=64:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle`,
     output,
   ]);
+  await run("gifsicle", [
+    "-O3",
+    "--lossy=60",
+    "--colors=64",
+    output,
+    "-o",
+    output,
+  ]).catch(() => undefined);
   await writePoster(output, output.replace(/\.gif$/u, ".jpg"));
 };
 
@@ -270,7 +302,8 @@ const importGif = async (options: ImportOptions): Promise<Gif> => {
 
   const output = path.join(options.outDir, `${options.slug}.gif`);
   const source = await probeVideo(options.input);
-  const isAnimated = source.codecName === "gif" && source.frameCount > 1;
+  const stillCodecs = new Set(["bmp", "mjpeg", "png", "webp"]);
+  const isAnimated = source.frameCount > 1 || !stillCodecs.has(source.codecName);
 
   if (isAnimated) {
     await convertAnimated(options.input, output);
