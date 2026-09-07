@@ -13,6 +13,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
+import { copyGifUrlWithToast } from "@/lib/copy-gif-url";
 import { gifs } from "@/lib/gifs";
 
 const GifCommandMenu = () => {
@@ -67,7 +68,7 @@ const GifCommandMenu = () => {
                 key={gif.slug}
                 onSelect={() => {
                   setOpen(false);
-                  router.push(`/${gif.slug}`);
+                  void copyGifUrlWithToast(gif);
                 }}
                 value={`${gif.title} ${gif.slug} ${gif.tags.join(" ")}`}
               >
