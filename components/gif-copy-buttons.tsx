@@ -43,28 +43,17 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
     setCopyingFile(true);
 
     try {
-      const result = await copyGifFile(gif.file, filename);
-
-      if (result === "copied") {
-        toast.add({
-          description: "Paste it into X.",
-          title: "Copied GIF",
-          type: "success",
-        });
-        setCopyingFile(false);
-        return;
-      }
-
+      await copyGifFile(gif.file, filename);
       toast.add({
-        description: "Attach the downloaded file in X.",
-        title: "Downloaded GIF",
+        description: "Paste it into X.",
+        title: "Copied GIF",
         type: "success",
       });
       setCopyingFile(false);
     } catch {
       toast.add({
-        description: "Could not copy or download this GIF.",
-        title: "GIF copy failed",
+        description: "The browser blocked copying this GIF file.",
+        title: "Could not copy GIF",
         type: "error",
       });
       setCopyingFile(false);
