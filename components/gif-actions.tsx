@@ -1,9 +1,9 @@
 "use client";
 
 import { DownloadSimpleIcon, MarkdownLogoIcon } from "@phosphor-icons/react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
-import { toast } from "@/components/ui/toast";
 import { gifAbsoluteUrl, gifMarkdown } from "@/lib/gif-share";
 import type { Gif } from "@/lib/gifs";
 
@@ -18,15 +18,10 @@ const GifActions = ({ gif }: GifActionsProps) => {
   const onCopyMarkdown = async (): Promise<void> => {
     try {
       await navigator.clipboard.writeText(gifMarkdown(gif.title, shareUrl()));
-      toast.add({
-        title: "Copied markdown",
-        type: "success",
-      });
+      toast.success("Copied markdown");
     } catch {
-      toast.add({
+      toast.error("Could not copy", {
         description: "The browser blocked clipboard access.",
-        title: "Could not copy",
-        type: "error",
       });
     }
   };

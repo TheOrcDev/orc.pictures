@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 
 import { GifPicker } from "@/components/gif-picker";
+import { GifPickerFallback } from "@/components/gif-picker-fallback";
 import { SiteBrand } from "@/components/site-brand";
 import { gifs } from "@/lib/gifs";
 
@@ -22,7 +23,7 @@ const Page = async ({ searchParams }: PageProps) => {
           Search orc reaction gifs
         </p>
       </header>
-      <Suspense>
+      <Suspense fallback={<GifPickerFallback />}>
         <GifPicker gifs={gifs} initialQuery={q} />
       </Suspense>
     </main>

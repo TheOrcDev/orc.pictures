@@ -3,9 +3,10 @@ import { Geist_Mono, Outfit } from "next/font/google";
 import type { ReactNode } from "react";
 
 import "./globals.css";
+import { GifCommandMenu } from "@/components/gif-command-menu";
 import { SiteFooter } from "@/components/site-footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/toast";
+import { Toaster } from "@/components/ui/sonner";
 import {
   ORCDEV_NAME,
   ORCDEV_URL,
@@ -112,6 +113,7 @@ const RootLayout = ({
           {children}
           <SiteFooter />
         </div>
+        <GifCommandMenu />
         <Toaster />
       </ThemeProvider>
     </body>
