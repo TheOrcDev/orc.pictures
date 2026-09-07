@@ -73,12 +73,12 @@
   },
   {
     "file": "/gifs/proud.gif",
-    "height": 800,
+    "height": 608,
+    "poster": "/gifs/proud.jpg",
     "slug": "proud",
     "tags": ["proud", "smile", "happy", "good"],
     "title": "Proud",
-    "width": 640,
-    "poster": "/gifs/proud.jpg"
+    "width": 480
   },
   {
     "file": "/gifs/ready.gif",
