@@ -37,12 +37,12 @@
   },
   {
     "file": "/gifs/nod.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/nod.jpg",
     "slug": "nod",
     "tags": ["nod", "yes", "approve", "thumbs-up", "ok"],
     "title": "Nod",
-    "width": 640,
-    "poster": "/gifs/nod.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/online.gif",
