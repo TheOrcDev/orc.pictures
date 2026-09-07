@@ -11,6 +11,8 @@
   "scripts": {
     "build": "ray build",
     "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix",
     "publish": "npx @raycast/api@latest publish"
   },
   "dependencies": {
@@ -18,8 +20,11 @@
     "@raycast/utils": "^2.2.2"
   },
   "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
     "@types/node": "^22.17.2",
     "@types/react": "^19.1.10",
+    "eslint": "^9.39.5",
+    "prettier": "^3.9.6",
     "typescript": "^5.9.2"
   },
   "icon": "icon.png",
@@ -67,5 +72,5 @@
       "required": false
     }
   ],
-  "title": "orc.pictures"
+  "title": "Orc Pictures"
 }

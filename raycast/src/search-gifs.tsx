@@ -4,6 +4,7 @@ import {
   Clipboard,
   Grid,
   Icon,
+  Keyboard,
   closeMainWindow,
   getPreferenceValues,
   showHUD,
@@ -87,12 +88,12 @@ const GifActions = ({ gif, localGifsDirectory, origin }: GifActionsProps) => {
       />
       <Action.CopyToClipboard
         content={fileUrl}
-        shortcut={{ modifiers: ["cmd", "shift"], key: "c" }}
+        shortcut={Keyboard.Shortcut.Common.Copy}
         title="Copy URL"
       />
       <Action.OpenInBrowser
-        shortcut={{ modifiers: ["cmd"], key: "o" }}
-        title="Open on orc.pictures"
+        shortcut={Keyboard.Shortcut.Common.Open}
+        title="Open Permalink"
         url={pageUrl}
       />
     </ActionPanel>
@@ -125,9 +126,14 @@ const SearchOrcGifs = () => {
       fit={Grid.Fit.Fill}
       inset={Grid.Inset.Zero}
       isLoading={isLoading}
-      navigationTitle="orc.pictures"
       searchBarPlaceholder="Search orc GIFs"
     >
+      {gifs.length === 0 ? (
+        <Grid.EmptyView
+          description="Could not load the orc.pictures catalog."
+          title="No GIFs"
+        />
+      ) : null}
       {gifs.map((gif) => (
         <Grid.Item
           key={gif.slug}

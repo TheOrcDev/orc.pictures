@@ -1,21 +1,24 @@
-# orc.pictures Raycast extension
+# orc.pictures
 
-Search the orc reaction catalog and copy the **GIF file** to the macOS clipboard. Paste into X and it animates.
+Search [orc.pictures](https://orc.pictures) reaction GIFs and copy the GIF file to your clipboard.
 
-The website cannot do this. Browsers refuse `image/gif` on `clipboard.write`. Raycast can write a real file.
+Browsers cannot put a GIF file on the clipboard. This extension can, so pasting into X keeps the animation.
 
-## Install
+## Commands
 
-1. Open a terminal in this folder.
-2. Run `npm install && npm run dev`.
-3. In Raycast, search for **Search Orc GIFs**.
-4. Stop the watcher with Ctrl+C. The command stays installed.
+### Search Orc GIFs
 
-Optional: in Raycast Preferences → Extensions → orc.pictures, set **Local GIFs folder** to `public/gifs` in this repo so the first copy does not download 3–5 MB.
+Search the catalog, then:
 
-## Actions
+- `↵` Copy the GIF file
+- `⌘⇧V` Paste the GIF into the frontmost app
+- `⌘⇧C` Copy the GIF URL
+- `⌘O` Open the permalink on orc.pictures
 
-- Return: copy the GIF file
-- ⌘⇧V: paste the GIF into the frontmost app
-- ⌘⇧C: copy the GIF URL
-- ⌘O: open the permalink
+The first copy of each GIF downloads the file once and caches it.
+
+## Preferences
+
+- **Catalog URL** — JSON catalog. Defaults to `https://orc.pictures/catalog.json`.
+- **Site URL** — Used to resolve GIF and poster paths. Defaults to `https://orc.pictures`.
+- **Local GIFs folder** — Optional. Point this at a folder of `{slug}.gif` files to skip the download.
