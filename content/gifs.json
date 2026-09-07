@@ -118,12 +118,12 @@
   },
   {
     "file": "/gifs/sleep.gif",
-    "height": 512,
+    "height": 480,
+    "poster": "/gifs/sleep.jpg",
     "slug": "sleep",
     "tags": ["sleep", "tired", "zzz", "night"],
     "title": "Sleep",
-    "width": 640,
-    "poster": "/gifs/sleep.jpg"
+    "width": 608
   },
   {
     "file": "/gifs/spotted.gif",
