@@ -11,6 +11,7 @@ import {
   copyGifUrl,
   isShareAbort,
   loadGifFile,
+  peekGifFile,
   shareGifFile,
 } from "@/lib/gif-clipboard";
 import { gifAbsoluteUrl } from "@/lib/gif-share";
@@ -75,11 +76,15 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
       return;
     }
 
-    const readyFile = file;
+    const readyFile = file ?? peekGifFile(gif.file);
+
+    if (readyFile && !file) {
+      setFile(readyFile);
+    }
 
     if (readyFile && canShareGifFile(readyFile)) {
       try {
-        await shareGifFile(readyFile);
+        await shareGifFile(readyFile, gif.title);
         return;
       } catch (error) {
         if (error instanceof DOMException && isShareAbort(error)) {
@@ -98,7 +103,7 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
 
       if (canShareGifFile(nextFile)) {
         try {
-          await shareGifFile(nextFile);
+          await shareGifFile(nextFile, gif.title);
           setBusy(false);
           return;
         } catch (error) {

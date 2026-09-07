@@ -1,8 +1,12 @@
 const gifFileCache = new Map<string, Promise<File>>();
+const gifFileReady = new Map<string, File>();
 
 export const copyGifUrl = async (url: string): Promise<void> => {
   await navigator.clipboard.writeText(url);
 };
+
+export const peekGifFile = (filePath: string): File | undefined =>
+  gifFileReady.get(filePath);
 
 const fetchGifFile = async (
   filePath: string,
@@ -12,12 +16,15 @@ const fetchGifFile = async (
 
   if (!response.ok) {
     gifFileCache.delete(filePath);
+    gifFileReady.delete(filePath);
     throw new Error(`Could not fetch ${filename}`);
   }
 
   const blob = await response.blob();
+  const file = new File([blob], filename, { type: "image/gif" });
+  gifFileReady.set(filePath, file);
 
-  return new File([blob], filename, { type: "image/gif" });
+  return file;
 };
 
 export const loadGifFile = (
@@ -39,8 +46,11 @@ export const loadGifFile = (
 export const canShareGifFile = (file: File): boolean =>
   navigator.canShare?.({ files: [file] }) === true;
 
-export const shareGifFile = async (file: File): Promise<void> => {
-  await navigator.share({ files: [file] });
+export const shareGifFile = async (
+  file: File,
+  title: string
+): Promise<void> => {
+  await navigator.share({ files: [file], title });
 };
 
 export const addGifToDataTransfer = (
