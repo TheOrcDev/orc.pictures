@@ -6,7 +6,7 @@ import { GifPreview } from "@/components/gif-preview";
 import { SiteBrand } from "@/components/site-brand";
 import { Badge } from "@/components/ui/badge";
 import { getGifBySlug, gifs } from "@/lib/gifs";
-import { SITE_NAME } from "@/lib/site";
+import { gifPageDescription, SITE_NAME } from "@/lib/site";
 
 interface GifPageProps {
   params: Promise<{
@@ -31,17 +31,22 @@ export const generateMetadata = async ({
     };
   }
 
-  const description = `Copy or download the ${gif.title} reaction gif.`;
+  const description = gifPageDescription(gif.title);
   const title = `${gif.title} · ${SITE_NAME}`;
   const cardImage = `/cards/${gif.slug}.jpg`;
+  const path = `/${gif.slug}`;
 
   return {
+    alternates: {
+      canonical: path,
+    },
     description,
+    keywords: gif.tags,
     openGraph: {
       description,
       images: [
         {
-          alt: gif.title,
+          alt: `${gif.title} orc reaction gif`,
           height: 630,
           type: "image/jpeg",
           url: cardImage,
@@ -50,7 +55,7 @@ export const generateMetadata = async ({
       ],
       title,
       type: "website",
-      url: `/${gif.slug}`,
+      url: path,
     },
     title: gif.title,
     twitter: {

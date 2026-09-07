@@ -2,6 +2,9 @@
   "name": "orc.pictures",
   "version": "0.0.1",
   "private": true,
+  "description": "Search personal orc reaction gifs. Hover to play, click to copy the URL.",
+  "homepage": "https://orc.pictures",
+  "author": "OrcDev",
   "type": "module",
   "scripts": {
     "dev": "next dev",
