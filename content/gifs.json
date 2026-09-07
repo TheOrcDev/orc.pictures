@@ -64,12 +64,12 @@
   },
   {
     "file": "/gifs/popcorn.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/popcorn.jpg",
     "slug": "popcorn",
     "tags": ["popcorn", "watching", "drama", "snack"],
     "title": "Popcorn",
-    "width": 640,
-    "poster": "/gifs/popcorn.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/proud.gif",
