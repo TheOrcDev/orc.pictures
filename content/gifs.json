@@ -46,12 +46,12 @@
   },
   {
     "file": "/gifs/online.gif",
-    "height": 606,
+    "height": 528,
+    "poster": "/gifs/online.jpg",
     "slug": "online",
     "tags": ["online", "here", "available", "wave"],
     "title": "Online",
-    "width": 640,
-    "poster": "/gifs/online.jpg"
+    "width": 560
   },
   {
     "file": "/gifs/orc-smile.gif",
