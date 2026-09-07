@@ -91,12 +91,12 @@
   },
   {
     "file": "/gifs/salute.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/salute.jpg",
     "slug": "salute",
     "tags": ["salute", "respect", "sir", "agree", "hello"],
     "title": "Salute",
-    "width": 640,
-    "poster": "/gifs/salute.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/seriously.gif",
