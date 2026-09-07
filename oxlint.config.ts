@@ -6,11 +6,11 @@ import next from "ultracite/oxlint/next";
 import nextJsPlugins from "ultracite/oxlint/next/js-plugins";
 import react from "ultracite/oxlint/react";
 
-const jsPlugins = selectJsPlugins(["github", "react-doctor"]);
+const jsPlugins = selectJsPlugins(["react-doctor"]);
 
 export default defineConfig({
   extends: [core, react, next, nextJsPlugins, antiSlop, jsPlugins],
-  ignorePatterns: core.ignorePatterns,
+  ignorePatterns: [...(core.ignorePatterns ?? []), "**/.agents"],
   jsPlugins: jsPlugins.jsPlugins,
   settings: jsPluginSettings,
 });
