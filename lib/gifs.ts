@@ -3,6 +3,7 @@ import catalog from "@/content/gifs.json";
 export interface Gif {
   file: string;
   height: number;
+  poster: string;
   slug: string;
   tags: string[];
   title: string;

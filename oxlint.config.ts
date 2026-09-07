@@ -30,6 +30,8 @@ export default defineConfig({
         "react-doctor/only-export-components": "off",
         "react-doctor/react-compiler-no-manual-memoization": "off",
         "react/function-component-definition": "off",
+        "react/no-object-type-as-default-prop": "off",
+        "react/todo": "off",
         "typescript/array-type": "off",
       },
     },

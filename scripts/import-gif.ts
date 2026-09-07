@@ -5,6 +5,7 @@ import path from "node:path";
 interface Gif {
   file: string;
   height: number;
+  poster: string;
   slug: string;
   tags: string[];
   title: string;
@@ -165,6 +166,8 @@ const convertStill = async (input: string, output: string): Promise<void> => {
     scaled,
   ]);
 
+  const poster = output.replace(/\.gif$/u, ".jpg");
+
   try {
     await run("ffmpeg", [
       "-y",
@@ -180,9 +183,32 @@ const convertStill = async (input: string, output: string): Promise<void> => {
       "eq=brightness='0.03*gt(mod(n\\,2)\\,0)',split[s0][s1];[s0]palettegen=max_colors=96:stats_mode=single[p];[s1][p]paletteuse=dither=bayer:bayer_scale=2",
       output,
     ]);
+    await run("ffmpeg", [
+      "-y",
+      "-i",
+      scaled,
+      "-q:v",
+      "5",
+      poster,
+    ]);
   } finally {
     await unlink(scaled).catch(() => undefined);
   }
+};
+
+const writePoster = async (gifPath: string, posterPath: string): Promise<void> => {
+  await run("ffmpeg", [
+    "-y",
+    "-i",
+    gifPath,
+    "-frames:v",
+    "1",
+    "-update",
+    "1",
+    "-q:v",
+    "5",
+    posterPath,
+  ]);
 };
 
 const convertAnimated = async (input: string, output: string): Promise<void> => {
@@ -194,6 +220,7 @@ const convertAnimated = async (input: string, output: string): Promise<void> => 
     `${scaleFilter},split[s0][s1];[s0]palettegen=max_colors=96:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=2`,
     output,
   ]);
+  await writePoster(output, output.replace(/\.gif$/u, ".jpg"));
 };
 
 const readCatalog = async (): Promise<Gif[]> => {
@@ -256,6 +283,7 @@ const importGif = async (options: ImportOptions): Promise<Gif> => {
   const entry: Gif = {
     file: `/gifs/${options.slug}.gif`,
     height: result.height,
+    poster: `/gifs/${options.slug}.jpg`,
     slug: options.slug,
     tags: options.tags,
     title: options.title,

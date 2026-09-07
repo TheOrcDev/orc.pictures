@@ -1,6 +1,7 @@
 "use client";
 
 import { MagnifyingGlass } from "@phosphor-icons/react";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import { GifEmpty } from "@/components/gif-empty";
@@ -16,12 +17,29 @@ import { searchGifs } from "@/lib/gifs";
 
 interface GifPickerProps {
   gifs: Gif[];
+  initialQuery: string;
 }
 
-const GifPicker = ({ gifs }: GifPickerProps) => {
-  const [query, setQuery] = useState("");
+const GifPicker = ({ gifs, initialQuery }: GifPickerProps) => {
+  const pathname = usePathname();
+  const [query, setQuery] = useState(initialQuery);
   const results = searchGifs(query, gifs);
   const hasQuery = query.trim() !== "";
+
+  const onQueryChange = (value: string): void => {
+    setQuery(value);
+
+    const params = new URLSearchParams();
+    const nextQuery = value.trim();
+
+    if (nextQuery !== "") {
+      params.set("q", nextQuery);
+    }
+
+    const nextSearch = params.toString();
+    const nextUrl = nextSearch === "" ? pathname : `${pathname}?${nextSearch}`;
+    window.history.replaceState(null, "", nextUrl);
+  };
 
   return (
     <div className="flex flex-col gap-8">
@@ -35,7 +53,7 @@ const GifPicker = ({ gifs }: GifPickerProps) => {
               autoComplete="off"
               id="gif-search"
               onChange={(event) => {
-                setQuery(event.target.value);
+                onQueryChange(event.target.value);
               }}
               placeholder="Search gifs…"
               spellCheck={false}
