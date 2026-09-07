@@ -1,5 +1,14 @@
 [
   {
+    "file": "/gifs/angry.gif",
+    "height": 544,
+    "poster": "/gifs/angry.jpg",
+    "slug": "angry",
+    "tags": ["angry", "mad", "rage", "yell", "furious"],
+    "title": "Angry",
+    "width": 544
+  },
+  {
     "file": "/gifs/cooked.gif",
     "height": 608,
     "poster": "/gifs/cooked.jpg",
