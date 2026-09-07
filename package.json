@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit",
     "check": "ultracite check",
     "fix": "ultracite fix",
+    "gif:import": "node --experimental-strip-types scripts/import-gif.ts",
     "prepare": "husky"
   },
   "dependencies": {

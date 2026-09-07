@@ -1,3 +1,5 @@
+import catalog from "@/content/gifs.json";
+
 export interface Gif {
   file: string;
   height: number;
@@ -7,16 +9,20 @@ export interface Gif {
   width: number;
 }
 
-export const gifs: Gif[] = [];
+// SAFETY: content/gifs.json is authored by scripts/import-gif.ts in the Gif shape.
+export const gifs: Gif[] = catalog;
 
-export const searchGifs = (query: string, catalog: Gif[] = gifs): Gif[] => {
+export const searchGifs = (
+  query: string,
+  catalogItems: Gif[] = gifs
+): Gif[] => {
   const normalized = query.trim().toLowerCase();
 
   if (normalized === "") {
-    return catalog;
+    return catalogItems;
   }
 
-  return catalog.filter((gif) => {
+  return catalogItems.filter((gif) => {
     const haystack = [gif.slug, gif.title, ...gif.tags].join(" ").toLowerCase();
 
     return haystack.includes(normalized);
