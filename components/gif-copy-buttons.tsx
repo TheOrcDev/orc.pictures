@@ -5,7 +5,15 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/toast";
-import { copyGifFile, copyGifUrl } from "@/lib/gif-clipboard";
+import {
+  addGifToDataTransfer,
+  canShareGifFile,
+  copyGifFile,
+  copyGifUrl,
+  isShareAbort,
+  loadGifFile,
+  shareGifFile,
+} from "@/lib/gif-clipboard";
 import { gifAbsoluteUrl } from "@/lib/gif-share";
 import type { Gif } from "@/lib/gifs";
 
@@ -16,7 +24,27 @@ interface GifCopyButtonsProps {
 
 const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
   const [copyingFile, setCopyingFile] = useState(false);
+  const [file, setFile] = useState<File | null>(null);
   const filename = `${gif.slug}.gif`;
+
+  const ensureFile = async (): Promise<File> => {
+    if (file) {
+      return file;
+    }
+
+    const nextFile = await loadGifFile(gif.file, filename);
+    setFile(nextFile);
+
+    return nextFile;
+  };
+
+  const prefetchFile = async (): Promise<void> => {
+    try {
+      await ensureFile();
+    } catch {
+      // Click will surface a load error.
+    }
+  };
 
   const onCopyUrl = async (): Promise<void> => {
     try {
@@ -43,17 +71,32 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
     setCopyingFile(true);
 
     try {
-      await copyGifFile(gif.file, filename);
+      const nextFile = await ensureFile();
+
+      if (canShareGifFile(nextFile)) {
+        try {
+          await shareGifFile(nextFile);
+          setCopyingFile(false);
+          return;
+        } catch (error) {
+          if (error instanceof DOMException && isShareAbort(error)) {
+            setCopyingFile(false);
+            return;
+          }
+        }
+      }
+
+      await copyGifFile(nextFile);
       toast.add({
         description: "Paste it into X.",
-        title: "Copied",
+        title: "Copied GIF",
         type: "success",
       });
       setCopyingFile(false);
     } catch {
       toast.add({
-        description: "The browser blocked copying this GIF file.",
-        title: "Could not copy GIF",
+        description: "Drag this GIF onto X. Browsers cannot copy GIF files.",
+        title: "Drag the GIF",
         type: "error",
       });
       setCopyingFile(false);
@@ -61,7 +104,7 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
   };
 
   return (
-    <div className="flex flex-wrap gap-1">
+    <div className="flex flex-wrap gap-1" onPointerEnter={prefetchFile}>
       <Button
         className="flex-1"
         onClick={onCopyUrl}
@@ -72,16 +115,29 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
         <CopyIcon data-icon="inline-start" />
         Copy URL
       </Button>
-      <Button
-        className="flex-1"
-        disabled={copyingFile}
-        onClick={onCopyGif}
-        size={size}
-        type="button"
+      <div
+        className="flex flex-1"
+        draggable={file !== null}
+        onDragStart={(event) => {
+          if (!file) {
+            event.preventDefault();
+            return;
+          }
+
+          addGifToDataTransfer(event.dataTransfer, file);
+        }}
       >
-        <GifIcon data-icon="inline-start" />
-        Copy GIF
-      </Button>
+        <Button
+          className="flex-1"
+          disabled={copyingFile}
+          onClick={onCopyGif}
+          size={size}
+          type="button"
+        >
+          <GifIcon data-icon="inline-start" />
+          Copy GIF
+        </Button>
+      </div>
     </div>
   );
 };
