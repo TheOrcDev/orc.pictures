@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { GifActions } from "@/components/gif-actions";
 import { GifPreview } from "@/components/gif-preview";
+import { SiteBrand } from "@/components/site-brand";
 import { Badge } from "@/components/ui/badge";
 import { getGifBySlug, gifs } from "@/lib/gifs";
 import { SITE_NAME } from "@/lib/site";
@@ -72,9 +72,7 @@ const GifPage = async ({ params }: GifPageProps) => {
 
   return (
     <main className="mx-auto flex min-h-svh w-full max-w-3xl flex-col gap-8 px-6 py-16">
-      <Link className="text-muted-foreground text-sm" href="/">
-        Back to search
-      </Link>
+      <SiteBrand compact />
       <GifPreview gif={gif} />
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">

@@ -18,6 +18,13 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   applicationName: SITE_NAME,
   description: SITE_DESCRIPTION,
+  icons: {
+    apple: "/apple-icon.png",
+    icon: [
+      { type: "image/x-icon", url: "/favicon.ico" },
+      { sizes: "512x512", type: "image/png", url: "/icon.png" },
+    ],
+  },
   metadataBase: SITE_URL,
   openGraph: {
     description: SITE_DESCRIPTION,
