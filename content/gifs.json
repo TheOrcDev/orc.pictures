@@ -109,12 +109,12 @@
   },
   {
     "file": "/gifs/sir.gif",
-    "height": 800,
+    "height": 608,
+    "poster": "/gifs/sir.jpg",
     "slug": "sir",
     "tags": ["sir", "yes-sir", "respect", "officer"],
     "title": "Sir",
-    "width": 640,
-    "poster": "/gifs/sir.jpg"
+    "width": 480
   },
   {
     "file": "/gifs/sleep.gif",
