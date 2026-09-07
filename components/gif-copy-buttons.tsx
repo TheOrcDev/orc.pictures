@@ -46,7 +46,7 @@ const GifCopyButtons = ({ gif, size = "default" }: GifCopyButtonsProps) => {
       await copyGifFile(gif.file, filename);
       toast.add({
         description: "Paste it into X.",
-        title: "Copied GIF",
+        title: "Copied",
         type: "success",
       });
       setCopyingFile(false);
