@@ -1,13 +1,22 @@
 const SOCIAL_CRAWLER_UA =
   /Twitterbot|facebookexternalhit|Facebot|LinkedInBot/iu;
-
-const GIF_FILE_PATH = /^\/gifs\/(?<slug>[a-z0-9-]+)\.gif$/u;
+const GIF_SLUG = /^[a-z0-9-]+$/u;
+const GIF_PREFIX = "/gifs/";
+const GIF_SUFFIX = ".gif";
 
 export const isSocialCrawler = (userAgent: string): boolean =>
   SOCIAL_CRAWLER_UA.test(userAgent);
 
 export const gifFileSlug = (pathname: string): string | undefined => {
-  const match = GIF_FILE_PATH.exec(pathname);
+  if (!pathname.startsWith(GIF_PREFIX) || !pathname.endsWith(GIF_SUFFIX)) {
+    return undefined;
+  }
 
-  return match?.groups?.slug;
+  const slug = pathname.slice(GIF_PREFIX.length, -GIF_SUFFIX.length);
+
+  if (!GIF_SLUG.test(slug)) {
+    return undefined;
+  }
+
+  return slug;
 };
