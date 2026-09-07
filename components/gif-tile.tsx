@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-import { GifCopyButtons } from "@/components/gif-copy-buttons";
-import { addGifToDataTransfer, loadGifFile } from "@/lib/gif-clipboard";
+import { copyGifUrlWithToast } from "@/lib/copy-gif-url";
 import type { Gif } from "@/lib/gifs";
 
 interface GifTileProps {
@@ -14,41 +13,15 @@ interface GifTileProps {
 
 const GifTile = ({ gif }: GifTileProps) => {
   const [playing, setPlaying] = useState(false);
-  const [file, setFile] = useState<File | null>(null);
-  const filename = `${gif.slug}.gif`;
-
-  const prefetchFile = async (): Promise<void> => {
-    if (file) {
-      return;
-    }
-
-    try {
-      const nextFile = await loadGifFile(gif.file, filename);
-      setFile(nextFile);
-    } catch {
-      // Click or drag will surface a load error.
-    }
-  };
 
   return (
-    <article className="flex flex-col gap-2" onPointerEnter={prefetchFile}>
+    <article className="flex flex-col gap-2">
       <button
         className="w-full text-left"
-        draggable={file !== null}
         onBlur={() => {
           setPlaying(false);
         }}
-        onClick={() => {
-          setPlaying((current) => !current);
-        }}
-        onDragStart={(event) => {
-          if (!file) {
-            event.preventDefault();
-            return;
-          }
-
-          addGifToDataTransfer(event.dataTransfer, file);
-        }}
+        onClick={() => copyGifUrlWithToast(gif)}
         onFocus={() => {
           setPlaying(true);
         }}
@@ -70,12 +43,11 @@ const GifTile = ({ gif }: GifTileProps) => {
             unoptimized
           />
         </div>
-        <span className="sr-only">Play {gif.title}</span>
+        <span className="sr-only">Copy {gif.title} URL</span>
       </button>
       <Link className="truncate text-sm font-medium" href={`/${gif.slug}`}>
         {gif.title}
       </Link>
-      <GifCopyButtons gif={gif} size="xs" />
     </article>
   );
 };

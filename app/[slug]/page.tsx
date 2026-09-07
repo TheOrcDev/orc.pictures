@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { GifActions } from "@/components/gif-actions";
+import { GifPreview } from "@/components/gif-preview";
 import { Badge } from "@/components/ui/badge";
 import { getGifBySlug, gifs } from "@/lib/gifs";
 import { SITE_NAME } from "@/lib/site";
@@ -75,17 +75,7 @@ const GifPage = async ({ params }: GifPageProps) => {
       <Link className="text-muted-foreground text-sm" href="/">
         Back to search
       </Link>
-      <div className="bg-muted relative aspect-square w-full overflow-hidden">
-        <Image
-          alt={gif.title}
-          className="object-contain"
-          fill
-          priority
-          sizes="(min-width: 768px) 48rem, 100vw"
-          src={gif.file}
-          unoptimized
-        />
-      </div>
+      <GifPreview gif={gif} />
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <h1 className="font-heading text-3xl font-semibold tracking-wider uppercase">

@@ -2,7 +2,6 @@
 
 import { DownloadSimpleIcon, MarkdownLogoIcon } from "@phosphor-icons/react";
 
-import { GifCopyButtons } from "@/components/gif-copy-buttons";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/toast";
 import { gifAbsoluteUrl, gifMarkdown } from "@/lib/gif-share";
@@ -33,28 +32,25 @@ const GifActions = ({ gif }: GifActionsProps) => {
   };
 
   return (
-    <div className="flex flex-col gap-2">
-      <GifCopyButtons gif={gif} />
-      <div className="flex flex-wrap gap-2">
-        <Button onClick={onCopyMarkdown} type="button" variant="outline">
-          <MarkdownLogoIcon data-icon="inline-start" />
-          Copy markdown
-        </Button>
-        <Button
-          nativeButton={false}
-          render={
-            <a
-              aria-label={`Download ${gif.title}`}
-              download={`${gif.slug}.gif`}
-              href={gif.file}
-            />
-          }
-          variant="ghost"
-        >
-          <DownloadSimpleIcon data-icon="inline-start" />
-          Download
-        </Button>
-      </div>
+    <div className="flex flex-wrap gap-2">
+      <Button onClick={onCopyMarkdown} type="button" variant="outline">
+        <MarkdownLogoIcon data-icon="inline-start" />
+        Copy markdown
+      </Button>
+      <Button
+        nativeButton={false}
+        render={
+          <a
+            aria-label={`Download ${gif.title}`}
+            download={`${gif.slug}.gif`}
+            href={gif.file}
+          />
+        }
+        variant="ghost"
+      >
+        <DownloadSimpleIcon data-icon="inline-start" />
+        Download
+      </Button>
     </div>
   );
 };
