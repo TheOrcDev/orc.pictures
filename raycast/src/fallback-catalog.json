@@ -214,5 +214,14 @@
     "tags": ["victory", "win", "celebrate", "yes"],
     "title": "Victory",
     "width": 640
+  },
+  {
+    "file": "/gifs/working.gif",
+    "height": 544,
+    "poster": "/gifs/working.jpg",
+    "slug": "working",
+    "tags": ["working", "coding", "computer", "laptop", "typing"],
+    "title": "Working",
+    "width": 544
   }
 ]
