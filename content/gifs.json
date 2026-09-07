@@ -163,12 +163,12 @@
   },
   {
     "file": "/gifs/toldyou.gif",
-    "height": 640,
+    "height": 544,
+    "poster": "/gifs/toldyou.jpg",
     "slug": "toldyou",
     "tags": ["toldyou", "told-you", "smug", "knew-it"],
     "title": "Told you",
-    "width": 640,
-    "poster": "/gifs/toldyou.jpg"
+    "width": 544
   },
   {
     "file": "/gifs/victory.gif",
