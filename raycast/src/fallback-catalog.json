@@ -90,6 +90,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/sad.gif",
+    "height": 544,
+    "poster": "/gifs/sad.jpg",
+    "slug": "sad",
+    "tags": ["sad", "down", "upset", "gloomy", "disappointed"],
+    "title": "Sad",
+    "width": 544
+  },
+  {
     "file": "/gifs/salute.gif",
     "height": 544,
     "poster": "/gifs/salute.jpg",

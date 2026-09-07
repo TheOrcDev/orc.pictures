@@ -39,6 +39,7 @@ const PROMPTS: Record<string, string> = {
     "The orc puffs his chest, proud smile widening, hair and fur moving in a light breeze. Heroic but subtle. Locked camera.",
   ready:
     "The armored orc tightens his grip on the axe and shifts into a ready stance, determined breath. Locked camera.",
+  sad: "The orc looks downcast, a slow sad blink, a tear welling, a small sniff and slump of the shoulders. The SAD text stays put. Locked camera.",
   salute:
     "The orc holds a firm military salute, a slight blink, armor catching light. Respectful, locked camera.",
   seriously:
