@@ -57,7 +57,7 @@ const PROMPTS: Record<string, string> = {
   thankyou:
     "The orc gives a grateful nod and a warm smile, a slight bow of thanks. Locked camera.",
   thinking:
-    "The orc thinks, eyes drifting up, a slow hmm, thumb stroking his chin. Locked camera.",
+    "He starts staring at the camera deadpan, unamused, like 'seriously now'. Then he looks up and aside, raises one finger to his temple, and thinks. Locked camera.",
   toldyou:
     "The orc smirks I-told-you-so, a smug little nod and knowing glance. Locked camera.",
   victory:
