@@ -30,6 +30,8 @@ const PROMPTS: Record<string, string> = {
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
   ew: "The orc recoils slightly, wrinkles his nose in disgust, and gives a small shake of the head. Locked camera.",
   gold: "The orc sits on the treasure and grins richer as coins shift and glint. A small satisfied chuckle in the shoulders. Locked camera.",
+  happy:
+    "The orc laughs happily, a warm chuckle shaking his shoulders, eyes crinkling, grin holding. Locked camera.",
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. Natural character animation, locked camera, no zoom or pan.",
   online:
     "The stacked eyes blink at different times with twitchy chronically-online energy. Subtle motion only. Locked camera.",
