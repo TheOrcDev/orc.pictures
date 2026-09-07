@@ -10,7 +10,12 @@ const jsPlugins = selectJsPlugins(["react-doctor"]);
 
 export default defineConfig({
   extends: [core, react, next, nextJsPlugins, antiSlop, jsPlugins],
-  ignorePatterns: [...(core.ignorePatterns ?? []), "**/.agents", "**/scripts"],
+  ignorePatterns: [
+    ...(core.ignorePatterns ?? []),
+    "**/.agents",
+    "**/scripts",
+    "**/raycast/**",
+  ],
   jsPlugins: jsPlugins.jsPlugins,
   overrides: [
     {
