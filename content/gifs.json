@@ -171,6 +171,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/thinking.gif",
+    "height": 544,
+    "poster": "/gifs/thinking.jpg",
+    "slug": "thinking",
+    "tags": ["thinking", "hmm", "consider", "ponder", "idea"],
+    "title": "Thinking",
+    "width": 544
+  },
+  {
     "file": "/gifs/toldyou.gif",
     "height": 544,
     "poster": "/gifs/toldyou.jpg",

@@ -54,6 +54,8 @@ const PROMPTS: Record<string, string> = {
   tear: "A tear rolls down the orc's face. He blinks, emotional but still. Locked camera.",
   thankyou:
     "The orc gives a grateful nod and a warm smile, a slight bow of thanks. Locked camera.",
+  thinking:
+    "The orc thinks, eyes drifting up, a slow hmm, thumb stroking his chin. Locked camera.",
   toldyou:
     "The orc smirks I-told-you-so, a smug little nod and knowing glance. Locked camera.",
   victory:
