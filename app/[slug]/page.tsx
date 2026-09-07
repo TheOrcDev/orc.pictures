@@ -71,7 +71,7 @@ const GifPage = async ({ params }: GifPageProps) => {
   }
 
   return (
-    <main className="mx-auto flex min-h-svh w-full max-w-3xl flex-col gap-8 px-6 py-16">
+    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-8 px-6 py-16">
       <SiteBrand compact />
       <GifPreview gif={gif} />
       <div className="flex flex-col gap-4">

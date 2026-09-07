@@ -3,6 +3,7 @@ import { Geist_Mono, Outfit } from "next/font/google";
 import type { ReactNode } from "react";
 
 import "./globals.css";
+import { SiteFooter } from "@/components/site-footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toast";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
@@ -71,7 +72,10 @@ const RootLayout = ({
   >
     <body>
       <ThemeProvider>
-        {children}
+        <div className="flex min-h-svh flex-col">
+          {children}
+          <SiteFooter />
+        </div>
         <Toaster />
       </ThemeProvider>
     </body>

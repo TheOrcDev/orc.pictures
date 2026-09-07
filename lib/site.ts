@@ -4,3 +4,4 @@ const SITE_URL_VALUE =
 export const SITE_NAME = "orc.pictures";
 export const SITE_DESCRIPTION = "Search and copy personal orc reaction gifs.";
 export const SITE_URL = new URL(SITE_URL_VALUE);
+export const ORCDEV_URL = "https://orcdev.com";
