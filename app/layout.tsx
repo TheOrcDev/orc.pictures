@@ -21,6 +21,14 @@ export const metadata: Metadata = {
   metadataBase: SITE_URL,
   openGraph: {
     description: SITE_DESCRIPTION,
+    images: [
+      {
+        alt: SITE_DESCRIPTION,
+        height: 630,
+        url: "/og.png",
+        width: 1200,
+      },
+    ],
     locale: "en_US",
     siteName: SITE_NAME,
     title: SITE_NAME,
@@ -34,6 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     description: SITE_DESCRIPTION,
+    images: ["/og.png"],
     title: SITE_NAME,
   },
 };
