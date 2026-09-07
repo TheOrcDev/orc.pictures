@@ -1,13 +1,7 @@
-import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { GifPicker } from "@/components/gif-picker";
 import { gifs } from "@/lib/gifs";
-
-export const metadata: Metadata = {
-  description: "Search and copy personal orc reaction gifs.",
-  title: "orc.pictures",
-};
 
 interface PageProps {
   searchParams: Promise<{

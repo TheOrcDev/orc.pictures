@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { GifActions } from "@/components/gif-actions";
 import { Badge } from "@/components/ui/badge";
 import { getGifBySlug, gifs } from "@/lib/gifs";
+import { SITE_NAME } from "@/lib/site";
 
 interface GifPageProps {
   params: Promise<{
@@ -30,9 +31,23 @@ export const generateMetadata = async ({
     };
   }
 
+  const description = `Copy or download the ${gif.title} reaction gif.`;
+  const title = `${gif.title} · ${SITE_NAME}`;
+
   return {
-    description: `Copy or download the ${gif.title} reaction gif.`,
-    title: `${gif.title} · orc.pictures`,
+    description,
+    openGraph: {
+      description,
+      title,
+      type: "website",
+      url: `/${gif.slug}`,
+    },
+    title: gif.title,
+    twitter: {
+      card: "summary_large_image",
+      description,
+      title,
+    },
   };
 };
 
