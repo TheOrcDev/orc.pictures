@@ -27,6 +27,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/dance.gif",
+    "height": 544,
+    "poster": "/gifs/dance.jpg",
+    "slug": "dance",
+    "tags": ["dance", "dancing", "groove", "party", "move"],
+    "title": "Dance",
+    "width": 544
+  },
+  {
     "file": "/gifs/doubt.gif",
     "height": 544,
     "poster": "/gifs/doubt.jpg",

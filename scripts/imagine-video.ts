@@ -30,6 +30,8 @@ const PROMPTS: Record<string, string> = {
     "The orc slowly stirs the pot, steam rising. He looks exhausted and done, a tired blink, the word COOKED staying readable. Natural character motion, locked camera.",
   curious:
     "The orc leans in a little closer, tilts his head, eyes widening with curiosity, a small interested blink. Locked camera.",
+  dance:
+    "The orc dances, swaying and stepping, arms moving to the groove, joyful grin holding. Locked camera.",
   doubt:
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
   ew: "The orc recoils slightly, wrinkles his nose in disgust, and gives a small shake of the head. Locked camera.",
