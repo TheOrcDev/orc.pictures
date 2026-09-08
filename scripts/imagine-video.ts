@@ -67,6 +67,8 @@ const PROMPTS: Record<string, string> = {
     "The orc's eyes widen as he realizes he has been seen, a small caught flinch toward the camera. Locked camera.",
   stars:
     "The orc looks amazed, eyes sparkling, a small wow lean forward. Locked camera.",
+  sweat:
+    "The orc looks nervously at the camera, sweat beading on his brow, a tense gulp, a small anxious blink. Locked camera.",
   tear: "A tear rolls down the orc's face. He blinks, emotional but still. Locked camera.",
   thankyou:
     "The orc gives a grateful nod and a warm smile, a slight bow of thanks. Locked camera.",

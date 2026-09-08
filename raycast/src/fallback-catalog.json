@@ -224,6 +224,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/sweat.gif",
+    "height": 544,
+    "poster": "/gifs/sweat.jpg",
+    "slug": "sweat",
+    "tags": ["sweat", "sweating", "nervous", "anxious", "stressed", "pressure"],
+    "title": "Sweat",
+    "width": 544
+  },
+  {
     "file": "/gifs/tear.gif",
     "height": 480,
     "poster": "/gifs/tear.jpg",
