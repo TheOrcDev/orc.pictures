@@ -9,6 +9,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/clap.gif",
+    "height": 544,
+    "poster": "/gifs/clap.jpg",
+    "slug": "clap",
+    "tags": ["clap", "clapping", "applause", "bravo", "well-done"],
+    "title": "Clap",
+    "width": 544
+  },
+  {
     "file": "/gifs/cooked.gif",
     "height": 608,
     "poster": "/gifs/cooked.jpg",
