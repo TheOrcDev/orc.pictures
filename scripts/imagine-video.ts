@@ -35,7 +35,7 @@ const PROMPTS: Record<string, string> = {
   dance:
     "The orc dances, swaying and stepping, arms moving to the groove, joyful grin holding. Locked camera.",
   doit:
-    "The orc leans in and jabs a finger at the camera, intense command, a short urgent nod. Locked camera.",
+    "The orc grins warmly, gives an encouraging thumbs-up, and a small you-got-this nod. Locked camera.",
   doubt:
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
   ew: "The orc recoils slightly, wrinkles his nose in disgust, and gives a small shake of the head. Locked camera.",
