@@ -40,6 +40,8 @@ const PROMPTS: Record<string, string> = {
   gold: "The orc sits on the treasure and grins richer as coins shift and glint. A small satisfied chuckle in the shoulders. Locked camera.",
   happy:
     "The orc laughs happily, a warm chuckle shaking his shoulders, eyes crinkling, grin holding. Locked camera.",
+  heart:
+    "The orc holds the heart-shaped hands toward the camera, a warm affectionate smile, a small fond blink. Locked camera.",
   hype:
     "The orc pumps both fists, bouncing with hype, wide excited grin holding. Locked camera.",
   morning:

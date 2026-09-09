@@ -81,6 +81,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/heart.gif",
+    "height": 544,
+    "poster": "/gifs/heart.jpg",
+    "slug": "heart",
+    "tags": ["heart", "love", "like", "hearts", "affection"],
+    "title": "Heart",
+    "width": 544
+  },
+  {
     "file": "/gifs/hype.gif",
     "height": 544,
     "poster": "/gifs/hype.jpg",
