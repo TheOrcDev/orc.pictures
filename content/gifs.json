@@ -45,6 +45,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/doit.gif",
+    "height": 544,
+    "poster": "/gifs/doit.jpg",
+    "slug": "doit",
+    "tags": ["doit", "do-it", "just-do-it", "go", "now"],
+    "title": "Do it",
+    "width": 544
+  },
+  {
     "file": "/gifs/doubt.gif",
     "height": 544,
     "poster": "/gifs/doubt.jpg",
