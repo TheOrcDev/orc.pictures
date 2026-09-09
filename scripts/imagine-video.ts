@@ -82,6 +82,8 @@ const PROMPTS: Record<string, string> = {
     "The orc smirks I-told-you-so, a smug little nod and knowing glance. Locked camera.",
   victory:
     "The orc celebrates the win with a short victorious motion and a proud grin. Locked camera.",
+  wave:
+    "The orc waves hello with his raised hand, a warm friendly smile holding, a couple of waves. Locked camera.",
   working:
     "The orc types on the laptop, fingers moving, screen glow on his face, a focused blink. Locked camera.",
 };

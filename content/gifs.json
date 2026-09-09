@@ -296,6 +296,15 @@
     "width": 640
   },
   {
+    "file": "/gifs/wave.gif",
+    "height": 544,
+    "poster": "/gifs/wave.jpg",
+    "slug": "wave",
+    "tags": ["wave", "waving", "hello", "hi", "bye"],
+    "title": "Wave",
+    "width": 544
+  },
+  {
     "file": "/gifs/working.gif",
     "height": 544,
     "poster": "/gifs/working.jpg",
