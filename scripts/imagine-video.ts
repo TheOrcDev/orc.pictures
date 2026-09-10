@@ -97,7 +97,7 @@ const PROMPTS: Record<string, string> = {
   wave:
     "The orc waves hello with his raised hand, a warm friendly smile holding, a couple of waves. Locked camera.",
   wink:
-    "He starts looking at the camera with both eyes open and a slight grin. Then he winks one eye, sly grin holding. Locked camera.",
+    "Both eyes start open, a small smile. Then only one eyelid closes for a short wink while the other eye stays open. Then both eyes open and he holds a warm smile. Not a blink, not both eyes closing. Only one wink. Locked camera, no zoom.",
   working:
     "The orc types on the laptop, fingers moving, screen glow on his face, a focused blink. Locked camera.",
 };
