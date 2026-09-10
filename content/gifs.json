@@ -117,6 +117,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/laugh.gif",
+    "height": 544,
+    "poster": "/gifs/laugh.jpg",
+    "slug": "laugh",
+    "tags": ["laugh", "laughing", "lol", "funny", "haha"],
+    "title": "Laugh",
+    "width": 544
+  },
+  {
     "file": "/gifs/morning.gif",
     "height": 544,
     "poster": "/gifs/morning.jpg",
