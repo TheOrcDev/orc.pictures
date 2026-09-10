@@ -72,6 +72,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/flashback.gif",
+    "height": 544,
+    "poster": "/gifs/flashback.jpg",
+    "slug": "flashback",
+    "tags": ["flashback", "remember", "nostalgia", "memories", "past"],
+    "title": "Flashback",
+    "width": 544
+  },
+  {
     "file": "/gifs/gold.gif",
     "height": 480,
     "poster": "/gifs/gold.jpg",
