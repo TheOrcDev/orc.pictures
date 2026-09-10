@@ -90,6 +90,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/fire.gif",
+    "height": 544,
+    "poster": "/gifs/fire.jpg",
+    "slug": "fire",
+    "tags": ["fire", "lit", "flames", "sick", "heat"],
+    "title": "Fire",
+    "width": 544
+  },
+  {
     "file": "/gifs/flashback.gif",
     "height": 544,
     "poster": "/gifs/flashback.jpg",

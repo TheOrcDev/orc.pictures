@@ -45,6 +45,8 @@ const PROMPTS: Record<string, string> = {
   ew: "The orc recoils slightly, wrinkles his nose in disgust, and gives a small shake of the head. Locked camera.",
   flashback:
     "Stay on this exact close-up portrait only. No other figures, no overlays. One continuous look into the distance, a slow blink and breath. Locked camera, no zoom, no cut, no pan.",
+  fire:
+    "Flames flicker around the orc and in his palm, a confident fire grin holding, firelight moving on his face. Locked camera.",
   gold: "The orc sits on the treasure and grins richer as coins shift and glint. A small satisfied chuckle in the shoulders. Locked camera.",
   happy:
     "The orc laughs happily, a warm chuckle shaking his shoulders, eyes crinkling, grin holding. Locked camera.",
