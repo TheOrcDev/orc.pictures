@@ -40,7 +40,7 @@ const PROMPTS: Record<string, string> = {
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
   ew: "The orc recoils slightly, wrinkles his nose in disgust, and gives a small shake of the head. Locked camera.",
   flashback:
-    "Keep the full framed portrait. Do not zoom or crop. The orc stares into the distance and blinks slowly. The translucent ghost figures around him stay visible the whole time, softly shifting: walking near a waterfall, picking up an axe, chopping wood. Locked camera, no zoom, no pan.",
+    "Stay on this exact close-up portrait. Do not cut away. The orc blinks slowly. The translucent full-frame memory covering the whole image drifts slightly. He stays clearly visible through it. Locked camera, no zoom, no pan.",
   gold: "The orc sits on the treasure and grins richer as coins shift and glint. A small satisfied chuckle in the shoulders. Locked camera.",
   happy:
     "The orc laughs happily, a warm chuckle shaking his shoulders, eyes crinkling, grin holding. Locked camera.",
