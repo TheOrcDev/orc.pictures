@@ -26,6 +26,8 @@ const SKIP_SLUGS = new Set(["orc-smile"]);
 const PROMPTS: Record<string, string> = {
   angry:
     "The orc shouts in anger, a short roar, shoulders heaving, glare holding on the camera. Locked camera.",
+  beach:
+    "The orc lifts the skull cocktail and takes a sip, a relaxed beach grin, ocean behind him. Locked camera.",
   clap:
     "The orc claps his hands in applause, a warm approving grin holding, a few more claps. Locked camera.",
   cooked:

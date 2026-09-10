@@ -9,6 +9,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/beach.gif",
+    "height": 544,
+    "poster": "/gifs/beach.jpg",
+    "slug": "beach",
+    "tags": ["beach", "cocktail", "drink", "vacation", "cheers"],
+    "title": "Beach",
+    "width": 544
+  },
+  {
     "file": "/gifs/clap.gif",
     "height": 544,
     "poster": "/gifs/clap.jpg",
