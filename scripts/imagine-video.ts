@@ -57,6 +57,8 @@ const PROMPTS: Record<string, string> = {
     "The orc holds the heart-shaped hands toward the camera, a warm affectionate smile, a small fond blink. Locked camera.",
   hype:
     "The orc pumps both fists, bouncing with hype, wide excited grin holding. Locked camera.",
+  icecream:
+    "The orc takes a happy lick of the vanilla ice cream cone, a yum blink, cream staying on the scoops. Locked camera.",
   "in-love":
     "The orc looks smitten, a dreamy sigh, hands over his heart, a warm in-love blink. Locked camera.",
   laugh:
