@@ -100,7 +100,7 @@ const PROMPTS: Record<string, string> = {
   toldyou:
     "The orc smirks I-told-you-so, a smug little nod and knowing glance. Locked camera.",
   "touch-grass":
-    "The orc rests in the meadow, fingers shifting in the grass, a small outdoor blink, breeze moving the grass. Locked camera.",
+    "The orc walks a few relaxed steps through the meadow toward the camera, enjoying the day. Then he crouches and touches the grass with one hand, a content smile. Not lying down. Locked camera.",
   victory:
     "The orc celebrates the win with a short victorious motion and a proud grin. Locked camera.",
   wave:
