@@ -49,7 +49,7 @@ const PROMPTS: Record<string, string> = {
     "Flames flicker around the orc and in his palm, a confident fire grin holding, firelight moving on his face. Locked camera.",
   flex: "The orc flexes both biceps harder, a cocky grin holding, a small proud pump of the arms. Locked camera.",
   "for-the-horde":
-    "The orc bellows a rallying war cry, fist pumping once, mouth open in a proud shout. Locked camera.",
+    "The orc charges forward with the army, ranks running behind him, then bellows a rallying war cry, fist raised. Keep the wide shot and the army in frame. Locked camera, no zoom to a close-up.",
   gold: "The orc sits on the treasure and grins richer as coins shift and glint. A small satisfied chuckle in the shoulders. Locked camera.",
   happy:
     "The orc laughs happily, a warm chuckle shaking his shoulders, eyes crinkling, grin holding. Locked camera.",
