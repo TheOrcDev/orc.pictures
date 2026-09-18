@@ -99,6 +99,8 @@ const PROMPTS: Record<string, string> = {
     "He starts staring at the camera deadpan, unamused, like 'seriously now'. Then he looks up and aside, raises one finger to his temple, and thinks. Locked camera.",
   toldyou:
     "The orc smirks I-told-you-so, a smug little nod and knowing glance. Locked camera.",
+  "touch-grass":
+    "The orc rests in the meadow, fingers shifting in the grass, a small outdoor blink, breeze moving the grass. Locked camera.",
   victory:
     "The orc celebrates the win with a short victorious motion and a proud grin. Locked camera.",
   wave:
