@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import "./globals.css";
 import { GifCommandMenu } from "@/components/gif-command-menu";
+import { RaycastInstall } from "@/components/raycast-install";
 import { SiteFooter } from "@/components/site-footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
@@ -110,6 +111,7 @@ const RootLayout = ({
     <body>
       <ThemeProvider>
         <div className="flex min-h-svh flex-col">
+          <RaycastInstall />
           {children}
           <SiteFooter />
         </div>
