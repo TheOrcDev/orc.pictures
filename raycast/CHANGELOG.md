@@ -1,5 +1,10 @@
 # orc.pictures Changelog
 
+## [1.0.1] - {PR_MERGE_DATE}
+
+- Fix copying GIFs on Windows
+- Use the orc.pictures logo as the Store icon
+
 ## [Initial Release] - {PR_MERGE_DATE}
 
 - Search orc reaction GIFs
