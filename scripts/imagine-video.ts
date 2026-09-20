@@ -28,6 +28,8 @@ const PROMPTS: Record<string, string> = {
     "The orc shouts in anger, a short roar, shoulders heaving, glare holding on the camera. Locked camera.",
   beach:
     "The orc lifts the skull cocktail and takes a sip, a relaxed beach grin, ocean behind him. Locked camera.",
+  champagne:
+    "The orc toasts with the champagne flute, a knowing smirk, a small raise of the glass and a point. Locked camera.",
   clap:
     "The orc claps his hands in applause, a warm approving grin holding, a few more claps. Locked camera.",
   cooked:
