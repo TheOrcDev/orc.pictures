@@ -404,6 +404,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/velocity.gif",
+    "height": 544,
+    "poster": "/gifs/velocity.jpg",
+    "slug": "velocity",
+    "tags": ["velocity", "run", "running", "sprint", "speed", "goal"],
+    "title": "Velocity",
+    "width": 544
+  },
+  {
     "file": "/gifs/victory.gif",
     "height": 426,
     "poster": "/gifs/victory.jpg",
