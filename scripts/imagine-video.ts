@@ -65,6 +65,8 @@ const PROMPTS: Record<string, string> = {
     "The orc looks smitten, a dreamy sigh, hands over his heart, a warm in-love blink. Locked camera.",
   laugh:
     "The orc laughs hard, mouth open, shoulders shaking, head tipping back a little, joyful laugh holding. Locked camera.",
+  livestream:
+    "The orc talks to the livestream camera, a small nod, mouth moving, streamer energy holding. Locked camera.",
   morning:
     "The orc lifts the coffee mug slightly, steam rising from the cup, a warm morning blink. Locked camera.",
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. Natural character animation, locked camera, no zoom or pan.",
