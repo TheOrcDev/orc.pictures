@@ -20,6 +20,9 @@ const MODEL = "grok-imagine-video-1.5";
 const SOURCE_DIR = "/Users/orcdev/Downloads/ai images";
 const VIDEO_DIR = "/tmp/orc-grok-videos";
 const DURATION_SECONDS = 4;
+const DURATIONS: Record<string, number> = {
+  wink: 8,
+};
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
 
@@ -118,7 +121,7 @@ const PROMPTS: Record<string, string> = {
   wave:
     "The orc waves hello with his raised hand, a warm friendly smile holding, a couple of waves. Locked camera.",
   wink:
-    "Both eyes start open, a small smile. Then only one eyelid closes for a short wink while the other eye stays open. Then both eyes open and he holds a warm smile. Not a blink, not both eyes closing. Only one wink. Locked camera, no zoom.",
+    "This frame is already a one-eye wink. Hold that exact wink for most of the clip: the closed eye stays fully shut, the open eye stays wide open and looks at the camera, sly smile holding. Only near the end, open the closed eye so both eyes are open and he smiles. Never close the open eye. Not a blink. Mouth stays closed. Locked camera, no zoom.",
   working:
     "The orc types on the laptop, fingers moving, screen glow on his face, a focused blink. Locked camera.",
 };
@@ -266,12 +269,13 @@ const probeSize = async (
 const startGeneration = async (
   imageDataUrl: string,
   prompt: string,
-  ratio: string
+  ratio: string,
+  duration: number
 ): Promise<string> => {
   const response = await fetch(`${API_BASE}/videos/generations`, {
     body: JSON.stringify({
       aspect_ratio: ratio,
-      duration: DURATION_SECONDS,
+      duration,
       image: { url: imageDataUrl },
       model: MODEL,
       prompt,
@@ -388,7 +392,8 @@ const generateOne = async (gif: CatalogGif, input: string): Promise<void> => {
   const requestId = await startGeneration(
     imageDataUrl,
     prompt,
-    aspectRatio(size.width, size.height)
+    aspectRatio(size.width, size.height),
+    DURATIONS[gif.slug] ?? DURATION_SECONDS
   );
   process.stdout.write(`  request ${requestId}\n`);
   const videoUrl = await pollVideo(requestId);
