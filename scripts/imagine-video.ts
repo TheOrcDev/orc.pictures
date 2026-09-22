@@ -109,6 +109,8 @@ const PROMPTS: Record<string, string> = {
     "The orc sprints toward the glowing gateway, pumping his arms, dust kicking up, high velocity. Keep the goal ahead in frame. Locked camera, no zoom.",
   victory:
     "The orc celebrates the win with a short victorious motion and a proud grin. Locked camera.",
+  waiting:
+    "The orc waits with arms crossed, glances aside, a small impatient shift, then looks back. Mouth stays closed. Locked camera.",
   wave:
     "The orc waves hello with his raised hand, a warm friendly smile holding, a couple of waves. Locked camera.",
   wink:

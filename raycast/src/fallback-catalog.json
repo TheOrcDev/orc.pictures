@@ -422,6 +422,15 @@
     "width": 640
   },
   {
+    "file": "/gifs/waiting.gif",
+    "height": 544,
+    "poster": "/gifs/waiting.jpg",
+    "slug": "waiting",
+    "tags": ["waiting", "wait", "impatient", "soon", "hold-on"],
+    "title": "Waiting",
+    "width": 544
+  },
+  {
     "file": "/gifs/wave.gif",
     "height": 544,
     "poster": "/gifs/wave.jpg",
