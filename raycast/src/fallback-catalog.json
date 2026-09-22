@@ -332,6 +332,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/smell.gif",
+    "height": 544,
+    "poster": "/gifs/smell.jpg",
+    "slug": "smell",
+    "tags": ["smell", "sniff", "aroma", "scent", "yum"],
+    "title": "Smell",
+    "width": 544
+  },
+  {
     "file": "/gifs/spotted.gif",
     "height": 480,
     "poster": "/gifs/spotted.jpg",
