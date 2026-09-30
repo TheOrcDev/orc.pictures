@@ -59,7 +59,7 @@ const PROMPTS: Record<string, string> = {
     "The orc charges forward with the army, ranks running behind him, then bellows a rallying war cry, fist raised. Keep the wide shot and the army in frame. Locked camera, no zoom to a close-up.",
   gold: "The orc sits on the treasure and grins richer as coins shift and glint. A small satisfied chuckle in the shoulders. Locked camera.",
   happy:
-    "The orc laughs happily, a warm chuckle shaking his shoulders, eyes crinkling, grin holding. Keep this exact face, short hair, short stubble, and dark steel plate armor. Do not grow a long beard, a mohawk, or change the face. Locked camera.",
+    "The orc laughs happily, a warm chuckle shaking his shoulders, eyes crinkling, grin holding. Keep the Hellscream topknot, shaved sides, red war tattoos, huge tusks, and spiked plate armor exactly as they are. Do not change his face into a different orc. Locked camera.",
   heart:
     "The orc holds the heart-shaped hands toward the camera, a warm affectionate smile, a small fond blink. Locked camera.",
   hype:
