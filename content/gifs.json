@@ -252,6 +252,15 @@
     "poster": "/gifs/orc-smile.jpg"
   },
   {
+    "file": "/gifs/pickaxe.gif",
+    "height": 544,
+    "poster": "/gifs/pickaxe.jpg",
+    "slug": "pickaxe",
+    "tags": ["pickaxe", "mine", "mining", "dig", "work"],
+    "title": "Pickaxe",
+    "width": 544
+  },
+  {
     "file": "/gifs/popcorn.gif",
     "height": 544,
     "poster": "/gifs/popcorn.jpg",

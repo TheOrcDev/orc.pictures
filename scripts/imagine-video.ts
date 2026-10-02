@@ -79,6 +79,8 @@ const PROMPTS: Record<string, string> = {
     "The orc looks at the camera and gives a small hello wave, a friendly blink, available and here. Locked camera.",
   "orc-smile":
     "The orc holds a warm closed-mouth smile at the camera, a slight friendly blink, expression staying kind and still. Locked camera.",
+  pickaxe:
+    "The orc swings the pickaxe into the rock wall, stone chips and dust flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed, no talking. Locked camera.",
   popcorn:
     "The orc eats popcorn from the bucket, chewing and watching something off-camera with amused eyes. Locked camera.",
   proud:
