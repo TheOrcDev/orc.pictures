@@ -45,6 +45,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/congratulations.gif",
+    "height": 544,
+    "poster": "/gifs/congratulations.jpg",
+    "slug": "congratulations",
+    "tags": ["congratulations", "congrats", "well-done", "kudos", "you-did-it"],
+    "title": "Congratulations",
+    "width": 544
+  },
+  {
     "file": "/gifs/cooked.gif",
     "height": 608,
     "poster": "/gifs/cooked.jpg",

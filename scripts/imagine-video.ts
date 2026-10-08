@@ -21,6 +21,7 @@ const SOURCE_DIR = "/Users/orcdev/Downloads/ai images";
 const VIDEO_DIR = "/tmp/orc-grok-videos";
 const DURATION_SECONDS = 4;
 const DURATIONS: Record<string, number> = {
+  congratulations: 6,
   "something-good": 6,
   "start-camera": 6,
   wink: 8,
@@ -39,6 +40,8 @@ const PROMPTS: Record<string, string> = {
     "The orc toasts with the champagne flute, a knowing smirk, a small raise of the glass and a point. Locked camera.",
   clap:
     "The orc claps his hands in applause, a warm approving grin holding, a few more claps. Locked camera.",
+  congratulations:
+    "The orc extends his open hand a little closer toward the camera, offering congratulations, then gives a proud little nod. His smile grows warmer. He does not clap. No talking. Locked camera.",
   cooked:
     "The orc slowly stirs the pot, steam rising. He looks exhausted and done, a tired blink, the word COOKED staying readable. Natural character motion, locked camera.",
   curious:
