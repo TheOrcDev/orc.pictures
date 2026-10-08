@@ -377,6 +377,22 @@
     "width": 544
   },
   {
+    "file": "/gifs/start-camera.gif",
+    "height": 544,
+    "poster": "/gifs/start-camera.jpg",
+    "slug": "start-camera",
+    "tags": [
+      "start-camera",
+      "camera",
+      "start",
+      "livestream",
+      "going-live",
+      "record"
+    ],
+    "title": "Start camera",
+    "width": 544
+  },
+  {
     "file": "/gifs/sweat.gif",
     "height": 544,
     "poster": "/gifs/sweat.jpg",

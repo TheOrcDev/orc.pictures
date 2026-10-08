@@ -21,6 +21,7 @@ const SOURCE_DIR = "/Users/orcdev/Downloads/ai images";
 const VIDEO_DIR = "/tmp/orc-grok-videos";
 const DURATION_SECONDS = 4;
 const DURATIONS: Record<string, number> = {
+  "start-camera": 6,
   wink: 8,
 };
 const POLL_MS = 5000;
@@ -101,6 +102,8 @@ const PROMPTS: Record<string, string> = {
     "The orc lifts his head, closes his eyes, and inhales a pleasant smell, a quiet content sniff. Mouth stays closed, no talking. Locked camera.",
   spotted:
     "The orc's eyes widen as he realizes he has been seen, a small caught flinch toward the camera. Locked camera.",
+  "start-camera":
+    "The orc presses the button on the small camera with his index finger. The camera's red record light clicks on. He pulls his hand back and looks into the lens, starting the livestream, a small ready blink. Mouth stays closed, no talking. Locked camera.",
   stars:
     "The orc looks amazed, eyes sparkling, a small wow lean forward. Locked camera.",
   sweat:
