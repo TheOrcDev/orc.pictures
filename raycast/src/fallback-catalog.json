@@ -359,6 +359,22 @@
     "width": 544
   },
   {
+    "file": "/gifs/something-good.gif",
+    "height": 544,
+    "poster": "/gifs/something-good.jpg",
+    "slug": "something-good",
+    "tags": [
+      "something-good",
+      "preparing",
+      "coming",
+      "soon",
+      "surprise",
+      "treat"
+    ],
+    "title": "Something good",
+    "width": 544
+  },
+  {
     "file": "/gifs/spotted.gif",
     "height": 480,
     "poster": "/gifs/spotted.jpg",
