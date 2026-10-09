@@ -158,6 +158,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/fishing.gif",
+    "height": 544,
+    "poster": "/gifs/fishing.jpg",
+    "slug": "fishing",
+    "tags": ["fishing", "fish", "reel", "river", "bite", "catch"],
+    "title": "Fishing",
+    "width": 544
+  },
+  {
     "file": "/gifs/flex.gif",
     "height": 544,
     "poster": "/gifs/flex.jpg",

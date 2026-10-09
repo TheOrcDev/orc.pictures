@@ -25,6 +25,7 @@ const DURATIONS: Record<string, number> = {
   celebrate: 6,
   congratulations: 6,
   damn: 6,
+  fishing: 6,
   "something-good": 6,
   "start-camera": 6,
   wink: 8,
@@ -66,6 +67,8 @@ const PROMPTS: Record<string, string> = {
     "Stay on this exact close-up portrait only. No other figures, no overlays. One continuous look into the distance, a slow blink and breath. Locked camera, no zoom, no cut, no pan.",
   fire:
     "Flames flicker around the orc and in his palm, a confident fire grin holding, firelight moving on his face. Locked camera.",
+  fishing:
+    "The fishing line tugs. He leans back a little and lifts the rod, a small splash in the water, then settles with a satisfied closed-mouth grin. Mouth stays closed, no talking. Locked camera.",
   flex: "The orc flexes both biceps harder, a cocky grin holding, a small proud pump of the arms. Locked camera.",
   "for-the-horde":
     "The orc charges forward with the army, ranks running behind him, then bellows a rallying war cry, fist raised. Keep the wide shot and the army in frame. Locked camera, no zoom to a close-up.",
