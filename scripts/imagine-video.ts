@@ -36,7 +36,7 @@ const PROMPTS: Record<string, string> = {
   angry:
     "The orc shouts in anger, a short roar, shoulders heaving, glare holding on the camera. Locked camera.",
   annoyed:
-    "The orc pinches the bridge of his nose, rolls his eyes, and gives a small exasperated head shake. Then he lowers his hand and holds a tight annoyed look. He does not shout. Mouth stays closed, no talking. Locked camera.",
+    "The orc watches, eyes narrowing, a small exasperated blink and a tiny head tilt. He stays annoyed. His hands never rise. He does not touch his face or nose. He does not shout. Mouth stays closed, no talking. Locked camera.",
   beach:
     "The orc lifts the skull cocktail and takes a sip, a relaxed beach grin, ocean behind him. Locked camera.",
   "burn-it-with-fire":
