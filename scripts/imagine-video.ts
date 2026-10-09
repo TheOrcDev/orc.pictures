@@ -21,6 +21,7 @@ const SOURCE_DIR = "/Users/orcdev/Downloads/ai images";
 const VIDEO_DIR = "/tmp/orc-grok-videos";
 const DURATION_SECONDS = 4;
 const DURATIONS: Record<string, number> = {
+  celebrate: 6,
   congratulations: 6,
   "something-good": 6,
   "start-camera": 6,
@@ -36,6 +37,8 @@ const PROMPTS: Record<string, string> = {
     "The orc lifts the skull cocktail and takes a sip, a relaxed beach grin, ocean behind him. Locked camera.",
   "burn-it-with-fire":
     "The orc thrusts both hands forward and blasts a roaring jet of fire at the cursed book and papers, flames growing as they catch. Determined burn-it glare holding. Mouth stays closed, no talking. Locked camera.",
+  celebrate:
+    "The orc pumps his fist in celebration, balloons bobbing beside him and confetti drifting down. His joyful grin holds. No talking. Locked camera.",
   champagne:
     "The orc toasts with the champagne flute, a knowing smirk, a small raise of the glass and a point. Locked camera.",
   clap:
