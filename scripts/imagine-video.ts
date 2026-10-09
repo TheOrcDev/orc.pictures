@@ -21,6 +21,7 @@ const SOURCE_DIR = "/Users/orcdev/Downloads/ai images";
 const VIDEO_DIR = "/tmp/orc-grok-videos";
 const DURATION_SECONDS = 4;
 const DURATIONS: Record<string, number> = {
+  annoyed: 6,
   celebrate: 6,
   congratulations: 6,
   "something-good": 6,
@@ -33,6 +34,8 @@ const SKIP_SLUGS = new Set(["orc-smile"]);
 const PROMPTS: Record<string, string> = {
   angry:
     "The orc shouts in anger, a short roar, shoulders heaving, glare holding on the camera. Locked camera.",
+  annoyed:
+    "The orc pinches the bridge of his nose, rolls his eyes, and gives a small exasperated head shake. Then he lowers his hand and holds a tight annoyed look. He does not shout. Mouth stays closed, no talking. Locked camera.",
   beach:
     "The orc lifts the skull cocktail and takes a sip, a relaxed beach grin, ocean behind him. Locked camera.",
   "burn-it-with-fire":
