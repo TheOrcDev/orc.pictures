@@ -24,6 +24,7 @@ const DURATIONS: Record<string, number> = {
   annoyed: 6,
   celebrate: 6,
   congratulations: 6,
+  damn: 6,
   "something-good": 6,
   "start-camera": 6,
   wink: 8,
@@ -55,7 +56,7 @@ const PROMPTS: Record<string, string> = {
   dance:
     "The orc dances, swaying and stepping, arms moving to the groove, joyful grin holding. Locked camera.",
   damn:
-    "The orc leans back a little, impressed, a silent damn on his face, a small respectful nod. Locked camera.",
+    "He starts looking aside. Then he leans back, one eyebrow lifts, and his mouth shapes a silent damn. A small impressed nod follows. No shouting. Locked camera.",
   doit:
     "The orc grins warmly, gives an encouraging thumbs-up, and a small you-got-this nod. Locked camera.",
   doubt:
