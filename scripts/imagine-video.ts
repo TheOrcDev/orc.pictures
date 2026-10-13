@@ -24,6 +24,7 @@ const DURATIONS: Record<string, number> = {
   annoyed: 6,
   celebrate: 6,
   congratulations: 6,
+  approves: 6,
   damn: 6,
   fishing: 6,
   "something-good": 6,
@@ -37,7 +38,7 @@ const PROMPTS: Record<string, string> = {
   angry:
     "The orc shouts in anger, a short roar, shoulders heaving, glare holding on the camera. Locked camera.",
   approves:
-    "He gives one slow approving nod, the thumbs-up staying up, and his closed-mouth smile grows a little. Mouth stays closed, no talking. Locked camera.",
+    "He slams the APPROVED stamp down onto the blank parchment. The word APPROVED prints in bold red ink and stays readable. He lifts the stamp to show it. Satisfied closed-mouth grin. Mouth stays closed, no talking. Locked camera.",
   annoyed:
     "The orc watches, eyes narrowing, a small exasperated blink and a tiny head tilt. He stays annoyed. His hands never rise. He does not touch his face or nose. He does not shout. Mouth stays closed, no talking. Locked camera.",
   beach:

@@ -29,7 +29,15 @@
     "height": 544,
     "poster": "/gifs/approves.jpg",
     "slug": "approves",
-    "tags": ["approves", "approved", "approval", "lgtm", "yes", "sign-off"],
+    "tags": [
+      "approves",
+      "approved",
+      "approval",
+      "stamp",
+      "lgtm",
+      "yes",
+      "sign-off"
+    ],
     "title": "Approves",
     "width": 544
   },
