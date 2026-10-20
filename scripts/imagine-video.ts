@@ -24,7 +24,7 @@ const DURATIONS: Record<string, number> = {
   annoyed: 6,
   celebrate: 6,
   congratulations: 6,
-  "crazy-nod": 4,
+  "crazy-nod": 5,
   approves: 6,
   damn: 6,
   fishing: 6,
@@ -57,7 +57,7 @@ const PROMPTS: Record<string, string> = {
   cooked:
     "The orc slowly stirs the pot, steam rising. He looks exhausted and done, a tired blink, the word COOKED staying readable. Natural character motion, locked camera.",
   "crazy-nod":
-    "He nods three separate times and comes back upright after each one. Nod one: chin dips, then his head pops back up. Nod two: chin dips, then his head pops back up. Nod three: chin dips, then his head pops back up. The closed-mouth smirk never changes. Eyes stay open. He does not stay bowed. He does not lean in. He does not open his mouth or raise his hands. Locked camera, no zoom.",
+    "Slow zoom in on his face. Small quick yes nods the whole time: chin dips a little, then pops back up, over and over. Closed-mouth smirk stays. Eyes stay open. He does not bow, lean, or open his mouth. Hands stay down.",
   curious:
     "The orc leans in a little closer, tilts his head, eyes widening with curiosity, a small interested blink. Locked camera.",
   dance:
