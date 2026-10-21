@@ -15,6 +15,7 @@ import { useFetch } from "@raycast/utils";
 
 import {
   absoluteUrl,
+  assetUrl,
   bundledCatalog,
   parseCatalog,
   type CatalogGif,
@@ -136,7 +137,7 @@ const SearchOrcGifs = () => {
       ) : null}
       {gifs.map((gif) => (
         <Grid.Item
-          key={gif.slug}
+          key={`${gif.slug}-${gif.revision ?? "current"}`}
           actions={
             <GifActions
               gif={gif}
@@ -144,7 +145,7 @@ const SearchOrcGifs = () => {
               origin={origin}
             />
           }
-          content={absoluteUrl(gif.poster, origin)}
+          content={assetUrl(gif.poster, origin, gif.revision)}
           keywords={[gif.slug, gif.title, ...gif.tags]}
           title={gif.title}
         />

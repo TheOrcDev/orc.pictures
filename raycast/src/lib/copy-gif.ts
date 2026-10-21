@@ -1,10 +1,10 @@
 import { existsSync } from "node:fs";
-import { mkdir, stat, writeFile } from "node:fs/promises";
+import { mkdir, readdir, stat, unlink, writeFile } from "node:fs/promises";
 import { isAbsolute, relative, resolve } from "node:path";
 
 import { environment } from "@raycast/api";
 
-import { absoluteUrl, isSafeSlug, type CatalogGif } from "./catalog";
+import { assetUrl, isSafeSlug, type CatalogGif } from "./catalog";
 
 const gifFileName = (slug: string): string => {
   if (!isSafeSlug(slug)) {
@@ -28,8 +28,19 @@ const pathInside = (root: string, fileName: string): string => {
 
 const cacheDirectory = (): string => resolve(environment.supportPath, "gifs");
 
-const cachedGifPath = (slug: string): string =>
-  pathInside(cacheDirectory(), gifFileName(slug));
+const cachedGifName = (slug: string, revision?: string): string => {
+  if (!revision) {
+    return gifFileName(slug);
+  }
+
+  return `${slug}.${revision}.gif`;
+};
+
+const cachedGifPath = (slug: string, revision?: string): string =>
+  pathInside(cacheDirectory(), cachedGifName(slug, revision));
+
+const belongsToSlug = (fileName: string, slug: string): boolean =>
+  fileName === `${slug}.gif` || fileName.startsWith(`${slug}.`);
 
 const localGifPath = (
   slug: string,
@@ -48,20 +59,73 @@ const localGifPath = (
   return path;
 };
 
-const cachedGifIfReady = async (slug: string): Promise<string | undefined> => {
-  const path = cachedGifPath(slug);
-
+const fileSize = async (filePath: string): Promise<number | undefined> => {
   try {
-    const info = await stat(path);
+    const info = await stat(filePath);
 
     if (info.size > 0) {
-      return path;
+      return info.size;
     }
   } catch {
     return undefined;
   }
 
   return undefined;
+};
+
+const remoteSize = async (url: string): Promise<number | undefined> => {
+  const response = await fetch(url, { method: "HEAD" });
+
+  if (!response.ok) {
+    return undefined;
+  }
+
+  const length = Number(response.headers.get("content-length"));
+
+  if (!Number.isFinite(length) || length <= 0) {
+    return undefined;
+  }
+
+  return length;
+};
+
+const cachedGifIfReady = async (
+  slug: string,
+  remoteUrl: string,
+  revision?: string
+): Promise<string | undefined> => {
+  const path = cachedGifPath(slug, revision);
+  const size = await fileSize(path);
+
+  if (size === undefined) {
+    return undefined;
+  }
+
+  if (revision) {
+    return path;
+  }
+
+  const latestSize = await remoteSize(remoteUrl);
+
+  if (latestSize === undefined || latestSize === size) {
+    return path;
+  }
+
+  return undefined;
+};
+
+const removeStaleCopies = async (slug: string, keep: string): Promise<void> => {
+  const names = await readdir(cacheDirectory()).catch(() => []);
+
+  await Promise.all(
+    names.map(async (name) => {
+      if (!belongsToSlug(name, slug) || name === keep) {
+        return;
+      }
+
+      await unlink(pathInside(cacheDirectory(), name)).catch(() => undefined);
+    })
+  );
 };
 
 export const ensureLocalGif = async (
@@ -75,23 +139,25 @@ export const ensureLocalGif = async (
     return localPath;
   }
 
-  const cachedPath = await cachedGifIfReady(gif.slug);
+  const remoteUrl = assetUrl(gif.file, origin, gif.revision);
+  const cachedPath = await cachedGifIfReady(gif.slug, remoteUrl, gif.revision);
 
   if (cachedPath) {
     return cachedPath;
   }
 
-  const response = await fetch(absoluteUrl(gif.file, origin));
+  const response = await fetch(remoteUrl);
 
   if (!response.ok) {
     throw new Error(`Could not download ${gif.slug}.gif`);
   }
 
   const bytes = Buffer.from(await response.arrayBuffer());
-  const dest = cachedGifPath(gif.slug);
+  const dest = cachedGifPath(gif.slug, gif.revision);
 
   await mkdir(cacheDirectory(), { recursive: true });
   await writeFile(dest, bytes);
+  await removeStaleCopies(gif.slug, cachedGifName(gif.slug, gif.revision));
 
   return dest;
 };
