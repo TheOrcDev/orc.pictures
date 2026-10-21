@@ -485,6 +485,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/surprise.gif",
+    "height": 544,
+    "poster": "/gifs/surprise.jpg",
+    "slug": "surprise",
+    "tags": ["surprise", "shocked", "whoa", "gasp", "what"],
+    "title": "Surprise",
+    "width": 544
+  },
+  {
     "file": "/gifs/sweat.gif",
     "height": 544,
     "poster": "/gifs/sweat.jpg",
