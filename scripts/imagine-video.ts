@@ -25,6 +25,7 @@ const DURATIONS: Record<string, number> = {
   celebrate: 6,
   congratulations: 6,
   "crazy-nod": 5,
+  "beach-lounge": 6,
   approves: 6,
   damn: 6,
   fishing: 6,
@@ -44,6 +45,8 @@ const PROMPTS: Record<string, string> = {
     "The orc watches, eyes narrowing, a small exasperated blink and a tiny head tilt. He stays annoyed. His hands never rise. He does not touch his face or nose. He does not shout. Mouth stays closed, no talking. Locked camera.",
   beach:
     "The orc lifts the skull cocktail and takes a sip, a relaxed beach grin, ocean behind him. Locked camera.",
+  "beach-lounge":
+    "He is already lying on the sand. He takes one small sip from the skull drink, then lowers it and settles back with a relaxed grin. Only one hand holds the drink. He does not sit up. Mouth stays closed after the sip. Locked camera.",
   "burn-it-with-fire":
     "The orc thrusts both hands forward and blasts a roaring jet of fire at the cursed book and papers, flames growing as they catch. Determined burn-it glare holding. Mouth stays closed, no talking. Locked camera.",
   celebrate:

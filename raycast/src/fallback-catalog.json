@@ -51,6 +51,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/beach-lounge.gif",
+    "height": 544,
+    "poster": "/gifs/beach-lounge.jpg",
+    "slug": "beach-lounge",
+    "tags": ["beach-lounge", "beach", "drink", "relax", "vacation", "lounge"],
+    "title": "Beach lounge",
+    "width": 544
+  },
+  {
     "file": "/gifs/burn-it-with-fire.gif",
     "height": 544,
     "poster": "/gifs/burn-it-with-fire.jpg",
