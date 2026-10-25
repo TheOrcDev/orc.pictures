@@ -31,6 +31,7 @@ const DURATIONS: Record<string, number> = {
   fishing: 6,
   "something-good": 6,
   "start-camera": 6,
+  "touch-grass": 6,
   wink: 8,
 };
 const POLL_MS = 5000;
@@ -143,7 +144,7 @@ const PROMPTS: Record<string, string> = {
   toldyou:
     "The orc smirks I-told-you-so, a smug little nod and knowing glance. Locked camera.",
   "touch-grass":
-    "The orc walks a few relaxed steps through the meadow toward the camera, enjoying the day. Then he crouches and touches the grass with one hand, a content smile. Not lying down. Locked camera.",
+    "Wide locked shot of the forest. He stays small in the distance and walks farther down the path, away from the camera. The trees stay large. The camera does not zoom in or move closer.",
   velocity:
     "The orc sprints toward the glowing gateway, pumping his arms, dust kicking up, high velocity. Keep the goal ahead in frame. Locked camera, no zoom.",
   victory:

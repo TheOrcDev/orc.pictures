@@ -549,12 +549,12 @@
   },
   {
     "file": "/gifs/touch-grass.gif",
-    "height": 544,
+    "height": 480,
     "poster": "/gifs/touch-grass.jpg",
     "slug": "touch-grass",
     "tags": ["touch-grass", "grass", "outside", "outdoors", "go-outside"],
     "title": "Touch grass",
-    "width": 544
+    "width": 480
   },
   {
     "file": "/gifs/velocity.gif",
