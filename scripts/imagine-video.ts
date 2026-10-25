@@ -40,7 +40,7 @@ const PROMPTS: Record<string, string> = {
   angry:
     "The orc shouts in anger, a short roar, shoulders heaving, glare holding on the camera. Locked camera.",
   approves:
-    "He slams the APPROVED stamp onto the blank parchment. The red mark is the same width and height as the stamp face. He lifts the stamp, then the camera zooms in until APPROVED fills the frame and stays readable. Satisfied closed-mouth grin. Mouth stays closed, no talking.",
+    "He lines the stamp up, drops his shoulder, and slams it onto the parchment. The red mark is the same width and height as the stamp face. He lifts the stamp, looks down at the mark, and gives a small proud nod. Then the camera zooms in until APPROVED fills the frame. Closed-mouth grin. Mouth stays closed, no talking.",
   annoyed:
     "The orc watches, eyes narrowing, a small exasperated blink and a tiny head tilt. He stays annoyed. His hands never rise. He does not touch his face or nose. He does not shout. Mouth stays closed, no talking. Locked camera.",
   beach:
