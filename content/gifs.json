@@ -594,12 +594,12 @@
   },
   {
     "file": "/gifs/wink.gif",
-    "height": 544,
+    "height": 480,
     "poster": "/gifs/wink.jpg",
     "slug": "wink",
     "tags": ["wink", "winking", "sly", "flirt", "cheeky"],
     "title": "Wink",
-    "width": 544
+    "width": 480
   },
   {
     "file": "/gifs/working.gif",

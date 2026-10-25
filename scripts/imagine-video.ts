@@ -32,7 +32,7 @@ const DURATIONS: Record<string, number> = {
   "something-good": 6,
   "start-camera": 6,
   "touch-grass": 6,
-  wink: 8,
+  wink: 4,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -154,7 +154,7 @@ const PROMPTS: Record<string, string> = {
   wave:
     "The orc waves hello with his raised hand, a warm friendly smile holding, a couple of waves. Locked camera.",
   wink:
-    "This frame is already a one-eye wink. Hold that exact wink for most of the clip: the closed eye stays fully shut, the open eye stays wide open and looks at the camera, sly smile holding. Only near the end, open the closed eye so both eyes are open and he smiles. Never close the open eye. Not a blink. Mouth stays closed. Locked camera, no zoom.",
+    "Both eyes start open. He winks once: one eye closes, then that eye opens again. The other eye stays open the whole time. One wink only. Closed-mouth sly smile. Mouth stays closed. Locked camera, no zoom.",
   working:
     "The orc types on the laptop, fingers moving, screen glow on his face, a focused blink. Locked camera.",
 };
