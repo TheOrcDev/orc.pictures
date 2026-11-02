@@ -47,7 +47,7 @@ const PROMPTS: Record<string, string> = {
   beach:
     "The orc lifts the skull cocktail and takes a sip, a relaxed beach grin, ocean behind him. Locked camera.",
   "beach-lounge":
-    "He is already lying on the sand. He takes one small sip from the skull drink, then lowers it and settles back with a relaxed grin. Only one hand holds the drink. He does not sit up. Mouth stays closed after the sip. Locked camera.",
+    "He is already lying in the hammock, which sways gently. He lifts the coconut, takes one small sip through the straw, then lowers it and settles back with a content grin. Only one hand holds the coconut; the other stays behind his head. He does not sit up. Mouth stays closed after the sip. Palm fronds and waves move softly. Locked camera.",
   "burn-it-with-fire":
     "The orc thrusts both hands forward and blasts a roaring jet of fire at the cursed book and papers, flames growing as they catch. Determined burn-it glare holding. Mouth stays closed, no talking. Locked camera.",
   celebrate:
