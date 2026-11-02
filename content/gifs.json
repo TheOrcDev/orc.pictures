@@ -461,12 +461,12 @@
   },
   {
     "file": "/gifs/spotted.gif",
-    "height": 480,
+    "height": 544,
     "poster": "/gifs/spotted.jpg",
     "slug": "spotted",
     "tags": ["spotted", "seen", "caught", "look"],
     "title": "Spotted",
-    "width": 608
+    "width": 544
   },
   {
     "file": "/gifs/stars.gif",
