@@ -162,17 +162,17 @@
   {
     "file": "/gifs/curious.gif",
     "height": 544,
-    "poster": "/gifs/curious.jpg",
-    "slug": "curious",
-    "tags": ["curious", "wonder", "inspect", "peek", "what"],
-    "title": "Curious",
-    "width": 544,
     "oil": {
       "file": "/gifs/oil/curious.gif",
       "height": 544,
       "poster": "/gifs/oil/curious.jpg",
       "width": 544
-    }
+    },
+    "poster": "/gifs/curious.jpg",
+    "slug": "curious",
+    "tags": ["curious", "wonder", "inspect", "peek", "what"],
+    "title": "Curious",
+    "width": 544
   },
   {
     "file": "/gifs/damn.gif",
