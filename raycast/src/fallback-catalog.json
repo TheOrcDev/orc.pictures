@@ -28,7 +28,13 @@
       "irritated"
     ],
     "title": "Annoyed",
-    "width": 544
+    "width": 544,
+    "oil": {
+      "file": "/gifs/oil/annoyed.gif",
+      "height": 544,
+      "poster": "/gifs/oil/annoyed.jpg",
+      "width": 544
+    }
   },
   {
     "file": "/gifs/approves.gif",
