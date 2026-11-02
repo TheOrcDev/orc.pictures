@@ -29,6 +29,7 @@ const DURATIONS: Record<string, number> = {
   approves: 6,
   damn: 6,
   fishing: 6,
+  flashback: 8,
   "something-good": 6,
   "start-camera": 6,
   "touch-grass": 6,
@@ -73,9 +74,9 @@ const PROMPTS: Record<string, string> = {
   doubt:
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
   ew: "The orc recoils hard from something gross just off-frame, face scrunching into an exaggerated EWWW, tongue out, turning his head away and raising one hand as if he can't bear to look. Nothing gross ever appears in frame. No talking. Locked camera.",
-  // Flashback is a composite: this take, three memory stills dissolved in, then the take reversed.
+  // Flashback is a composite: this take, three animated memories under a faint overlay of his face, then the take reversed.
   flashback:
-    "He gazes into the distance by the campfire, then slowly closes his eyes and keeps them closed, breathing slowly as old memories return. Mouth stays closed, no talking. Firelight flickers. Locked camera, no zoom, no cut.",
+    "He gazes into the distance by the campfire, then slowly closes his eyes within the first second and keeps them closed for the rest of the shot, breathing slowly and deeply as old battles return to him. Mouth stays closed, no talking. Firelight flickers on his face. Locked camera, no zoom, no cut.",
   fire:
     "Flames flicker around the orc and in his palm, a confident fire grin holding, firelight moving on his face. Locked camera.",
   fishing:
