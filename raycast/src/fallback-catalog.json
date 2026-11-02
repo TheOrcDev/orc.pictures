@@ -173,12 +173,12 @@
   },
   {
     "file": "/gifs/cooked.gif",
-    "height": 608,
+    "height": 544,
     "poster": "/gifs/cooked.jpg",
     "slug": "cooked",
     "tags": ["cooked", "done", "finished", "toast"],
     "title": "Cooked",
-    "width": 480
+    "width": 544
   },
   {
     "file": "/gifs/crazy-nod.gif",
