@@ -72,7 +72,7 @@ const PROMPTS: Record<string, string> = {
     "The orc grins warmly, gives an encouraging thumbs-up, and a small you-got-this nod. Locked camera.",
   doubt:
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
-  ew: "The orc recoils slightly, wrinkles his nose in disgust, and gives a small shake of the head. Locked camera.",
+  ew: "The orc recoils hard from something gross just off-frame, face scrunching into an exaggerated EWWW, tongue out, turning his head away and raising one hand as if he can't bear to look. Nothing gross ever appears in frame. No talking. Locked camera.",
   flashback:
     "Stay on this exact close-up portrait only. No other figures, no overlays. One continuous look into the distance, a slow blink and breath. Locked camera, no zoom, no cut, no pan.",
   fire:
