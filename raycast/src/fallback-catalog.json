@@ -118,7 +118,13 @@
       "woohoo"
     ],
     "title": "Celebrate",
-    "width": 544
+    "width": 544,
+    "oil": {
+      "file": "/gifs/oil/celebrate.gif",
+      "height": 544,
+      "poster": "/gifs/oil/celebrate.jpg",
+      "width": 544
+    }
   },
   {
     "file": "/gifs/champagne.gif",
