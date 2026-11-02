@@ -30,6 +30,7 @@ const DURATIONS: Record<string, number> = {
   damn: 6,
   fishing: 6,
   flashback: 8,
+  "orc-smile": 5,
   "something-good": 6,
   "start-camera": 6,
   "touch-grass": 6,
@@ -104,8 +105,9 @@ const PROMPTS: Record<string, string> = {
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. His hair, face and outfit stay exactly the same throughout. Natural character animation, locked camera, no zoom or pan.",
   online:
     "The orc looks at the camera and gives a small hello wave, a friendly blink, available and here. Locked camera.",
+  // Orc smile ends where it starts; the GIF closes the loop with a 0.25 s dissolve.
   "orc-smile":
-    "The orc holds a warm closed-mouth smile at the camera, a slight friendly blink, expression staying kind and still. Locked camera.",
+    "The orc looks at the viewer, his warm smile deepening, and gives one slow, appreciative nod of acknowledgement, chin dipping and rising. Then he settles back into exactly his starting pose and gentle closed-mouth smile, still looking at the viewer. Mouth stays closed, no talking. His hair, face and outfit stay exactly the same throughout. He does not lean toward the camera. The fire behind him flickers and crackles, warm light dancing on his face. Locked camera, no zoom, no cut.",
   pickaxe:
     "The orc swings the pickaxe into the rock wall, stone chips and dust flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed, no talking. Locked camera.",
   popcorn:
