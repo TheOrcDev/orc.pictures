@@ -148,7 +148,13 @@
     "slug": "clap",
     "tags": ["clap", "clapping", "applause", "bravo", "well-done"],
     "title": "Clap",
-    "width": 544
+    "width": 544,
+    "oil": {
+      "file": "/gifs/oil/clap.gif",
+      "height": 544,
+      "poster": "/gifs/oil/clap.jpg",
+      "width": 544
+    }
   },
   {
     "file": "/gifs/congratulations.gif",
