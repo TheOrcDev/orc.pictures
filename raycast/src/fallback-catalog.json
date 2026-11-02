@@ -163,7 +163,13 @@
     "slug": "congratulations",
     "tags": ["congratulations", "congrats", "well-done", "kudos", "you-did-it"],
     "title": "Congratulations",
-    "width": 544
+    "width": 544,
+    "oil": {
+      "file": "/gifs/oil/congratulations.gif",
+      "height": 544,
+      "poster": "/gifs/oil/congratulations.jpg",
+      "width": 544
+    }
   },
   {
     "file": "/gifs/cooked.gif",
