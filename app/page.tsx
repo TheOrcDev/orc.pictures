@@ -1,3 +1,4 @@
+import { connection } from "next/server";
 import { Suspense } from "react";
 
 import { GifPicker } from "@/components/gif-picker";
@@ -5,15 +6,9 @@ import { GifPickerFallback } from "@/components/gif-picker-fallback";
 import { SiteBrand } from "@/components/site-brand";
 import { gifs } from "@/lib/gifs";
 
-interface PageProps {
-  searchParams: Promise<{
-    q?: string;
-  }>;
-}
-
-const Page = async ({ searchParams }: PageProps) => {
-  const params = await searchParams;
-  const [q = ""] = [params.q].flat();
+// The picker reads ?q and ?style through nuqs; render per request so results arrive in the HTML.
+const Page = async () => {
+  await connection();
 
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-1 flex-col gap-10 px-6 py-16">
@@ -24,7 +19,7 @@ const Page = async ({ searchParams }: PageProps) => {
         </p>
       </header>
       <Suspense fallback={<GifPickerFallback />}>
-        <GifPicker gifs={gifs} initialQuery={q} />
+        <GifPicker gifs={gifs} />
       </Suspense>
     </main>
   );
