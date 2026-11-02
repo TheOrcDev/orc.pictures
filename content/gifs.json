@@ -57,7 +57,13 @@
     "slug": "beach-lounge",
     "tags": ["beach-lounge", "beach", "drink", "relax", "vacation", "lounge"],
     "title": "Beach lounge",
-    "width": 544
+    "width": 544,
+    "oil": {
+      "file": "/gifs/oil/beach-lounge.gif",
+      "height": 544,
+      "poster": "/gifs/oil/beach-lounge.jpg",
+      "width": 544
+    }
   },
   {
     "file": "/gifs/burn-it-with-fire.gif",
