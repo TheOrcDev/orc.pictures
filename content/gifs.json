@@ -39,6 +39,12 @@
   {
     "file": "/gifs/approves.gif",
     "height": 544,
+    "oil": {
+      "file": "/gifs/oil/approves.gif",
+      "height": 544,
+      "poster": "/gifs/oil/approves.jpg",
+      "width": 544
+    },
     "poster": "/gifs/approves.jpg",
     "slug": "approves",
     "tags": [
@@ -51,13 +57,7 @@
       "sign-off"
     ],
     "title": "Approves",
-    "width": 544,
-    "oil": {
-      "file": "/gifs/oil/approves.gif",
-      "height": 544,
-      "poster": "/gifs/oil/approves.jpg",
-      "width": 544
-    }
+    "width": 544
   },
   {
     "file": "/gifs/beach.gif",
