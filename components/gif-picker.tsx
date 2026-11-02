@@ -1,11 +1,10 @@
 "use client";
 
 import { MagnifyingGlass } from "@phosphor-icons/react";
-import { useQueryStates } from "nuqs";
+import { useQueryState } from "nuqs";
 
 import { GifEmpty } from "@/components/gif-empty";
 import { GifGrid } from "@/components/gif-grid";
-import { GifStyleToggle } from "@/components/gif-style-toggle";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import {
   InputGroup,
@@ -21,43 +20,39 @@ interface GifPickerProps {
 }
 
 const GifPicker = ({ gifs }: GifPickerProps) => {
-  const [{ q: query, style }, setSearchParams] =
-    useQueryStates(gifSearchParams);
+  const [query, setQuery] = useQueryState("q", gifSearchParams.q);
   const results = searchGifs(query, gifs);
   const hasQuery = query.trim() !== "";
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <FieldGroup className="flex-1">
-          <Field>
-            <FieldLabel className="sr-only" htmlFor="gif-search">
-              Search gifs
-            </FieldLabel>
-            <InputGroup>
-              <InputGroupInput
-                autoComplete="off"
-                id="gif-search"
-                onChange={(event) => {
-                  void setSearchParams({ q: event.target.value });
-                }}
-                placeholder="Search gifs…"
-                spellCheck={false}
-                type="search"
-                value={query}
-              />
-              <InputGroupAddon>
-                <MagnifyingGlass />
-              </InputGroupAddon>
-            </InputGroup>
-          </Field>
-        </FieldGroup>
-        <GifStyleToggle />
-      </div>
+      <FieldGroup>
+        <Field>
+          <FieldLabel className="sr-only" htmlFor="gif-search">
+            Search gifs
+          </FieldLabel>
+          <InputGroup>
+            <InputGroupInput
+              autoComplete="off"
+              id="gif-search"
+              onChange={(event) => {
+                void setQuery(event.target.value);
+              }}
+              placeholder="Search gifs…"
+              spellCheck={false}
+              type="search"
+              value={query}
+            />
+            <InputGroupAddon>
+              <MagnifyingGlass />
+            </InputGroupAddon>
+          </InputGroup>
+        </Field>
+      </FieldGroup>
       {results.length === 0 ? (
         <GifEmpty hasQuery={hasQuery} />
       ) : (
-        <GifGrid gifs={results} style={style} />
+        <GifGrid gifs={results} />
       )}
     </div>
   );

@@ -13,14 +13,12 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { useGifStyle } from "@/hooks/use-gif-style";
 import { copyGifUrlWithToast } from "@/lib/copy-gif-url";
 import { gifs } from "@/lib/gifs";
 
 const GifCommandMenu = () => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
-  const [style] = useGifStyle();
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -70,7 +68,7 @@ const GifCommandMenu = () => {
                 key={gif.slug}
                 onSelect={() => {
                   setOpen(false);
-                  void copyGifUrlWithToast(gif, style);
+                  void copyGifUrlWithToast(gif);
                 }}
                 value={`${gif.title} ${gif.slug} ${gif.tags.join(" ")}`}
               >

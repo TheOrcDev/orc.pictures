@@ -36,7 +36,6 @@ const DURATIONS: Record<string, number> = {
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
-const STYLES = new Set(["oil", "watercolor"]);
 
 const PROMPTS: Record<string, string> = {
   angry:
@@ -382,12 +381,7 @@ const downloadFile = async (url: string, dest: string): Promise<void> => {
   await writeFile(dest, bytes);
 };
 
-const importGif = async (
-  slug: string,
-  videoPath: string,
-  gif: CatalogGif,
-  style: string
-): Promise<void> => {
+const importGif = async (slug: string, videoPath: string, gif: CatalogGif): Promise<void> => {
   await new Promise<void>((resolve, reject) => {
     const child = spawn(
       "node",
@@ -398,8 +392,6 @@ const importGif = async (
         videoPath,
         "--slug",
         slug,
-        "--style",
-        style,
         "--title",
         gif.title,
         "--tags",
@@ -419,23 +411,15 @@ const importGif = async (
   });
 };
 
-// Oil files share the slug with a `-oil` suffix so both styles can sit side by side.
-const styleSuffix = (style: string): string => (style === "oil" ? "-oil" : "");
-
-const generateOne = async (
-  gif: CatalogGif,
-  input: string,
-  style: string
-): Promise<void> => {
+const generateOne = async (gif: CatalogGif, input: string): Promise<void> => {
   const prompt = PROMPTS[gif.slug];
 
   if (!prompt) {
     throw new Error(`No motion prompt for ${gif.slug}`);
   }
 
-  const name = `${gif.slug}${styleSuffix(style)}`;
-  process.stdout.write(`Generating ${gif.slug} ${style}\n`);
-  const jpeg = await prepareStill(input, name);
+  process.stdout.write(`Generating ${gif.slug}\n`);
+  const jpeg = await prepareStill(input, gif.slug);
   const size = await probeSize(jpeg);
   const imageDataUrl = `data:image/jpeg;base64,${(await readFile(jpeg)).toString("base64")}`;
   const requestId = await startGeneration(
@@ -446,19 +430,13 @@ const generateOne = async (
   );
   process.stdout.write(`  request ${requestId}\n`);
   const videoUrl = await pollVideo(requestId);
-  const videoPath = path.join(VIDEO_DIR, `${name}.mp4`);
+  const videoPath = path.join(VIDEO_DIR, `${gif.slug}.mp4`);
   await downloadFile(videoUrl, videoPath);
-  await importGif(gif.slug, videoPath, gif, style);
+  await importGif(gif.slug, videoPath, gif);
 };
 
 const main = async (): Promise<void> => {
   const args = parseArgs(process.argv.slice(2));
-  const style = args.style ?? "watercolor";
-
-  if (!STYLES.has(style)) {
-    throw new Error(`Invalid style: ${style}`);
-  }
-
   const catalog = JSON.parse(
     await readFile(path.join(process.cwd(), "content/gifs.json"), "utf8")
   ) as CatalogGif[];
@@ -476,8 +454,8 @@ const main = async (): Promise<void> => {
   for (const gif of wanted) {
     const input = args.input
       ? path.resolve(args.input)
-      : path.join(SOURCE_DIR, `${gif.slug}${styleSuffix(style)}.png`);
-    await generateOne(gif, input, style);
+      : path.join(SOURCE_DIR, `${gif.slug}.png`);
+    await generateOne(gif, input);
   }
 };
 

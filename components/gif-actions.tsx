@@ -5,19 +5,15 @@ import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { gifAbsoluteUrl, gifMarkdown } from "@/lib/gif-share";
-import type { Gif, GifStyle } from "@/lib/gifs";
-import { gifAsset } from "@/lib/gifs";
+import type { Gif } from "@/lib/gifs";
 
 interface GifActionsProps {
   gif: Gif;
-  style: GifStyle;
 }
 
-const GifActions = ({ gif, style }: GifActionsProps) => {
-  const { file } = gifAsset(gif, style);
-  const downloadName =
-    file === gif.file ? `${gif.slug}.gif` : `${gif.slug}-${style}.gif`;
-  const shareUrl = (): string => gifAbsoluteUrl(file, window.location.origin);
+const GifActions = ({ gif }: GifActionsProps) => {
+  const shareUrl = (): string =>
+    gifAbsoluteUrl(gif.file, window.location.origin);
 
   const onCopyMarkdown = async (): Promise<void> => {
     try {
@@ -41,8 +37,8 @@ const GifActions = ({ gif, style }: GifActionsProps) => {
         render={
           <a
             aria-label={`Download ${gif.title}`}
-            download={downloadName}
-            href={file}
+            download={`${gif.slug}.gif`}
+            href={gif.file}
           />
         }
         variant="ghost"

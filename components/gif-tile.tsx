@@ -5,18 +5,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { copyGifUrlWithToast } from "@/lib/copy-gif-url";
-import type { Gif, GifStyle } from "@/lib/gifs";
-import { gifAsset } from "@/lib/gifs";
-import { serializeGifSearchParams } from "@/lib/search-params";
+import type { Gif } from "@/lib/gifs";
 
 interface GifTileProps {
   gif: Gif;
-  style: GifStyle;
 }
 
-const GifTile = ({ gif, style }: GifTileProps) => {
+const GifTile = ({ gif }: GifTileProps) => {
   const [playing, setPlaying] = useState(false);
-  const asset = gifAsset(gif, style);
 
   return (
     <article className="flex flex-col gap-2">
@@ -25,7 +21,7 @@ const GifTile = ({ gif, style }: GifTileProps) => {
         onBlur={() => {
           setPlaying(false);
         }}
-        onClick={() => copyGifUrlWithToast(gif, style)}
+        onClick={() => copyGifUrlWithToast(gif)}
         onFocus={() => {
           setPlaying(true);
         }}
@@ -43,16 +39,13 @@ const GifTile = ({ gif, style }: GifTileProps) => {
             className="object-cover"
             fill
             sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw"
-            src={playing ? asset.file : asset.poster}
+            src={playing ? gif.file : gif.poster}
             unoptimized
           />
         </div>
         <span className="sr-only">Copy {gif.title} URL</span>
       </button>
-      <Link
-        className="truncate text-sm font-medium"
-        href={serializeGifSearchParams(`/${gif.slug}`, { style })}
-      >
+      <Link className="truncate text-sm font-medium" href={`/${gif.slug}`}>
         {gif.title}
       </Link>
     </article>
