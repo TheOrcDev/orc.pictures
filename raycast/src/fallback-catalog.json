@@ -230,12 +230,12 @@
   },
   {
     "file": "/gifs/gold.gif",
-    "height": 480,
+    "height": 544,
     "poster": "/gifs/gold.jpg",
     "slug": "gold",
     "tags": ["gold", "rich", "money", "treasure"],
     "title": "Gold",
-    "width": 608
+    "width": 544
   },
   {
     "file": "/gifs/happy.gif",
