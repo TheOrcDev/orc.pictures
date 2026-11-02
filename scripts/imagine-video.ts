@@ -101,7 +101,7 @@ const PROMPTS: Record<string, string> = {
     "The orc looks at the camera and holds still, mouth closed, one small blink. No talking, no nodding, no waving. Locked camera.",
   morning:
     "The orc lifts the coffee mug slightly, steam rising from the cup, a warm morning blink. Locked camera.",
-  nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. Natural character animation, locked camera, no zoom or pan.",
+  nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. His hair, face and outfit stay exactly the same throughout. Natural character animation, locked camera, no zoom or pan.",
   online:
     "The orc looks at the camera and gives a small hello wave, a friendly blink, available and here. Locked camera.",
   "orc-smile":
@@ -135,12 +135,12 @@ const PROMPTS: Record<string, string> = {
   stars:
     "The orc looks amazed, eyes sparkling, a small wow lean forward. Locked camera.",
   surprise:
-    "A small surprise jolt. Eyes stay wide. His mouth stays in a small gasp and does not open wider. He leans back a little, then holds the shocked face. He does not shout. Hands stay down. Locked camera.",
+    "A small surprise jolt. Eyes stay wide. His mouth stays in a small gasp and does not open wider. He leans back a little, then holds the shocked face. He does not shout. Hands stay down. One continuous close shot: locked camera, no cut, no zoom out.",
   sweat:
     "The orc looks nervously at the camera, sweat beading on his brow, a tense gulp, a small anxious blink. Locked camera.",
   tear: "A tear rolls down the orc's face. He blinks, emotional but still. Locked camera.",
   thankyou:
-    "The orc gives a grateful nod and a warm smile, a slight bow of thanks. Locked camera.",
+    "The orc gives a grateful nod and a warm smile, a slight bow of thanks, his hand staying on his chest. His hair, face and outfit stay exactly the same throughout. Locked camera.",
   thinking:
     "He starts staring at the camera deadpan, unamused, like 'seriously now'. Then he looks up and aside, raises one finger to his temple, and thinks. Locked camera.",
   toldyou:
@@ -154,7 +154,7 @@ const PROMPTS: Record<string, string> = {
   waiting:
     "The orc waits with arms crossed, glances aside, a small impatient shift, then looks back. Mouth stays closed. Locked camera.",
   wave:
-    "The orc waves hello with his raised hand, a warm friendly smile holding, a couple of waves. Locked camera.",
+    "The orc waves hello with his raised hand beside his head, a warm friendly smile holding, a couple of side-to-side waves. His hand never passes in front of his face. Locked camera.",
   wink:
     "Both eyes start open. He winks once: one eye closes, then that eye opens again. The other eye stays open the whole time. One wink only. Closed-mouth sly smile. Mouth stays closed. Locked camera, no zoom.",
   working:
