@@ -2,12 +2,6 @@
   {
     "file": "/gifs/angry.gif",
     "height": 544,
-    "oil": {
-      "file": "/gifs/oil/angry.gif",
-      "height": 544,
-      "poster": "/gifs/oil/angry.jpg",
-      "width": 544
-    },
     "poster": "/gifs/angry.jpg",
     "slug": "angry",
     "tags": ["angry", "mad", "rage", "yell", "furious"],
@@ -17,12 +11,6 @@
   {
     "file": "/gifs/annoyed.gif",
     "height": 544,
-    "oil": {
-      "file": "/gifs/oil/annoyed.gif",
-      "height": 544,
-      "poster": "/gifs/oil/annoyed.jpg",
-      "width": 544
-    },
     "poster": "/gifs/annoyed.jpg",
     "slug": "annoyed",
     "tags": [
@@ -39,12 +27,6 @@
   {
     "file": "/gifs/approves.gif",
     "height": 544,
-    "oil": {
-      "file": "/gifs/oil/approves.gif",
-      "height": 544,
-      "poster": "/gifs/oil/approves.jpg",
-      "width": 544
-    },
     "poster": "/gifs/approves.jpg",
     "slug": "approves",
     "tags": [
@@ -62,12 +44,6 @@
   {
     "file": "/gifs/beach.gif",
     "height": 544,
-    "oil": {
-      "file": "/gifs/oil/beach.gif",
-      "height": 544,
-      "poster": "/gifs/oil/beach.jpg",
-      "width": 544
-    },
     "poster": "/gifs/beach.jpg",
     "slug": "beach",
     "tags": ["beach", "cocktail", "drink", "vacation", "cheers"],
@@ -81,13 +57,7 @@
     "slug": "beach-lounge",
     "tags": ["beach-lounge", "beach", "drink", "relax", "vacation", "lounge"],
     "title": "Beach lounge",
-    "width": 544,
-    "oil": {
-      "file": "/gifs/oil/beach-lounge.gif",
-      "height": 544,
-      "poster": "/gifs/oil/beach-lounge.jpg",
-      "width": 544
-    }
+    "width": 544
   },
   {
     "file": "/gifs/burn-it-with-fire.gif",
@@ -96,23 +66,11 @@
     "slug": "burn-it-with-fire",
     "tags": ["burn-it-with-fire", "burn", "fire", "torch", "destroy", "cursed"],
     "title": "Burn it with fire",
-    "width": 544,
-    "oil": {
-      "file": "/gifs/oil/burn-it-with-fire.gif",
-      "height": 544,
-      "poster": "/gifs/oil/burn-it-with-fire.jpg",
-      "width": 544
-    }
+    "width": 544
   },
   {
     "file": "/gifs/celebrate.gif",
     "height": 544,
-    "oil": {
-      "file": "/gifs/oil/celebrate.gif",
-      "height": 544,
-      "poster": "/gifs/oil/celebrate.jpg",
-      "width": 544
-    },
     "poster": "/gifs/celebrate.jpg",
     "slug": "celebrate",
     "tags": [
@@ -133,13 +91,7 @@
     "slug": "champagne",
     "tags": ["champagne", "leo", "gatsby", "toast", "cheers"],
     "title": "Champagne",
-    "width": 544,
-    "oil": {
-      "file": "/gifs/oil/champagne.gif",
-      "height": 544,
-      "poster": "/gifs/oil/champagne.jpg",
-      "width": 544
-    }
+    "width": 544
   },
   {
     "file": "/gifs/clap.gif",
@@ -148,13 +100,7 @@
     "slug": "clap",
     "tags": ["clap", "clapping", "applause", "bravo", "well-done"],
     "title": "Clap",
-    "width": 544,
-    "oil": {
-      "file": "/gifs/oil/clap.gif",
-      "height": 544,
-      "poster": "/gifs/oil/clap.jpg",
-      "width": 544
-    }
+    "width": 544
   },
   {
     "file": "/gifs/congratulations.gif",
@@ -163,13 +109,7 @@
     "slug": "congratulations",
     "tags": ["congratulations", "congrats", "well-done", "kudos", "you-did-it"],
     "title": "Congratulations",
-    "width": 544,
-    "oil": {
-      "file": "/gifs/oil/congratulations.gif",
-      "height": 544,
-      "poster": "/gifs/oil/congratulations.jpg",
-      "width": 544
-    }
+    "width": 544
   },
   {
     "file": "/gifs/cooked.gif",
@@ -192,12 +132,6 @@
   {
     "file": "/gifs/curious.gif",
     "height": 544,
-    "oil": {
-      "file": "/gifs/oil/curious.gif",
-      "height": 544,
-      "poster": "/gifs/oil/curious.jpg",
-      "width": 544
-    },
     "poster": "/gifs/curious.jpg",
     "slug": "curious",
     "tags": ["curious", "wonder", "inspect", "peek", "what"],
