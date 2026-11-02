@@ -66,7 +66,13 @@
     "slug": "beach",
     "tags": ["beach", "cocktail", "drink", "vacation", "cheers"],
     "title": "Beach",
-    "width": 544
+    "width": 544,
+    "oil": {
+      "file": "/gifs/oil/beach.gif",
+      "height": 544,
+      "poster": "/gifs/oil/beach.jpg",
+      "width": 544
+    }
   },
   {
     "file": "/gifs/beach-lounge.gif",
