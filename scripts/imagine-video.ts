@@ -73,8 +73,9 @@ const PROMPTS: Record<string, string> = {
   doubt:
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
   ew: "The orc recoils hard from something gross just off-frame, face scrunching into an exaggerated EWWW, tongue out, turning his head away and raising one hand as if he can't bear to look. Nothing gross ever appears in frame. No talking. Locked camera.",
+  // Flashback is a composite: this take, three memory stills dissolved in, then the take reversed.
   flashback:
-    "Stay on this exact close-up portrait only. No other figures, no overlays. One continuous look into the distance, a slow blink and breath. Locked camera, no zoom, no cut, no pan.",
+    "He gazes into the distance by the campfire, then slowly closes his eyes and keeps them closed, breathing slowly as old memories return. Mouth stays closed, no talking. Firelight flickers. Locked camera, no zoom, no cut.",
   fire:
     "Flames flicker around the orc and in his palm, a confident fire grin holding, firelight moving on his face. Locked camera.",
   fishing:
