@@ -73,7 +73,7 @@ const PROMPTS: Record<string, string> = {
     "The orc grins warmly, gives an encouraging thumbs-up, and a small you-got-this nod. Locked camera.",
   doubt:
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
-  ew: "The orc recoils hard from something gross just off-frame, face scrunching into an exaggerated EWWW, tongue out, turning his head away and raising one hand as if he can't bear to look. Nothing gross ever appears in frame. No talking. Locked camera.",
+  ew: "The orc recoils hard from something gross just off-frame, face scrunching into an exaggerated EWWW grimace, lips pulled back over clenched teeth, turning his head away and raising one hand as if he can't bear to look. His tongue stays inside his mouth. Nothing gross ever appears in frame. No talking. Locked camera.",
   // Flashback is a composite: this take, three animated memories under a faint overlay of his face, then the take reversed.
   flashback:
     "He gazes into the distance by the campfire, then slowly closes his eyes within the first second and keeps them closed for the rest of the shot, breathing slowly and deeply as old battles return to him. Mouth stays closed, no talking. Firelight flickers on his face. Locked camera, no zoom, no cut.",
@@ -92,7 +92,7 @@ const PROMPTS: Record<string, string> = {
   hype:
     "The orc pumps both fists, bouncing with hype, wide excited grin holding. Locked camera.",
   icecream:
-    "The orc takes a happy lick of the vanilla ice cream cone, a yum blink, cream staying on the scoops. Locked camera.",
+    "The orc lifts the vanilla ice cream cone to his mouth and takes one quick, small lick, then lowers it a little and smiles with his mouth closed, a happy yum blink. The tongue shows only briefly during the lick. The ice cream keeps its shape. Locked camera.",
   "in-love":
     "The orc looks smitten, a dreamy sigh, hands over his heart, a warm in-love blink. Locked camera.",
   laugh:
@@ -114,7 +114,7 @@ const PROMPTS: Record<string, string> = {
     "The orc puffs his chest, proud smile widening, hair and fur moving in a light breeze. Heroic but subtle. Locked camera.",
   ready:
     "The armored orc tightens his grip on the axe and shifts into a ready stance, determined breath. Locked camera.",
-  sad: "The orc looks downcast, a slow sad blink, a tear welling, a small sniff and slump of the shoulders. Locked camera.",
+  sad: "The warrior looks downcast, a slow sad blink, a small sniff and a heavy slump of his shoulders. Mouth stays closed. Locked camera.",
   salute:
     "The orc holds a firm military salute, a slight blink, armor catching light. Respectful, locked camera.",
   seriously:
@@ -138,11 +138,11 @@ const PROMPTS: Record<string, string> = {
     "A small surprise jolt. Eyes stay wide. His mouth stays in a small gasp and does not open wider. He leans back a little, then holds the shocked face. He does not shout. Hands stay down. One continuous close shot: locked camera, no cut, no zoom out.",
   sweat:
     "The orc looks nervously at the camera, sweat beading on his brow, a tense gulp, a small anxious blink. Locked camera.",
-  tear: "A tear rolls down the orc's face. He blinks, emotional but still. Locked camera.",
+  tear: "A single tear rolls slowly down the warrior's scarred cheek. He blinks once, jaw tight, emotional but holding still. Mouth stays closed. Locked camera.",
   thankyou:
     "The orc gives a grateful nod and a warm smile, a slight bow of thanks, his hand staying on his chest. His hair, face and outfit stay exactly the same throughout. Locked camera.",
   thinking:
-    "He starts staring at the camera deadpan, unamused, like 'seriously now'. Then he looks up and aside, raises one finger to his temple, and thinks. Locked camera.",
+    "The orc looks up and to the side, deep in thought, eyes slowly drifting as he ponders, a slow blink, a small thoughtful purse of the lips. His hands stay down and never touch his head or face. Mouth stays closed. Locked camera.",
   toldyou:
     "The orc smirks I-told-you-so, a smug little nod and knowing glance. Locked camera.",
   "touch-grass":
@@ -156,7 +156,7 @@ const PROMPTS: Record<string, string> = {
   wave:
     "The orc waves hello with his raised hand beside his head, a warm friendly smile holding, a couple of side-to-side waves. His hand never passes in front of his face. Locked camera.",
   wink:
-    "Both eyes start open. He winks once: one eye closes, then that eye opens again. The other eye stays open the whole time. One wink only. Closed-mouth sly smile. Mouth stays closed. Locked camera, no zoom.",
+    "Both eyes start open. He winks once with his left eye only: the left eye closes, then opens again. His right eye stays wide open the whole time and never blinks. One single wink. Closed-mouth sly smile. Mouth stays closed. Locked camera, no zoom.",
   working:
     "The orc types on the laptop, fingers moving, screen glow on his face, a focused blink. Locked camera.",
 };
