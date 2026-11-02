@@ -202,21 +202,21 @@
     "width": 544
   },
   {
-    "file": "/gifs/flex.gif",
-    "height": 544,
-    "poster": "/gifs/flex.jpg",
-    "slug": "flex",
-    "tags": ["flex", "flexing", "muscles", "swole", "strong"],
-    "title": "Flex",
-    "width": 544
-  },
-  {
     "file": "/gifs/flashback.gif",
     "height": 544,
     "poster": "/gifs/flashback.jpg",
     "slug": "flashback",
     "tags": ["flashback", "remember", "nostalgia", "memories", "past"],
     "title": "Flashback",
+    "width": 544
+  },
+  {
+    "file": "/gifs/flex.gif",
+    "height": 544,
+    "poster": "/gifs/flex.jpg",
+    "slug": "flex",
+    "tags": ["flex", "flexing", "muscles", "swole", "strong"],
+    "title": "Flex",
     "width": 544
   },
   {
