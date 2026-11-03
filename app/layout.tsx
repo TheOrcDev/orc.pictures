@@ -5,8 +5,8 @@ import type { ReactNode } from "react";
 
 import "./globals.css";
 import { GifCommandMenu } from "@/components/gif-command-menu";
-import { RaycastInstall } from "@/components/raycast-install";
 import { SiteFooter } from "@/components/site-footer";
+import { SiteNav } from "@/components/site-nav";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import {
@@ -113,7 +113,7 @@ const RootLayout = ({
       <NuqsAdapter>
         <ThemeProvider>
           <div className="flex min-h-svh flex-col">
-            <RaycastInstall />
+            <SiteNav />
             {children}
             <SiteFooter />
           </div>
