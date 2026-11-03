@@ -13,6 +13,10 @@
   <img src="https://shieldcn.dev/badge/video-Grok+Imagine-green.svg?logo=x&variant=secondary&size=sm" alt="Grok Imagine" />
 </p>
 
+<p align="center">
+  <img alt="Watercolor orc reaction GIFs, then the Raycast extension scrolling the catalog" src=".github/assets/showcase.gif" width="640" />
+</p>
+
 Personal [Giphy](https://orc.pictures) for orc reaction GIFs. Search, hover to play, click to copy the URL or markdown.
 
 ## Use the picker
