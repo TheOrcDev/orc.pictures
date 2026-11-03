@@ -12,6 +12,9 @@ const compactFormat = new Intl.NumberFormat("en-US", {
 });
 const fullFormat = new Intl.NumberFormat("en-US");
 
+const starsLabel = (count: number): string =>
+  `${fullFormat.format(count)} ${count === 1 ? "star" : "stars"}`;
+
 export interface GitHubStarsProps {
   /** GitHub repository in `owner/repo` format. */
   repo: string;
@@ -28,7 +31,7 @@ export const GitHubStars = ({ repo, stargazersCount }: GitHubStarsProps) => (
           nativeButton={false}
           render={
             <a
-              aria-label={`${repo} on GitHub, ${fullFormat.format(stargazersCount)} stars`}
+              aria-label={`${repo} on GitHub, ${starsLabel(stargazersCount)}`}
               href={`https://github.com/${repo}`}
               rel="noopener"
               target="_blank"
@@ -55,7 +58,7 @@ export const GitHubStars = ({ repo, stargazersCount }: GitHubStarsProps) => (
     />
 
     <TooltipContent className="tabular-nums">
-      {fullFormat.format(stargazersCount)} stars
+      {starsLabel(stargazersCount)}
     </TooltipContent>
   </Tooltip>
 );
