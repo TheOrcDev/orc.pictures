@@ -30,6 +30,7 @@ const DURATIONS: Record<string, number> = {
   damn: 6,
   fishing: 6,
   flashback: 8,
+  phew: 5,
   "something-good": 6,
   "start-camera": 6,
   "touch-grass": 6,
@@ -107,6 +108,8 @@ const PROMPTS: Record<string, string> = {
   // Orc smile repaints the pre-restyle topknot orc. It's rendered at 720p with a locked camera, and the zoom to his face (1.75x, eased) is added afterwards with zoompan; Grok's own push-ins warp his face.
   "orc-smile":
     "The orc keeps eye contact with the viewer the whole time. Subtle and slow, like a real actor: his slight knowing smirk gradually widens into a warm, pleased closed-mouth smile, his cheeks lifting and his eyes crinkling and narrowing kindly, with a very slight tilt of his head. He holds the warm smile at the end. He does not nod and does not blink. Mouth stays closed, his tusks stay in place. His topknot, beard, face, fur and armor stay exactly the same. The fire and torches flicker softly. Locked camera, no zoom, no cut.",
+  phew:
+    "He blows out the rest of a long relieved breath and the little breath cloud drifts away and fades. He slowly wipes his hand across his sweaty brow, his shoulders sag in relief, then he opens his eyes and glances sideways at the arrow stuck beside his head, and a small relieved smile appears. Mouth closes after the breath, no talking. His tusks, beard, face and armor stay exactly the same. The arrow in the door quivers and the torch flickers. Locked camera, no zoom, no cut.",
   pickaxe:
     "The orc swings the pickaxe into the rock wall, stone chips and dust flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed, no talking. Locked camera.",
   popcorn:
