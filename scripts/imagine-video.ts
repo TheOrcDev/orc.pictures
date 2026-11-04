@@ -104,9 +104,9 @@ const PROMPTS: Record<string, string> = {
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. His hair, face and outfit stay exactly the same throughout. Natural character animation, locked camera, no zoom or pan.",
   online:
     "The orc looks at the camera and gives a small hello wave, a friendly blink, available and here. Locked camera.",
-  // Orc smile repaints the pre-restyle topknot orc. Grok never returns to the smirk, so the GIF plays the first 3 s forward, then reversed.
+  // Orc smile repaints the pre-restyle topknot orc facing front; from a three-quarter still Grok turns his head and the loop never closes. The GIF dissolves the last 0.4 s into the start.
   "orc-smile":
-    "The orc looks at the viewer with a slight knowing smirk. His eyes crinkle and his closed-mouth smile slowly widens into a warm, pleased grin, and he gives a small, slow acknowledging nod with a slight tilt of his head. Then he settles back into his starting pose and smirk. Mouth stays closed, no talking. His topknot, beard, face, fur and armor stay exactly the same throughout. He does not lean toward the camera. The fire and torches behind him flicker softly. Locked camera, no zoom, no cut.",
+    "The orc gives one small, slow nod of acknowledgement, chin dipping just slightly, his smirk warming and eyes softening, then a slow friendly blink. His head stays upright and facing the viewer, centered, and ends exactly where it started. Mouth stays closed, no talking. His topknot, beard, face, fur and armor stay exactly the same. He does not lean in. The fire and torches flicker softly. Locked camera, no zoom, no cut.",
   pickaxe:
     "The orc swings the pickaxe into the rock wall, stone chips and dust flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed, no talking. Locked camera.",
   popcorn:
