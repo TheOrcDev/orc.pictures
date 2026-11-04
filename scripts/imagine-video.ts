@@ -39,6 +39,7 @@ const DURATIONS: Record<string, number> = {
   "im-out": 6,
   "ship-it": 6,
   nope: 5,
+  shrug: 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -135,6 +136,8 @@ const PROMPTS: Record<string, string> = {
     "The orc stares unamused, slow blink, almost no expression change. Deadpan. Locked camera.",
   "ship-it":
     "He yanks the release lever. The catapult arm whips forward and flings the wooden crate high into the sky, and the crate sails far away over the green valley until it is a tiny speck. He watches it fly with a proud grin, then dusts off his hands with a satisfied nod. The catapult stays in place. Mouth stays closed, no talking. His goggles, hair, face and apron stay exactly the same. Locked camera, no zoom, no cut.",
+  shrug:
+    "A classic shrug. His elbows stay tucked at his sides while his forearms lift off the counter and turn his palms up at waist height, and at the same time he raises his shoulders up toward his ears, tilts his head slightly, raises his eyebrows and gives a lopsided clueless half-smile: no idea. His hands never rise above his chest. He holds the shrug for a moment, then drops his shoulders and rests his hands back on the counter. Mouth stays closed, no talking. His hair, earring, face and clothes stay exactly the same. Locked camera: the framing stays exactly the same, the camera does not move back, no zoom, no cut.",
   sir: "The orc stands at attention and gives a sharp yes-sir nod. Locked camera.",
   sleep:
     "The orc sleeps, chest rising and falling, a tiny sleepy sway. Soft breathing motion. Locked camera.",
