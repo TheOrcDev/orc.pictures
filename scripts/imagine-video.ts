@@ -104,9 +104,9 @@ const PROMPTS: Record<string, string> = {
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. His hair, face and outfit stay exactly the same throughout. Natural character animation, locked camera, no zoom or pan.",
   online:
     "The orc looks at the camera and gives a small hello wave, a friendly blink, available and here. Locked camera.",
-  // Orc smile repaints the pre-restyle topknot orc. It plays once forward and holds the close-up for 0.75 s; it doesn't loop seamlessly.
+  // Orc smile repaints the pre-restyle topknot orc. It's rendered at 720p with a locked camera, and the zoom to his face (1.75x, eased) is added afterwards with zoompan; Grok's own push-ins warp his face.
   "orc-smile":
-    "The orc looks at the viewer. His knowing smirk slowly warms into a pleased, genuine closed-mouth smile, his cheeks lifting and his eyes crinkling kindly, then a slow friendly blink. The camera slowly and smoothly pushes in on his face the whole time, ending on a close-up of his face and eyes. One continuous shot, no cut. He does not nod and his head stays still. Mouth stays closed, no talking. His topknot, beard, face, fur and armor stay exactly the same. The fire and torches flicker softly behind him.",
+    "The orc keeps eye contact with the viewer the whole time. Subtle and slow, like a real actor: his slight knowing smirk gradually widens into a warm, pleased closed-mouth smile, his cheeks lifting and his eyes crinkling and narrowing kindly, with a very slight tilt of his head. He holds the warm smile at the end. He does not nod and does not blink. Mouth stays closed, his tusks stay in place. His topknot, beard, face, fur and armor stay exactly the same. The fire and torches flicker softly. Locked camera, no zoom, no cut.",
   pickaxe:
     "The orc swings the pickaxe into the rock wall, stone chips and dust flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed, no talking. Locked camera.",
   popcorn:
