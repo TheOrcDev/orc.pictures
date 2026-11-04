@@ -184,6 +184,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/facepalm.gif",
+    "height": 544,
+    "poster": "/gifs/facepalm.jpg",
+    "slug": "facepalm",
+    "tags": ["facepalm", "ugh", "smh", "disappointed", "really", "cringe"],
+    "title": "Facepalm",
+    "width": 544
+  },
+  {
     "file": "/gifs/fire.gif",
     "height": 544,
     "poster": "/gifs/fire.jpg",

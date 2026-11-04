@@ -35,6 +35,7 @@ const DURATIONS: Record<string, number> = {
   "start-camera": 6,
   "touch-grass": 6,
   wink: 4,
+  facepalm: 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -76,6 +77,8 @@ const PROMPTS: Record<string, string> = {
     "The orc raises one eyebrow, tilts his head, and side-eyes the camera with a skeptical look. Subtle breathing. Locked camera, no zoom.",
   ew: "The orc recoils hard from something gross just off-frame, face scrunching into an exaggerated EWWW grimace, lips pulled back over clenched teeth, turning his head away and raising one hand as if he can't bear to look. His tongue stays inside his mouth. Nothing gross ever appears in frame. No talking. Locked camera.",
   // Flashback is a composite: this take, three animated memories under a faint overlay of his face, then the take reversed.
+  facepalm:
+    "The sergeant lets out a long weary sigh, then slowly lifts his open hand and presses his palm flat over his eyes and brow in a facepalm, his head tipping down into his hand. He holds the facepalm and gives a small slow disappointed head shake inside his palm. Mouth stays closed, no talking. His braided beard, scar, face and armor stay exactly the same. Locked camera, no zoom, no cut.",
   flashback:
     "He gazes into the distance by the campfire, then slowly closes his eyes within the first second and keeps them closed for the rest of the shot, breathing slowly and deeply as old battles return to him. Mouth stays closed, no talking. Firelight flickers on his face. Locked camera, no zoom, no cut.",
   fire:
