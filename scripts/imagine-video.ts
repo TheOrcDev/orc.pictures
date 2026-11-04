@@ -36,6 +36,7 @@ const DURATIONS: Record<string, number> = {
   "touch-grass": 6,
   wink: 4,
   facepalm: 5,
+  "im-out": 6,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -97,6 +98,8 @@ const PROMPTS: Record<string, string> = {
     "The orc pumps both fists, bouncing with hype, wide excited grin holding. Locked camera.",
   icecream:
     "The orc lifts the vanilla ice cream cone to his mouth and takes one quick, small lick, then lowers it a little and smiles with his mouth closed, a happy yum blink. The tongue shows only briefly during the lick. The ice cream keeps its shape. Locked camera.",
+  "im-out":
+    "He pushes the swinging door open and walks out of the tavern into the bright sunny street, away from the camera, never turning around. As he steps through the doorway he lazily raises one hand over his shoulder in a casual goodbye wave without looking back, then keeps walking down the street. The swinging doors swing back behind him. His axe stays strapped on his back. Locked camera, no zoom, no cut.",
   "in-love":
     "The orc looks smitten, a dreamy sigh, hands over his heart, a warm in-love blink. Locked camera.",
   laugh:
