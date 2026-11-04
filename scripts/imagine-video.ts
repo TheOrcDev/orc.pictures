@@ -109,7 +109,7 @@ const PROMPTS: Record<string, string> = {
   "orc-smile":
     "The orc keeps eye contact with the viewer the whole time. Subtle and slow, like a real actor: his slight knowing smirk gradually widens into a warm, pleased closed-mouth smile, his cheeks lifting and his eyes crinkling and narrowing kindly, with a very slight tilt of his head. He holds the warm smile at the end. He does not nod and does not blink. Mouth stays closed, his tusks stay in place. His topknot, beard, face, fur and armor stay exactly the same. The fire and torches flicker softly. Locked camera, no zoom, no cut.",
   phew:
-    "He wipes his wrist across his brow and lowers his arm, lets out a happy relieved breath with his shoulders dropping, then opens his eyes and beams a big cheerful grin at the camera with a small happy chuckle. No sweat, no smoke, no breath cloud. No talking. His hair, tusks, earring, face and outfit stay exactly the same. The wheat sways gently in the breeze. Locked camera, no zoom, no cut.",
+    "He wipes his wrist across his brow and lowers that arm, lets out a happy relieved breath with his shoulders dropping, then opens his eyes and beams a big cheerful grin at the camera with a small happy chuckle. His other hand keeps the axe resting on his shoulder. No sweat, no smoke, no breath cloud. No talking. His hair, scars, tusks, face, fur and armor stay exactly the same. The grass and banners sway gently in the breeze. Locked camera, no zoom, no cut.",
   pickaxe:
     "The orc swings the pickaxe into the rock wall, stone chips and dust flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed, no talking. Locked camera.",
   popcorn:
