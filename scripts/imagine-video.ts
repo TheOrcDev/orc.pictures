@@ -43,6 +43,7 @@ const DURATIONS: Record<string, number> = {
   morning: 5,
   please: 5,
   "mic-drop": 5,
+  oops: 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -122,6 +123,8 @@ const PROMPTS: Record<string, string> = {
   online:
     "The orc looks at the camera and gives a small hello wave, a friendly blink, available and here. Locked camera.",
   // Orc smile repaints the pre-restyle topknot orc. It's rendered at 720p with a locked camera, and the zoom to his face (1.75x, eased) is added afterwards with zoompan; Grok's own push-ins warp his face.
+  oops:
+    "He leans a little more weight on the crate stack and it starts to wobble. The top crates tip over and tumble away out of the right side of the frame. He flinches and grimaces with his teeth clenched, glances after the fallen crates, then turns back to the viewer, rubs the back of his head with one hand and gives a sheepish, apologetic grin. No text, no captions, no lettering anywhere. His hair, pencil, tusks, face and clothes stay exactly the same. Locked camera on a tripod: the framing and the background stay exactly the same the whole time, the camera does not pan, does not move back, no zoom, no cut.",
   "orc-smile":
     "The orc keeps eye contact with the viewer the whole time. Subtle and slow, like a real actor: his slight knowing smirk gradually widens into a warm, pleased closed-mouth smile, his cheeks lifting and his eyes crinkling and narrowing kindly, with a very slight tilt of his head. He holds the warm smile at the end. He does not nod and does not blink. Mouth stays closed, his tusks stay in place. His topknot, beard, face, fur and armor stay exactly the same. The fire and torches flicker softly. Locked camera, no zoom, no cut.",
   phew:
