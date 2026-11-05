@@ -42,6 +42,7 @@ const DURATIONS: Record<string, number> = {
   shrug: 5,
   morning: 5,
   please: 5,
+  "mic-drop": 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -111,6 +112,8 @@ const PROMPTS: Record<string, string> = {
     "The orc laughs hard, mouth open, shoulders shaking, head tipping back a little, joyful laugh holding. Locked camera.",
   livestream:
     "The orc looks at the camera and holds still, mouth closed, one small blink. No talking, no nodding, no waving. Locked camera.",
+  "mic-drop":
+    "He holds the war horn out in front of him at chest height and looks at the viewer with total confidence. Then his fingers spring open and the horn falls, tumbling straight down out of the bottom of the frame, while his empty open hand stays up in the air for a moment, fingers spread. Then he slowly folds his arms across his chest, raises his chin and gives a smug, satisfied half-smile, and holds that pose. Mouth stays closed, no talking. No text, no captions. His mohawk, braided beard, tusks, face, cloak and chainmail stay exactly the same. Locked camera on a tripod: the framing stays exactly the same, the camera does not move back, no zoom, no cut.",
   morning:
     "He raises the steaming mug to his lips, tilts it and takes a real, slow sip of hot coffee, his lips touching the rim between his tusks, his eyes closed. Then he lowers the mug back to chest height, swallows, lets out a contented sigh with a warm, satisfied closed-mouth smile, and opens his eyes to the viewer with a sleepy good-morning look. Steam keeps rising from the coffee. One hand holds the mug the whole time. Mouth stays closed except for the sip, no talking. His hair, tusks, face and shirt stay exactly the same. Locked camera, no zoom, no cut.",
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. His hair, face and outfit stay exactly the same throughout. Natural character animation, locked camera, no zoom or pan.",
