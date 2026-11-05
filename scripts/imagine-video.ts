@@ -41,6 +41,7 @@ const DURATIONS: Record<string, number> = {
   nope: 5,
   shrug: 5,
   morning: 5,
+  please: 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -124,6 +125,8 @@ const PROMPTS: Record<string, string> = {
     "He wipes his wrist across his brow and lowers that arm, lets out a happy relieved breath with his shoulders dropping, then opens his eyes and beams a big cheerful grin at the camera with a small happy chuckle. His other hand keeps the axe resting on his shoulder. No sweat, no smoke, no breath cloud. No talking. His hair, scars, tusks, face, fur and armor stay exactly the same. The grass and banners sway gently in the breeze. Locked camera, no zoom, no cut.",
   pickaxe:
     "The orc swings the pickaxe into the rock wall, stone chips and dust flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed, no talking. Locked camera.",
+  please:
+    "He slowly draws the empty bowl in close to his chest, holding it in both hands, tilts his head to one side and makes big pleading puppy-dog eyes at the viewer, his eyebrows raised high in the middle, with a small hopeful smile, mouth closed. He gives the bowl a tiny hopeful lift toward the viewer: please? His hair, scar, tusks, face and armor stay exactly the same. Locked camera: the framing stays exactly the same, the camera does not move back, no zoom, no cut.",
   popcorn:
     "The orc eats popcorn from the bucket, chewing and watching something off-camera with amused eyes. Locked camera.",
   proud:
