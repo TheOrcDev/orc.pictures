@@ -138,7 +138,7 @@ const PROMPTS: Record<string, string> = {
   pickaxe:
     "The orc swings the pickaxe into the rock wall, stone chips and dust flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed, no talking. Locked camera.",
   please:
-    "He slowly draws the empty bowl in close to his chest, holding it in both hands, tilts his head to one side and makes big pleading puppy-dog eyes at the viewer, his eyebrows raised high in the middle, with a small hopeful smile, mouth closed. He gives the bowl a tiny hopeful lift toward the viewer: please? His hair, scar, tusks, face and armor stay exactly the same. Locked camera: the framing stays exactly the same, the camera does not move back, no zoom, no cut.",
+    "Keeping his palms pressed together in front of his chest, he gives his hands two small hopeful shakes, tilts his head a little to one side, raises his eyebrows a bit higher and widens his warm, charming, hopeful smile, politely asking a friendly favor. Then he holds that hopeful look at the viewer. Friendly and good-natured, not sad and not desperate. Mouth stays closed, no talking. No text, no captions. His hair, earring, tusks, face and clothes stay exactly the same. Locked camera: the framing stays exactly the same, the camera does not move back, no zoom, no cut.",
   popcorn:
     "The orc eats popcorn from the bucket, chewing and watching something off-camera with amused eyes. Locked camera.",
   proud:
