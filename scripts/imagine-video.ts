@@ -40,6 +40,7 @@ const DURATIONS: Record<string, number> = {
   "ship-it": 6,
   nope: 5,
   shrug: 5,
+  morning: 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -110,7 +111,7 @@ const PROMPTS: Record<string, string> = {
   livestream:
     "The orc looks at the camera and holds still, mouth closed, one small blink. No talking, no nodding, no waving. Locked camera.",
   morning:
-    "The orc lifts the coffee mug slightly, steam rising from the cup, a warm morning blink. Locked camera.",
+    "He raises the steaming mug to his lips, tilts it and takes a real, slow sip of hot coffee, his lips touching the rim between his tusks, his eyes closed. Then he lowers the mug back to chest height, swallows, lets out a contented sigh with a warm, satisfied closed-mouth smile, and opens his eyes to the viewer with a sleepy good-morning look. Steam keeps rising from the coffee. One hand holds the mug the whole time. Mouth stays closed except for the sip, no talking. His hair, tusks, face and shirt stay exactly the same. Locked camera, no zoom, no cut.",
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. His hair, face and outfit stay exactly the same throughout. Natural character animation, locked camera, no zoom or pan.",
   nope:
     "He slowly shakes his head no, side to side, two or three slow deliberate shakes, keeping his arms firmly crossed and his flat, unimpressed look, then stares back at the viewer. Absolutely not. Mouth stays closed, no talking. His helmet, beard, tusks, face and armor stay exactly the same. The banners flutter softly in the courtyard. Locked camera, no zoom, no cut.",
