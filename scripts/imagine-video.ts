@@ -70,7 +70,7 @@ const PROMPTS: Record<string, string> = {
   clap:
     "The orc claps his hands in applause, a warm approving grin holding, a few more claps. Locked camera.",
   congratulations:
-    "The orc looks at someone just out of frame and pats the shoulder at the edge of the frame with his open hand in a warm congratulations. His proud smile grows, clearly congratulating them. Only that shoulder is ever visible; no other face or body enters the frame. He does not turn to the camera. He does not clap. No talking. Locked camera.",
+    "The orc keeps his eyes open the whole time, looking proudly at the person just out of frame to the right. He lifts his hand off their shoulder and brings it down in one single hearty slap, then grips the shoulder firmly and gives it a warm, proud little shake, and nods once approvingly with a big proud grin. Only that shoulder is ever visible; no other face or body enters the frame. He does not close his eyes, does not turn to the camera, does not clap and does not pat repeatedly. No talking. No text, no captions. His hair, scar, earring, tusks, face and clothes stay exactly the same. Locked camera, no zoom, no cut.",
   cooked:
     "The orc stirs the pot with gusto, steam rising, then lifts his chin with a proud, happy grin and a small satisfied nod, clearly enjoying his cooking. The word COOKED stays readable. Natural character motion, locked camera.",
   "crazy-nod":
