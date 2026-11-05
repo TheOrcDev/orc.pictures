@@ -44,6 +44,7 @@ const DURATIONS: Record<string, number> = {
   please: 5,
   "mic-drop": 5,
   oops: 5,
+  noted: 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -120,6 +121,8 @@ const PROMPTS: Record<string, string> = {
   nod: "The orc nods his head yes twice and holds the thumbs-up, a satisfied blink. His hair, face and outfit stay exactly the same throughout. Natural character animation, locked camera, no zoom or pan.",
   nope:
     "He slowly shakes his head no, side to side, two or three slow deliberate shakes, keeping his arms firmly crossed and his flat, unimpressed look, then stares back at the viewer. Absolutely not. Mouth stays closed, no talking. His helmet, beard, tusks, face and armor stay exactly the same. The banners flutter softly in the courtyard. Locked camera, no zoom, no cut.",
+  noted:
+    "He looks down, dips the quill into the inkwell and quickly writes a short note on the parchment ledger, then looks up at the viewer and gives one firm, decisive nod: noted. He holds a calm, businesslike look at the end. Mouth stays closed, no talking. His spectacles, hair, beard, tusks, face and clothes stay exactly the same. The banners flutter softly. Locked camera, no zoom, no cut.",
   online:
     "The orc looks at the camera and gives a small hello wave, a friendly blink, available and here. Locked camera.",
   // Orc smile repaints the pre-restyle topknot orc. It's rendered at 720p with a locked camera, and the zoom to his face (1.75x, eased) is added afterwards with zoompan; Grok's own push-ins warp his face.

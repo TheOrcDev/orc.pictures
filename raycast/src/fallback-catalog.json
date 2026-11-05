@@ -355,6 +355,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/noted.gif",
+    "height": 544,
+    "poster": "/gifs/noted.jpg",
+    "slug": "noted",
+    "tags": ["noted", "got-it", "will-do", "ok", "writing"],
+    "title": "Noted",
+    "width": 544
+  },
+  {
     "file": "/gifs/online.gif",
     "height": 544,
     "poster": "/gifs/online.jpg",
