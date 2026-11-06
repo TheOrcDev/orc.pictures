@@ -47,6 +47,7 @@ const DURATIONS: Record<string, number> = {
   noted: 5,
   "mind-blown": 5,
   handshake: 5,
+  "push-to-main": 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -146,6 +147,8 @@ const PROMPTS: Record<string, string> = {
     "The orc eats popcorn from the bucket, chewing and watching something off-camera with amused eyes. Locked camera.",
   proud:
     "The orc puffs his chest, proud smile widening, hair and fur moving in a light breeze. Heroic but subtle. Locked camera.",
+  "push-to-main":
+    "He presses the big red button firmly with his index finger: the button clicks down into its brass ring and springs back up as he lifts his finger. Right after the click, the big gears on the wall behind him start turning. He straightens up, looks at the viewer with a proud, satisfied, confident grin, his eyes open, and gives one small nod. Job done. His finger is the only thing that touches the button. The brass plate and its engraved words stay exactly the same and never change. No talking. No new text, no captions. His head, goggles, tusks, face, shirt and apron stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   ready:
     "The armored orc tightens his grip on the axe and shifts into a ready stance, determined breath. Locked camera.",
   sad: "The warrior looks downcast, a slow sad blink, a small sniff and a heavy slump of his shoulders. Mouth stays closed. Locked camera.",
