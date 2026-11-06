@@ -46,6 +46,7 @@ const DURATIONS: Record<string, number> = {
   oops: 5,
   noted: 5,
   "mind-blown": 5,
+  handshake: 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -99,6 +100,8 @@ const PROMPTS: Record<string, string> = {
   "for-the-horde":
     "The orc charges forward with the army, ranks running behind him, then bellows a rallying war cry, fist raised. Keep the wide shot and the army in frame. Locked camera, no zoom to a close-up.",
   gold: "The orc sits on the treasure and grins richer as coins shift and glint. A small satisfied chuckle in the shoulders. Locked camera.",
+  handshake:
+    "He shakes the hand firmly, pumping it up and down twice in a strong, friendly handshake, then holds the grip and gives one confident, approving nod with a pleased grin, looking at the person just out of frame to the right. Only that hand and forearm are ever visible; no other face or body enters the frame. He does not turn to the camera and does not let go. No talking. No text, no captions. His hair, beard, tusks, face and clothes stay exactly the same. Locked camera: the framing stays exactly the same, the camera does not move back, no zoom, no cut.",
   happy:
     "The orc laughs happily, a warm chuckle shaking his shoulders, eyes crinkling, grin holding. Locked camera.",
   heart:

@@ -247,6 +247,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/handshake.gif",
+    "height": 544,
+    "poster": "/gifs/handshake.jpg",
+    "slug": "handshake",
+    "tags": ["handshake", "deal", "agreed", "partnership", "welcome"],
+    "title": "Handshake",
+    "width": 544
+  },
+  {
     "file": "/gifs/happy.gif",
     "height": 544,
     "poster": "/gifs/happy.jpg",
