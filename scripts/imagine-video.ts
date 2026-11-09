@@ -49,6 +49,7 @@ const DURATIONS: Record<string, number> = {
   handshake: 5,
   "push-to-main": 5,
   searching: 6,
+  sailing: 6,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -153,6 +154,8 @@ const PROMPTS: Record<string, string> = {
   ready:
     "The armored orc tightens his grip on the axe and shifts into a ready stance, determined breath. Locked camera.",
   sad: "The warrior looks downcast, a slow sad blink, a small sniff and a heavy slump of his shoulders. Mouth stays closed. Locked camera.",
+  sailing:
+    "The ship sails steadily forward across the sparkling sea under full sail. The deck gently rises and falls with the swell, the huge white sails billow and ripple in the strong wind, the rigging sways, waves and white spray rush past the hull, and seagulls glide by overhead. The captain stands firm at the wheel with both hands on it, turns the wheel a little to steer, and gazes out ahead over the sea with a calm, content, confident smile, his eyes open, the wind tugging at his coat and the tails of his bandana. No talking. No text, no captions. His bandana, beard, tusks, earring, face and coat stay exactly the same. The camera rides along with the ship: the framing stays the same, no zoom, no cut.",
   salute:
     "The orc holds a firm military salute, a slight blink, armor catching light. Respectful, locked camera.",
   searching:
