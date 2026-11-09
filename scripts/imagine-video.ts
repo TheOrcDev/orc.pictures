@@ -48,6 +48,7 @@ const DURATIONS: Record<string, number> = {
   "mind-blown": 5,
   handshake: 5,
   "push-to-main": 5,
+  searching: 6,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -154,6 +155,8 @@ const PROMPTS: Record<string, string> = {
   sad: "The warrior looks downcast, a slow sad blink, a small sniff and a heavy slump of his shoulders. Mouth stays closed. Locked camera.",
   salute:
     "The orc holds a firm military salute, a slight blink, armor catching light. Respectful, locked camera.",
+  searching:
+    "He glances at the rolled scroll in his hand, shakes his head, and tosses it over his shoulder. Then he digs into the chest with both hands, pushing the odds and ends aside and peering in, and pulls out an old boot, frowns at it and drops it back in. He looks up and glances left, then right, around the attic with a puzzled, searching frown and a raised eyebrow, then goes back to rummaging in the chest. His eyes stay open. No talking. No text, no captions. His mohawk, scar, tusks, face, vest and bracers stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   seriously:
     "The orc stares unamused, slow blink, almost no expression change. Deadpan. Locked camera.",
   "ship-it":
