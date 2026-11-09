@@ -51,6 +51,7 @@ const DURATIONS: Record<string, number> = {
   searching: 6,
   sailing: 6,
   santa: 6,
+  "orcish-salute": 5,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -140,6 +141,8 @@ const PROMPTS: Record<string, string> = {
     "He leans a little more weight on the crate stack and it starts to wobble. The top crates tip over and tumble away out of the right side of the frame. He flinches and grimaces with his teeth clenched, glances after the fallen crates, then turns back to the viewer, rubs the back of his head with one hand and gives a sheepish, apologetic grin. No text, no captions, no lettering anywhere. His hair, pencil, tusks, face and clothes stay exactly the same. Locked camera on a tripod: the framing and the background stay exactly the same the whole time, the camera does not pan, does not move back, no zoom, no cut.",
   "orc-smile":
     "The orc keeps eye contact with the viewer the whole time. Subtle and slow, like a real actor: his slight knowing smirk gradually widens into a warm, pleased closed-mouth smile, his cheeks lifting and his eyes crinkling and narrowing kindly, with a very slight tilt of his head. He holds the warm smile at the end. He does not nod and does not blink. Mouth stays closed, his tusks stay in place. His topknot, beard, face, fur and armor stay exactly the same. The fire and torches flicker softly. Locked camera, no zoom, no cut.",
+  "orcish-salute":
+    "He draws a breath and lifts his right fist, bringing it across his body, and strikes it firmly against the left side of his chest, over his heart, with one solid thump, his chest plate and fur mantle jolting from the blow. He keeps his fist pressed over his heart, raises his chin a little and gives one slow, solemn, respectful nod, his head dipping down and coming back up, his eyes open and steady on the viewer. Then he holds the salute perfectly still with a proud, honorable look. The war banners keep fluttering in the wind behind him. No talking. No text, no captions. His shaved head, war paint, scar, tusks, face, fur mantle and armor stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   phew:
     "He wipes his wrist across his brow and lowers that arm, lets out a happy relieved breath with his shoulders dropping, then opens his eyes and beams a big cheerful grin at the camera with a small happy chuckle. His other hand keeps the axe resting on his shoulder. No sweat, no smoke, no breath cloud. No talking. His hair, scars, tusks, face, fur and armor stay exactly the same. The grass and banners sway gently in the breeze. Locked camera, no zoom, no cut.",
   pickaxe:

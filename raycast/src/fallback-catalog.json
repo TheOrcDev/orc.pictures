@@ -409,6 +409,22 @@
     "width": 544
   },
   {
+    "file": "/gifs/orcish-salute.gif",
+    "height": 544,
+    "poster": "/gifs/orcish-salute.jpg",
+    "slug": "orcish-salute",
+    "tags": [
+      "orcish-salute",
+      "fist-on-heart",
+      "honor",
+      "respect",
+      "loyalty",
+      "salute"
+    ],
+    "title": "Orcish salute",
+    "width": 544
+  },
+  {
     "file": "/gifs/phew.gif",
     "height": 544,
     "poster": "/gifs/phew.jpg",
