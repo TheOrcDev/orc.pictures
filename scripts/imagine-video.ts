@@ -50,6 +50,7 @@ const DURATIONS: Record<string, number> = {
   "push-to-main": 5,
   searching: 6,
   sailing: 6,
+  santa: 6,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -158,6 +159,8 @@ const PROMPTS: Record<string, string> = {
     "The ship sails steadily forward across the sparkling sea under full sail. The deck gently rises and falls with the swell, the huge white sails billow and ripple in the strong wind, the rigging sways, waves and white spray rush past the hull, and seagulls glide by overhead. The captain stands firm at the wheel with both hands on it, turns the wheel a little to steer, and gazes out ahead over the sea with a calm, content, confident smile, his eyes open, the wind tugging at his coat and the tails of his bandana. No talking. No text, no captions. His bandana, beard, tusks, earring, face and coat stay exactly the same. The camera rides along with the ship: the framing stays the same, no zoom, no cut.",
   salute:
     "The orc holds a firm military salute, a slight blink, armor catching light. Respectful, locked camera.",
+  santa:
+    "He holds the red present out toward the viewer and offers it with a small friendly push forward, as if handing it over. Then, keeping his face turned toward the viewer the whole time, he reaches up over his shoulder into the sack without looking at it, pulls out a second wrapped present, a green box with a red bow, and holds both presents out toward the viewer with a warm, jolly, closed-mouth grin, his eyes open and twinkling, looking at the viewer. Soft snowflakes drift down. His face is always visible: he never turns his head away, and his two big white tusks stay clearly visible the whole time. No talking. No text, no captions. His Santa hat, white beard, tusks, green orc face, red coat and mittens stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   searching:
     "He glances at the rolled scroll in his hand, shakes his head, and tosses it over his shoulder. Then he digs into the chest with both hands, pushing the odds and ends aside and peering in, and pulls out an old boot, frowns at it and drops it back in. He looks up and glances left, then right, around the attic with a puzzled, searching frown and a raised eyebrow, then goes back to rummaging in the chest. His eyes stay open. No talking. No text, no captions. His mohawk, scar, tusks, face, vest and bracers stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   seriously:

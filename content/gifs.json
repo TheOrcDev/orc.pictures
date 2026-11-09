@@ -499,6 +499,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/santa.gif",
+    "height": 544,
+    "poster": "/gifs/santa.jpg",
+    "slug": "santa",
+    "tags": ["santa", "christmas", "xmas", "gift", "presents", "holidays"],
+    "title": "Santa",
+    "width": 544
+  },
+  {
     "file": "/gifs/searching.gif",
     "height": 544,
     "poster": "/gifs/searching.jpg",
