@@ -53,6 +53,7 @@ const DURATIONS: Record<string, number> = {
   santa: 6,
   "orcish-salute": 5,
   "strong-orc": 6,
+  "power-up": 6,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -152,6 +153,8 @@ const PROMPTS: Record<string, string> = {
     "Keeping his palms pressed together in front of his chest, he gives his hands two small hopeful shakes, tilts his head a little to one side, raises his eyebrows a bit higher and widens his warm, charming, hopeful smile, politely asking a friendly favor. Then he holds that hopeful look at the viewer. Friendly and good-natured, not sad and not desperate. Mouth stays closed, no talking. No text, no captions. His hair, earring, tusks, face and clothes stay exactly the same. Locked camera: the framing stays exactly the same, the camera does not move back, no zoom, no cut.",
   popcorn:
     "The orc eats popcorn from the bucket, chewing and watching something off-camera with amused eyes. Locked camera.",
+  "power-up":
+    "He pulls the cork out with his thumb, tips his head back and gulps down the glowing green potion in one go, then tosses the empty flask away over his shoulder. He clenches both fists at his sides, plants his feet and tenses his whole body. A bright glowing green aura bursts up around him like flames, crackling with little green sparks, his eyes glow bright green, his muscles swell bigger, and the wind from the burst whips the leaves and grass around him. He ends in a powerful stance, fists clenched, grinning fiercely at the viewer with the green aura still blazing around him. No talking. No text, no captions. His face, bald tattooed head, tusks, nose ring, vest and bracer stay the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   proud:
     "The orc puffs his chest, proud smile widening, hair and fur moving in a light breeze. Heroic but subtle. Locked camera.",
   "push-to-main":

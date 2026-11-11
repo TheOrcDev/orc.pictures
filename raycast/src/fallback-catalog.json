@@ -461,6 +461,15 @@
     "width": 544
   },
   {
+    "file": "/gifs/power-up.gif",
+    "height": 544,
+    "poster": "/gifs/power-up.jpg",
+    "slug": "power-up",
+    "tags": ["power-up", "powerup", "potion", "buff", "level-up", "aura"],
+    "title": "Power up",
+    "width": 544
+  },
+  {
     "file": "/gifs/proud.gif",
     "height": 544,
     "poster": "/gifs/proud.jpg",
