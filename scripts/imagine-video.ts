@@ -54,6 +54,7 @@ const DURATIONS: Record<string, number> = {
   "orcish-salute": 5,
   "strong-orc": 6,
   "power-up": 6,
+  "proud-of-you": 6,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -157,6 +158,8 @@ const PROMPTS: Record<string, string> = {
     "He pulls the cork out with his thumb, tips his head back and gulps down the glowing green potion in one go, then tosses the empty flask away over his shoulder. He clenches both fists at his sides, plants his feet and tenses his whole body. A bright glowing green aura bursts up around him like flames, crackling with little green sparks, his eyes glow bright green, his muscles swell bigger, and the wind from the burst whips the leaves and grass around him. He ends in a powerful stance, fists clenched, grinning fiercely at the viewer with the green aura still blazing around him. No talking. No text, no captions. His face, bald tattooed head, tusks, nose ring, vest and bracer stay the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   proud:
     "The orc puffs his chest, proud smile widening, hair and fur moving in a light breeze. Heroic but subtle. Locked camera.",
+  "proud-of-you":
+    "His stern look slowly softens. His eyes grow a little misty and shine, and a warm, proud smile spreads across his face, his tusks showing. He gives one small, slow nod of approval, his head dipping only slightly and coming back up, his eyes open and fixed warmly on the viewer. Then he lifts one hand from his crossed arms and wipes the corner of one eye with his thumb, trying to hide that he is moved, and lets out a small proud chuckle, his chest swelling. He keeps smiling at the viewer with his eyes open. No talking. No text, no captions. His face, shaved head, grey beard, scars, tusks and outfit stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "push-to-main":
     "He presses the big red button firmly with his index finger: the button clicks down into its brass ring and springs back up as he lifts his finger. Right after the click, the big gears on the wall behind him start turning. He straightens up, looks at the viewer with a proud, satisfied, confident grin, his eyes open, and gives one small nod. Job done. His finger is the only thing that touches the button. The brass plate and its engraved words stay exactly the same and never change. No talking. No new text, no captions. His head, goggles, tusks, face, shirt and apron stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   ready:
