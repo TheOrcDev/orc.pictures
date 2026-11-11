@@ -52,6 +52,7 @@ const DURATIONS: Record<string, number> = {
   sailing: 6,
   santa: 6,
   "orcish-salute": 5,
+  "strong-orc": 6,
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
@@ -187,6 +188,8 @@ const PROMPTS: Record<string, string> = {
     "The orc presses the button on the small camera with his index finger. The camera's red record light clicks on. He pulls his hand back and looks into the lens, starting the livestream, a small ready blink. Mouth stays closed, no talking. Locked camera.",
   stars:
     "The orc looks amazed, eyes sparkling, a small wow lean forward. Locked camera.",
+  "strong-orc":
+    "He draws in a deep breath, his huge shoulders rising, then tightens his grip and squeezes the huge boulder between his hands and arms with all his might, his muscles bulging. Cracks race across the boulder, then it bursts apart into chunks of rock and a puff of dust that tumble down to the ground. He brushes the dust off his hands and grins proudly at the viewer with his eyes open. No talking. No text, no captions. His face, tusks, topknot, belt and wrist wraps stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   surprise:
     "A small surprise jolt. Eyes stay wide. His mouth stays in a small gasp and does not open wider. He leans back a little, then holds the shocked face. He does not shout. Hands stay down. One continuous close shot: locked camera, no cut, no zoom out.",
   sweat:
