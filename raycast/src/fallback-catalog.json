@@ -448,7 +448,13 @@
     "slug": "hype",
     "tags": ["hype", "excited", "pumped", "yes", "energy"],
     "title": "Hype",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/hype.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/hype.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/icecream.gif",
