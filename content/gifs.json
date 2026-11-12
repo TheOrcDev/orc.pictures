@@ -765,7 +765,13 @@
     "slug": "salute",
     "tags": ["salute", "respect", "sir", "agree", "hello"],
     "title": "Salute",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/salute.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/salute.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/santa.gif",
