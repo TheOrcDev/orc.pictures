@@ -523,7 +523,13 @@
     "slug": "livestream",
     "tags": ["livestream", "stream", "streaming", "twitch", "live"],
     "title": "Livestream",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/livestream.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/livestream.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/mic-drop.gif",
