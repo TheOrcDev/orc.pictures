@@ -1105,7 +1105,13 @@
     "slug": "surprise",
     "tags": ["surprise", "shocked", "whoa", "gasp", "what"],
     "title": "Surprise",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/surprise.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/surprise.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/sweat.gif",
