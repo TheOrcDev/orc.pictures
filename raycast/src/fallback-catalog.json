@@ -1231,7 +1231,13 @@
     "slug": "victory",
     "tags": ["victory", "win", "celebrate", "yes"],
     "title": "Victory",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/victory.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/victory.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/waiting.gif",
