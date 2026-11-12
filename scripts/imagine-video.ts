@@ -227,6 +227,7 @@ const PROMPTS: Record<string, string> = {
 // Videorc versions: the dark, photoreal cyber orc. Each still is generated from scratch, so its motion prompt is its own.
 const VIDEORC_DURATIONS: Record<string, number> = {
   angry: 5,
+  annoyed: 6,
   approves: 6,
   beach: 5,
   "beach-lounge": 6,
@@ -241,6 +242,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
   // Orc smile (Videorc): rendered at 720p; the static opening stare is played at 2x afterwards, then a 0.6 s hold.
   angry:
     "He glares at the viewer, then his fury breaks: he leans forward a little and lets out one short furious roar, mouth wide open, tusks bared, shoulders heaving, his red eyes flaring blazing bright. Then he closes his mouth and holds the furious glare at the viewer, breathing hard. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  annoyed:
+    "He watches the viewer with an irritated stare, then rolls his eyes slowly up and to the side in an exaggerated, exasperated eye-roll, lets out a long, heavy, annoyed sigh through his nose with his big shoulders rising and dropping, and gives a tiny, irritated head shake. Then he looks back at the viewer with flat, narrowed, unimpressed eyes. His eyes keep their dim red glow the whole time and never turn white. His arms stay crossed and his hands never rise. He does not touch his face. He does not shout. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   approves:
     "He lines the stamp up and slams it down hard onto the paper. He lifts the stamp away: a bold red APPROVED mark is left on the paper, the same width and height as the stamp face. He looks down at the mark, gives a small satisfied nod, then looks up at the viewer with a cold, approving smirk, mouth closed. No talking. No captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   beach:

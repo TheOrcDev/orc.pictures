@@ -28,7 +28,13 @@
       "irritated"
     ],
     "title": "Annoyed",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/annoyed.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/annoyed.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/approves.gif",
