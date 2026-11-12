@@ -244,6 +244,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   doubt: 5,
   ew: 5,
   facepalm: 5,
+  fire: 5,
   "orc-smile": 6,
 };
 
@@ -285,6 +286,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He recoils hard from something gross just off-frame to his right, his face scrunching into an exaggerated EWWW grimace, lips pulled back over clenched teeth, turning his head away and raising one hand as if he can't bear to look. His tongue stays inside his mouth. Nothing gross ever appears in frame. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   facepalm:
     "He lets out a long weary sigh, then slowly lifts his open steel hand and presses his palm flat over his eyes and brow in a facepalm, his head tipping down into his hand. He holds the facepalm and gives a small, slow, disappointed head shake inside his palm. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  fire:
+    "The flames flicker and roar around him and in his open palm, embers swirling up into the dark. He grins confidently with a dangerous look, his red eyes glowing, the firelight moving on his face and his metal plates. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orc-smile":
     "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
