@@ -578,7 +578,13 @@
       "salute"
     ],
     "title": "Orcish salute",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/orcish-salute.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/orcish-salute.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/phew.gif",
