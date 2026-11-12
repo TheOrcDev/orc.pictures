@@ -1186,7 +1186,13 @@
     "slug": "toldyou",
     "tags": ["toldyou", "told-you", "smug", "knew-it"],
     "title": "Told you",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/toldyou.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/toldyou.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/touch-grass.gif",
