@@ -237,6 +237,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   clap: 5,
   cooked: 6,
   "crazy-nod": 5,
+  curious: 5,
   "orc-smile": 6,
 };
 
@@ -264,6 +265,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He stirs the pot with gusto, steam rising, then lifts his chin with a proud, happy grin and a small satisfied nod, clearly enjoying his cooking. The word COOKED on the red neon sign stays readable and unchanged. No talking. No captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "crazy-nod":
     "Small quick yes nods the whole time: his chin dips a little, then pops back up, over and over, faster and faster, with a manic closed-mouth smirk and wide intense eyes, his red eyes glowing. Eyes stay open. He does not bow, lean or open his mouth. Hands stay down. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  curious:
+    "He leans in a little closer toward the viewer, tilts his head to one side, his eyes widening with curiosity and his red eyes glowing a little brighter, then gives a small, interested blink. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orc-smile":
     "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
