@@ -249,6 +249,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   flashback: 6,
   flex: 5,
   "for-the-horde": 6,
+  gold: 5,
   "orc-smile": 6,
 };
 
@@ -300,6 +301,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He flexes both biceps harder, his muscles bulging, a cocky grin holding, then gives a small proud pump of the arms. His red eyes flare a little brighter. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "for-the-horde":
     "He charges forward with the army, the ranks running behind him, then bellows a rallying war cry with his fist raised, his red eyes blazing. Keep the wide shot and the army in frame. Locked camera, no zoom to a close-up. No text, no captions. His face, tusks, metal skull plates and armor stay exactly the same.",
+  gold:
+    "He sits on the treasure and his grin grows richer as the coins shift and glint around him. A small satisfied chuckle moves his shoulders. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orc-smile":
     "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };

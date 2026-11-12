@@ -382,7 +382,13 @@
     "slug": "gold",
     "tags": ["gold", "rich", "money", "treasure"],
     "title": "Gold",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/gold.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/gold.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/handshake.gif",
