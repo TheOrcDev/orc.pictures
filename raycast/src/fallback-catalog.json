@@ -1255,7 +1255,13 @@
     "slug": "wave",
     "tags": ["wave", "waving", "hello", "hi", "bye"],
     "title": "Wave",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/wave.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/wave.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/wink.gif",
