@@ -241,6 +241,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   damn: 6,
   dance: 5,
   doit: 5,
+  doubt: 5,
   "orc-smile": 6,
 };
 
@@ -276,6 +277,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He dances to the beat, swaying his shoulders and bobbing his head, his arms moving to the groove, a joyful, fierce grin holding, the red laser beams sweeping through the haze behind him. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   doit:
     "He grins warmly at the viewer, pushes his thumbs-up a little toward the viewer and gives a firm, encouraging you-got-this nod. His red eyes glow a little brighter. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  doubt:
+    "He raises one eyebrow higher, tilts his head a little and side-eyes the viewer with a skeptical look, his lips pressing together. Subtle breathing. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orc-smile":
     "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };

@@ -262,7 +262,13 @@
     "slug": "doubt",
     "tags": ["doubt", "skeptical", "hmm", "side-eye"],
     "title": "Doubt",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/doubt.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/doubt.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/ew.gif",
