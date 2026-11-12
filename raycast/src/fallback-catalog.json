@@ -367,7 +367,13 @@
     "slug": "for-the-horde",
     "tags": ["for-the-horde", "horde", "battle-cry", "rally", "warcry"],
     "title": "For the Horde",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/for-the-horde.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/for-the-horde.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/gold.gif",
