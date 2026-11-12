@@ -967,7 +967,13 @@
     "slug": "sleep",
     "tags": ["sleep", "tired", "zzz", "night"],
     "title": "Sleep",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/sleep.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/sleep.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/smash.gif",
