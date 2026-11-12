@@ -1297,6 +1297,12 @@
     "slug": "working",
     "tags": ["working", "coding", "computer", "laptop", "typing"],
     "title": "Working",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/working.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/working.jpg",
+      "width": 640
+    }
   }
 ]
