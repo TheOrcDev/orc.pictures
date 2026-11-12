@@ -90,7 +90,13 @@
     "slug": "burn-it-with-fire",
     "tags": ["burn-it-with-fire", "burn", "fire", "torch", "destroy", "cursed"],
     "title": "Burn it with fire",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/burn-it-with-fire.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/burn-it-with-fire.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/celebrate.gif",
