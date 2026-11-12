@@ -253,6 +253,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   gold: 5,
   "orc-smile": 6,
   "orcish-salute": 5,
+  phew: 5,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -311,6 +312,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orcish-salute":
     "He draws a breath and lifts his right fist, bringing it across his body, and strikes it firmly against the left side of his chest, over his heart, with one solid thump. He keeps his fist pressed over his heart, raises his chin a little and gives one slow, solemn, respectful nod, his eyes open and steady on the viewer, his red eyes glowing brighter. Then he holds the salute perfectly still with a proud, honorable look. The banners sway softly. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  phew:
+    "He wipes his forearm across his brow and lowers that arm, lets out a big relieved breath with his shoulders dropping, then beams a big cheerful grin at the viewer with a small happy chuckle. No sweat, no smoke from his mouth, no breath cloud. Eyes open at the end. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {
