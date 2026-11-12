@@ -267,6 +267,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   nope: 5,
   noted: 5,
   online: 5,
+  oops: 5,
   "orc-smile": 6,
   "orcish-salute": 5,
   phew: 5,
@@ -369,6 +370,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He looks down and quickly writes a short note on the tablet with the stylus, then looks up at the viewer and gives one firm, decisive nod: noted. He holds a calm, businesslike look at the end. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   online:
     "He looks at the camera and gives a small hello wave with his raised hand, a friendly blink, available and here. His hand never passes in front of his face. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  oops:
+    "He leans a little more weight on the stack of server cases and it starts to wobble. The top cases tip over and tumble away out of the right side of the frame. He flinches and grimaces with his teeth clenched, glances after the fallen cases, then turns back to the viewer, rubs the back of his head with one hand and gives a sheepish, apologetic grin. No talking. No text, no captions, no lettering anywhere. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera on a tripod: the framing and the background stay exactly the same the whole time, the camera does not pan, does not move back, no zoom, no cut.",
   "orc-smile":
     "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orcish-salute":
