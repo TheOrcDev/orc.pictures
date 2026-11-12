@@ -1027,7 +1027,13 @@
       "treat"
     ],
     "title": "Something good",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/something-good.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/something-good.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/spotted.gif",
