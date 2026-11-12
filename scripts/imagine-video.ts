@@ -290,6 +290,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   smash: 5,
   smell: 5,
   "something-good": 6,
+  spotted: 4,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -422,6 +423,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He lifts his head, closes his eyes and slowly inhales the pleasant smell rising from the steaming bowl, a quiet, content sniff and a happy little smile. Mouth stays closed. The steam keeps rising. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "something-good":
     "He rubs his hands together over the feast, then makes a small finishing gesture with both hands. His knowing smile grows wider, like something good is coming, and he looks at the viewer with a sly, excited look, his red eyes glinting. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  spotted:
+    "His eyes widen as he realizes he has been seen, he gives a small caught flinch toward the viewer and freezes, holding the hard drive. The red security light sweeps across him. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {

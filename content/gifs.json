@@ -1042,7 +1042,13 @@
     "slug": "spotted",
     "tags": ["spotted", "seen", "caught", "look"],
     "title": "Spotted",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/spotted.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/spotted.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/stars.gif",
