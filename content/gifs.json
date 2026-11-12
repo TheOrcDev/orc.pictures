@@ -403,7 +403,13 @@
     "slug": "handshake",
     "tags": ["handshake", "deal", "agreed", "partnership", "welcome"],
     "title": "Handshake",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/handshake.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/handshake.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/happy.gif",
