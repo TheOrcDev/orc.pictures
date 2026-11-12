@@ -2,15 +2,21 @@ import { spawn } from "node:child_process";
 import { mkdir, readFile, stat, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-interface Gif {
+interface GifAsset {
   file: string;
   height: number;
   poster: string;
+  width: number;
+}
+
+interface Gif extends GifAsset {
+  videorc?: GifAsset;
   slug: string;
   tags: string[];
   title: string;
-  width: number;
 }
+
+type GifStyle = "orc" | "videorc";
 
 const MAX_WIDTH = 640;
 const STILL_FPS = 8;
@@ -20,12 +26,14 @@ const STILL_CROP = 0.9;
 const STILL_COLORS = 48;
 const CATALOG_PATH = path.join(process.cwd(), "content/gifs.json");
 const DEFAULT_OUT_DIR = path.join(process.cwd(), "public/gifs");
+const VIDEORC_OUT_DIR = path.join(DEFAULT_OUT_DIR, "videorc");
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 interface ImportOptions {
   input: string;
   outDir: string;
   slug: string;
+  style: GifStyle;
   tags: string[];
   title: string;
 }
@@ -274,13 +282,20 @@ const writeCatalog = async (catalog: Gif[]): Promise<void> => {
   await writeFile(CATALOG_PATH, `${JSON.stringify(sorted, null, 2)}\n`);
 };
 
+const isGifStyle = (value: string): value is GifStyle =>
+  value === "orc" || value === "videorc";
+
+const outDirFor = (style: GifStyle): string =>
+  style === "videorc" ? VIDEORC_OUT_DIR : DEFAULT_OUT_DIR;
+
 const resolveOptions = (args: Record<string, string>): ImportOptions => {
   const input = args.input;
   const slug = args.slug;
+  const style = args.style ?? "orc";
 
   if (!input || !slug) {
     throw new Error(
-      "Usage: node --experimental-strip-types scripts/import-gif.ts --input <file> --slug <slug> [--title <title>] [--tags a,b] [--out-dir <dir>]"
+      "Usage: node --experimental-strip-types scripts/import-gif.ts --input <file> --slug <slug> [--style orc|videorc] [--title <title>] [--tags a,b] [--out-dir <dir>]"
     );
   }
 
@@ -288,16 +303,55 @@ const resolveOptions = (args: Record<string, string>): ImportOptions => {
     throw new Error(`Invalid slug: ${slug}`);
   }
 
+  if (!isGifStyle(style)) {
+    throw new Error(`Invalid style: ${style}`);
+  }
+
   return {
     input: path.resolve(input),
-    outDir: path.resolve(args["out-dir"] ?? DEFAULT_OUT_DIR),
+    outDir: path.resolve(args["out-dir"] ?? outDirFor(style)),
     slug,
+    style,
     tags: uniqueTags([slug, ...(args.tags ?? "").split(",")]),
     title: args.title ?? titleFromSlug(slug),
   };
 };
 
-const importGif = async (options: ImportOptions): Promise<Gif> => {
+// The orc import owns the main entry; the Videorc import only fills in `videorc`.
+const updateCatalog = (
+  catalog: Gif[],
+  options: ImportOptions,
+  asset: GifAsset
+): Gif[] => {
+  const existing = catalog.find((gif) => gif.slug === options.slug);
+  const others = catalog.filter((gif) => gif.slug !== options.slug);
+
+  if (options.style === "videorc") {
+    if (!existing) {
+      throw new Error(
+        `Import the orc ${options.slug} before its Videorc version`
+      );
+    }
+
+    return [...others, { ...existing, videorc: asset }];
+  }
+
+  return [
+    ...others,
+    {
+      file: asset.file,
+      height: asset.height,
+      ...(existing?.videorc ? { videorc: existing.videorc } : {}),
+      poster: asset.poster,
+      slug: options.slug,
+      tags: options.tags,
+      title: options.title,
+      width: asset.width,
+    },
+  ];
+};
+
+const importGif = async (options: ImportOptions): Promise<GifAsset> => {
   await mkdir(options.outDir, { recursive: true });
 
   const output = path.join(options.outDir, `${options.slug}.gif`);
@@ -313,30 +367,24 @@ const importGif = async (options: ImportOptions): Promise<Gif> => {
 
   const result = await probeVideo(output);
   const fileStat = await stat(output);
-  const entry: Gif = {
-    file: `/gifs/${options.slug}.gif`,
+  const publicDir = options.style === "videorc" ? "/gifs/videorc" : "/gifs";
+  const asset: GifAsset = {
+    file: `${publicDir}/${options.slug}.gif`,
     height: result.height,
-    poster: `/gifs/${options.slug}.jpg`,
-    slug: options.slug,
-    tags: options.tags,
-    title: options.title,
+    poster: `${publicDir}/${options.slug}.jpg`,
     width: result.width,
   };
 
-  if (options.outDir === DEFAULT_OUT_DIR) {
+  if (options.outDir === outDirFor(options.style)) {
     const catalog = await readCatalog();
-    const nextCatalog = [
-      ...catalog.filter((gif) => gif.slug !== options.slug),
-      entry,
-    ];
-    await writeCatalog(nextCatalog);
+    await writeCatalog(updateCatalog(catalog, options, asset));
   }
 
   process.stdout.write(
-    `Imported ${options.slug} (${entry.width}x${entry.height}, ${Math.round(fileStat.size / 1024)}kb)\n`
+    `Imported ${options.slug} ${options.style} (${asset.width}x${asset.height}, ${Math.round(fileStat.size / 1024)}kb)\n`
   );
 
-  return entry;
+  return asset;
 };
 
 const main = async (): Promise<void> => {

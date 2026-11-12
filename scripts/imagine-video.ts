@@ -58,6 +58,7 @@ const DURATIONS: Record<string, number> = {
 };
 const POLL_MS = 5000;
 const SKIP_SLUGS = new Set(["orc-smile"]);
+const STYLES = new Set(["orc", "videorc"]);
 
 const PROMPTS: Record<string, string> = {
   angry:
@@ -223,6 +224,17 @@ const PROMPTS: Record<string, string> = {
     "The orc types on the laptop, fingers moving, screen glow on his face, a focused blink. Locked camera.",
 };
 
+// Videorc versions: the dark, photoreal cyber orc. Each still is generated from scratch, so its motion prompt is its own.
+const VIDEORC_DURATIONS: Record<string, number> = {
+  "orc-smile": 6,
+};
+
+const VIDEORC_PROMPTS: Record<string, string> = {
+  // Orc smile (Videorc): rendered at 720p; the static opening stare is played at 2x afterwards, then a 0.6 s hold.
+  "orc-smile":
+    "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+};
+
 const parseArgs = (argv: string[]): Record<string, string> => {
   const result: Record<string, string> = {};
   const tokens = argv[Symbol.iterator]();
@@ -367,7 +379,8 @@ const startGeneration = async (
   imageDataUrl: string,
   prompt: string,
   ratio: string,
-  duration: number
+  duration: number,
+  resolution: string
 ): Promise<string> => {
   const response = await fetch(`${API_BASE}/videos/generations`, {
     body: JSON.stringify({
@@ -376,7 +389,7 @@ const startGeneration = async (
       image: { url: imageDataUrl },
       model: MODEL,
       prompt,
-      resolution: "480p",
+      resolution,
     }),
     headers: {
       Authorization: `Bearer ${apiKey()}`,
@@ -445,7 +458,12 @@ const downloadFile = async (url: string, dest: string): Promise<void> => {
   await writeFile(dest, bytes);
 };
 
-const importGif = async (slug: string, videoPath: string, gif: CatalogGif): Promise<void> => {
+const importGif = async (
+  slug: string,
+  videoPath: string,
+  gif: CatalogGif,
+  style: string
+): Promise<void> => {
   await new Promise<void>((resolve, reject) => {
     const child = spawn(
       "node",
@@ -456,6 +474,8 @@ const importGif = async (slug: string, videoPath: string, gif: CatalogGif): Prom
         videoPath,
         "--slug",
         slug,
+        "--style",
+        style,
         "--title",
         gif.title,
         "--tags",
@@ -475,32 +495,51 @@ const importGif = async (slug: string, videoPath: string, gif: CatalogGif): Prom
   });
 };
 
-const generateOne = async (gif: CatalogGif, input: string): Promise<void> => {
-  const prompt = PROMPTS[gif.slug];
+// Videorc stills live in their own folder, and their videos get a `-videorc` suffix so both styles can sit side by side.
+const sourcePath = (style: string, slug: string): string =>
+  style === "videorc"
+    ? path.join(SOURCE_DIR, "videorc", `${slug}.png`)
+    : path.join(SOURCE_DIR, `${slug}.png`);
+
+const generateOne = async (
+  gif: CatalogGif,
+  input: string,
+  style: string
+): Promise<void> => {
+  const isVideorc = style === "videorc";
+  const prompt = (isVideorc ? VIDEORC_PROMPTS : PROMPTS)[gif.slug];
 
   if (!prompt) {
-    throw new Error(`No motion prompt for ${gif.slug}`);
+    throw new Error(`No ${style} motion prompt for ${gif.slug}`);
   }
 
-  process.stdout.write(`Generating ${gif.slug}\n`);
-  const jpeg = await prepareStill(input, gif.slug);
+  const name = isVideorc ? `${gif.slug}-videorc` : gif.slug;
+  process.stdout.write(`Generating ${gif.slug} ${style}\n`);
+  const jpeg = await prepareStill(input, name);
   const size = await probeSize(jpeg);
   const imageDataUrl = `data:image/jpeg;base64,${(await readFile(jpeg)).toString("base64")}`;
   const requestId = await startGeneration(
     imageDataUrl,
     prompt,
     aspectRatio(size.width, size.height),
-    DURATIONS[gif.slug] ?? DURATION_SECONDS
+    (isVideorc ? VIDEORC_DURATIONS : DURATIONS)[gif.slug] ?? DURATION_SECONDS,
+    isVideorc ? "720p" : "480p"
   );
   process.stdout.write(`  request ${requestId}\n`);
   const videoUrl = await pollVideo(requestId);
-  const videoPath = path.join(VIDEO_DIR, `${gif.slug}.mp4`);
+  const videoPath = path.join(VIDEO_DIR, `${name}.mp4`);
   await downloadFile(videoUrl, videoPath);
-  await importGif(gif.slug, videoPath, gif);
+  await importGif(gif.slug, videoPath, gif, style);
 };
 
 const main = async (): Promise<void> => {
   const args = parseArgs(process.argv.slice(2));
+  const style = args.style ?? "orc";
+
+  if (!STYLES.has(style)) {
+    throw new Error(`Invalid style: ${style}`);
+  }
+
   const catalog = JSON.parse(
     await readFile(path.join(process.cwd(), "content/gifs.json"), "utf8")
   ) as CatalogGif[];
@@ -518,8 +557,8 @@ const main = async (): Promise<void> => {
   for (const gif of wanted) {
     const input = args.input
       ? path.resolve(args.input)
-      : path.join(SOURCE_DIR, `${gif.slug}.png`);
-    await generateOne(gif, input);
+      : sourcePath(style, gif.slug);
+    await generateOne(gif, input, style);
   }
 };
 

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Outfit } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { ReactNode } from "react";
+import { Suspense } from "react";
 
 import "./globals.css";
 import { GifCommandMenu } from "@/components/gif-command-menu";
@@ -117,7 +118,9 @@ const RootLayout = ({
             {children}
             <SiteFooter />
           </div>
-          <GifCommandMenu />
+          <Suspense>
+            <GifCommandMenu />
+          </Suspense>
           <Toaster />
         </ThemeProvider>
       </NuqsAdapter>

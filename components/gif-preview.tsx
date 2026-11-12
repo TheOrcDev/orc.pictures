@@ -3,16 +3,18 @@
 import Image from "next/image";
 
 import { copyGifUrlWithToast } from "@/lib/copy-gif-url";
-import type { Gif } from "@/lib/gifs";
+import type { Gif, GifStyle } from "@/lib/gifs";
+import { gifAsset } from "@/lib/gifs";
 
 interface GifPreviewProps {
   gif: Gif;
+  style: GifStyle;
 }
 
-const GifPreview = ({ gif }: GifPreviewProps) => (
+const GifPreview = ({ gif, style }: GifPreviewProps) => (
   <button
     className="bg-muted relative aspect-square w-full overflow-hidden text-left"
-    onClick={() => copyGifUrlWithToast(gif)}
+    onClick={() => copyGifUrlWithToast(gif, style)}
     type="button"
   >
     <Image
@@ -21,7 +23,7 @@ const GifPreview = ({ gif }: GifPreviewProps) => (
       fill
       priority
       sizes="(min-width: 768px) 48rem, 100vw"
-      src={gif.file}
+      src={gifAsset(gif, style).file}
       unoptimized
     />
     <span className="sr-only">Copy {gif.title} URL</span>

@@ -6,7 +6,7 @@ import { GifPickerFallback } from "@/components/gif-picker-fallback";
 import { SiteBrand } from "@/components/site-brand";
 import { gifs } from "@/lib/gifs";
 
-// The picker reads ?q through nuqs; render per request so results arrive in the HTML.
+// The picker reads ?q and ?style through nuqs; render per request so results arrive in the HTML.
 const Page = async () => {
   await connection();
 

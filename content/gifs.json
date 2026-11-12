@@ -406,7 +406,13 @@
     "slug": "orc-smile",
     "tags": ["orc-smile", "smile", "grin", "happy", "orc", "acknowledge"],
     "title": "Orc smile",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/orc-smile.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/orc-smile.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/orcish-salute.gif",
