@@ -1171,7 +1171,13 @@
     "slug": "thinking",
     "tags": ["thinking", "hmm", "consider", "ponder", "idea"],
     "title": "Thinking",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/thinking.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/thinking.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/toldyou.gif",
