@@ -322,7 +322,13 @@
     "slug": "fishing",
     "tags": ["fishing", "fish", "reel", "river", "bite", "catch"],
     "title": "Fishing",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/fishing.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/fishing.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/flashback.gif",
