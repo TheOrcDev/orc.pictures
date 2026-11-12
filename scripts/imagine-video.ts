@@ -261,6 +261,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   proud: 5,
   "proud-of-you": 6,
   "push-to-main": 5,
+  ready: 5,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -335,6 +336,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "His stern look slowly softens. His eyes grow a little misty and shine, and a warm, proud smile spreads across his face, his tusks showing. He gives one small, slow nod of approval, his eyes open and fixed warmly on the viewer. Then he lifts one hand from his crossed arms and wipes the corner of one eye with his thumb, trying to hide that he is moved, and lets out a small proud chuckle. He keeps smiling at the viewer with his eyes open. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "push-to-main":
     "He presses the big red button firmly with his index finger: the button clicks down into its steel ring and springs back up as he lifts his finger. Right after the click, all the server lights behind him flash red and start blinking fast. He straightens up, looks at the viewer with a proud, confident grin, his eyes open, and gives one small nod. Job done. His finger is the only thing that touches the button. The steel plate and its engraved words stay exactly the same and never change. No talking. No new text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  ready:
+    "He tightens his grip on the axe and shifts into a ready combat stance, takes a determined breath, his red eyes flaring brighter. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {

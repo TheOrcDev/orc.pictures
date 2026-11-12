@@ -720,7 +720,13 @@
     "slug": "ready",
     "tags": ["ready", "lets-go", "go", "prepared"],
     "title": "Ready",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/ready.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/ready.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/sad.gif",
