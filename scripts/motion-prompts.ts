@@ -444,5 +444,7 @@ export const VIDEORC_PROMPTS: Record<string, string> = {
   victory:
     "He celebrates the win: he pumps both fists down and back up with a short victorious roar, his red eyes blazing, then holds a proud, triumphant grin. His fists stay inside the frame. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   wave:
-    "He waves hello with his raised hand beside his head, a warm friendly smile holding, a couple of side-to-side waves. His hand never passes in front of his face. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+    "He waves hello with his raised hand beside his head, a warm friendly smile holding, a couple of side-to-side waves. His hand never passes in front of his face. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",  wink:
+    "Cursor keyframe over the still: his left eye closed. Both eyes start open; the left eye closes and reopens once while his cyber eye flares red. Slow push-in.",
+
 };
