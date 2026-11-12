@@ -508,7 +508,13 @@
     "slug": "laugh",
     "tags": ["laugh", "laughing", "lol", "funny", "haha"],
     "title": "Laugh",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/laugh.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/laugh.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/livestream.gif",

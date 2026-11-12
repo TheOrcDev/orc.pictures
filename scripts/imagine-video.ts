@@ -258,6 +258,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   icecream: 5,
   "im-out": 6,
   "in-love": 5,
+  laugh: 5,
   "orc-smile": 6,
   "orcish-salute": 5,
   phew: 5,
@@ -342,6 +343,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He keeps walking away from the camera down the corridor toward the red-lit exit, never turning around. As he walks he lazily raises one hand over his shoulder in a casual goodbye wave without looking back, then keeps walking and steps out through the doorway. No talking. No text, no captions. His metal skull plates and coat stay exactly the same. Locked camera, no zoom, no cut.",
   "in-love":
     "He looks smitten, lets out a dreamy sigh with his hands over his heart, his head tilting a little more, and gives a warm, in-love blink, his red eyes glowing softly. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  laugh:
+    "He laughs hard, mouth open, shoulders shaking, head tipping back a little, a joyful laugh holding. His tongue stays inside his mouth. Eyes stay open. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orc-smile":
     "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orcish-salute":
