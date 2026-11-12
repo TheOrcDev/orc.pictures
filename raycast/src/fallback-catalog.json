@@ -1156,7 +1156,13 @@
     "slug": "thankyou",
     "tags": ["thankyou", "thanks", "grateful"],
     "title": "Thank you",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/thankyou.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/thankyou.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/thinking.gif",
