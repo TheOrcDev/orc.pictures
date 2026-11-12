@@ -294,6 +294,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   spotted: 4,
   stars: 4,
   surprise: 4,
+  tear: 4,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -434,6 +435,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He looks amazed, his eyes sparkling, his red eyes shimmering with little star-like glints, and he gives a small wow lean forward. Mouth stays only slightly open. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   surprise:
     "A small surprise jolt. His eyes stay wide and his red eyes flare. His mouth stays in a small gasp and does not open wider. He leans back a little, then holds the shocked face. He does not shout. His hands stay down. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  tear:
+    "A single tear rolls slowly down his scarred cheek, catching the red light. He blinks once, jaw tight, emotional but holding still. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {

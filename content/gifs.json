@@ -1135,7 +1135,13 @@
     "slug": "tear",
     "tags": ["tear", "sad", "cry", "emotional"],
     "title": "Tear",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/tear.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/tear.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/thankyou.gif",
