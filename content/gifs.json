@@ -463,7 +463,13 @@
     "slug": "icecream",
     "tags": ["icecream", "ice-cream", "vanilla", "dessert", "yum"],
     "title": "Ice cream",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/icecream.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/icecream.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/im-out.gif",
