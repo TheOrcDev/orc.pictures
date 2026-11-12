@@ -235,6 +235,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   celebrate: 6,
   champagne: 5,
   clap: 5,
+  congratulations: 6,
   cooked: 6,
   "crazy-nod": 5,
   curious: 5,
@@ -273,6 +274,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He raises the champagne flute toward the viewer in a toast with a knowing smirk, gives it a small lift, then points at the viewer with one finger of the hand holding the glass. He holds the smug toast, mouth closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   clap:
     "He claps his hands together four times in applause with a warm, approving grin, then gives one small nod. His hands stay in front of his chest. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  congratulations:
+    "He keeps his eyes open the whole time, looking proudly at the person just out of frame to the right. He lifts his hand off their shoulder and brings it down in one single hearty slap, then grips the shoulder firmly, gives it a warm proud little shake, and nods once approvingly with a big proud grin. Only that shoulder is ever visible; no other face or body enters the frame. He does not close his eyes, does not turn to the camera, does not clap and does not pat repeatedly. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   cooked:
     "He stirs the pot with gusto, steam rising, then lifts his chin with a proud, happy grin and a small satisfied nod, clearly enjoying his cooking. The word COOKED on the red neon sign stays readable and unchanged. No talking. No captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "crazy-nod":
