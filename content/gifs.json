@@ -1264,7 +1264,13 @@
     "slug": "waiting",
     "tags": ["waiting", "wait", "impatient", "soon", "hold-on"],
     "title": "Waiting",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/waiting.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/waiting.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/wave.gif",

@@ -450,6 +450,8 @@ export const VIDEORC_PROMPTS: Record<string, string> = {
   wave:
     "He waves hello with his raised hand beside his head, a warm friendly smile holding, a couple of side-to-side waves. His hand never passes in front of his face. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",  wink:
     "Cursor keyframe over the still: his left eye closed. Both eyes start open; the left eye closes and reopens once while his cyber eye flares red. Slow push-in.",
+  waiting:
+    "Cursor keyframe over the still: his fingers resting on his crossed forearm. Soft warps tap the fingers impatiently, he heaves one annoyed sigh and glares with his red eyes, and the platform signals blink. Slow push-in.",
   working:
     "Cursor keyframe over the still: his left hand lifted over the keys. Soft warps tap his fingers on the keys as the keys and screens flicker; twice his left hand lifts and strikes, the second time with a camera shake, a red keyboard flash and his eyes flaring. Slow push-in.",
 
