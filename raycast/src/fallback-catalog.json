@@ -277,7 +277,13 @@
     "slug": "ew",
     "tags": ["ew", "gross", "nope", "dislike"],
     "title": "Ew",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/ew.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/ew.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/facepalm.gif",
