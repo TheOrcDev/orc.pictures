@@ -112,7 +112,13 @@
       "woohoo"
     ],
     "title": "Celebrate",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/celebrate.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/celebrate.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/champagne.gif",
