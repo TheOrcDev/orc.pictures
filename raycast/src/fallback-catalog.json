@@ -653,7 +653,13 @@
     "slug": "power-up",
     "tags": ["power-up", "powerup", "potion", "buff", "level-up", "aura"],
     "title": "Power up",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/power-up.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/power-up.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/proud.gif",
