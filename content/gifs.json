@@ -668,7 +668,13 @@
     "slug": "proud",
     "tags": ["proud", "smile", "happy", "good"],
     "title": "Proud",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/proud.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/proud.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/proud-of-you.gif",
