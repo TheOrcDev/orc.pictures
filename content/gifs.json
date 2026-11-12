@@ -1138,7 +1138,13 @@
     "slug": "sweat",
     "tags": ["sweat", "sweating", "nervous", "anxious", "stressed", "pressure"],
     "title": "Sweat",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/sweat.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/sweat.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/tear.gif",

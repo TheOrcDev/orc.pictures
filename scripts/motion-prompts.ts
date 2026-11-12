@@ -429,6 +429,8 @@ export const VIDEORC_PROMPTS: Record<string, string> = {
     "He draws in a deep breath, his huge shoulders rising, then tightens his grip and squeezes the huge boulder between his hands and arms with all his might, his muscles bulging and his red eyes blazing. Cracks race across the boulder, then it bursts apart into chunks of rock and a puff of dust that tumble to the ground. He brushes the dust off his hands and grins proudly at the viewer with his eyes open. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   surprise:
     "A small surprise jolt. His eyes stay wide and his red eyes flare. His mouth stays in a small gasp and does not open wider. He leans back a little, then holds the shocked face. He does not shout. His hands stay down. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  sweat:
+    "Cursor keyframes over the still: his head beaded with sweat, and his natural eye glancing each way. Sweat beads up over his scalp and face while his natural eye darts left and right and his cyber lens flickers red. Slow push-in.",
   tear:
     "A single tear rolls slowly down his scarred cheek, catching the red light. He blinks once, jaw tight, emotional but holding still. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   thankyou:
