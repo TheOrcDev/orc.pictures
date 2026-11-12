@@ -628,7 +628,13 @@
     "slug": "online",
     "tags": ["online", "here", "available", "wave"],
     "title": "Online",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/online.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/online.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/oops.gif",
