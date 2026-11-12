@@ -1057,7 +1057,13 @@
     "slug": "stars",
     "tags": ["stars", "wow", "amazed", "sparkle"],
     "title": "Stars",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/stars.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/stars.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/start-camera.gif",
