@@ -638,7 +638,13 @@
     "slug": "popcorn",
     "tags": ["popcorn", "watching", "drama", "snack"],
     "title": "Popcorn",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/popcorn.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/popcorn.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/power-up.gif",

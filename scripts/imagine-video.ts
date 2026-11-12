@@ -256,6 +256,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   phew: 5,
   pickaxe: 5,
   please: 5,
+  popcorn: 5,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -320,6 +321,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He swings the pickaxe into the rock wall, stone chips and red crystal shards flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   please:
     "Keeping his palms pressed together in front of his chest, he gives his hands two small hopeful shakes, tilts his head a little to one side, raises his eyebrows a bit higher and widens his warm, charming, hopeful smile, politely asking a friendly favor. Then he holds that hopeful look at the viewer. Friendly and good-natured, not sad and not desperate. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  popcorn:
+    "He eats popcorn from the bucket, tossing a few pieces into his mouth and chewing, watching something off-camera with amused eyes and a growing smirk. The screen light flickers on his face. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {
