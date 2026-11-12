@@ -919,7 +919,13 @@
     "slug": "seriously",
     "tags": ["seriously", "unamused", "stare", "really"],
     "title": "Seriously",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/seriously.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/seriously.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/ship-it.gif",

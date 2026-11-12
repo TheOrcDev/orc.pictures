@@ -284,6 +284,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   salute: 4,
   santa: 4,
   searching: 6,
+  seriously: 4,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -404,6 +405,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He holds the red present out toward the viewer and offers it with a small friendly push forward, as if handing it over, with a warm, jolly, closed-mouth grin, his eyes open and twinkling red. Soft snowflakes drift down. He is an orc, not a human: his two big tusks stay clearly visible the whole time and he never grows a long beard. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   searching:
     "He glances at the cable in his hand, shakes his head and tosses it over his shoulder. Then he digs into the crate with both hands, pushing the gear aside and peering in, pulls out an old black boot, frowns at it and drops it back in. He looks up and glances left, then right, with a puzzled, searching frown and a raised eyebrow, then goes back to rummaging in the crate. His eyes stay open. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  seriously:
+    "He stares at the viewer unamused, gives one slow deadpan blink, and his expression barely changes. Deadpan. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {
