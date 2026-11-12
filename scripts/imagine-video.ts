@@ -286,6 +286,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   searching: 6,
   seriously: 4,
   "ship-it": 6,
+  shrug: 5,
   sleep: 5,
   smash: 5,
   smell: 5,
@@ -417,6 +418,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He stares at the viewer unamused, gives one slow deadpan blink, and his expression barely changes. Deadpan. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "ship-it":
     "He gives the sleek black speedboat one mighty shove. The boat slides down the ramp away from him, splashes into the dark water and speeds out into the harbor, its red lights glowing. He straightens up, plants his fists on his hips and gives one proud nod toward the viewer. Job done. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  shrug:
+    "A classic shrug. His elbows stay tucked at his sides while his forearms lift off the counter and turn his palms up at waist height, and at the same time he raises his shoulders up toward his ears, tilts his head slightly, raises his eyebrows and gives a lopsided clueless half-smile: no idea. His hands never rise above his chest. He holds the shrug for a moment, then drops his shoulders and rests his hands back on the counter. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, the camera does not move back, no zoom, no cut.",
   sleep:
     "He sleeps peacefully, his chest slowly rising and falling, a tiny sleepy sway of his head. His eyes stay closed the whole time. Soft breathing motion. The monitors glow softly behind him. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   smash:

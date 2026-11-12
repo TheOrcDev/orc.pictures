@@ -949,7 +949,13 @@
     "slug": "shrug",
     "tags": ["shrug", "idk", "dunno", "whatever", "no-idea"],
     "title": "Shrug",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/shrug.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/shrug.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/sir.gif",
