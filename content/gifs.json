@@ -990,7 +990,13 @@
       "computer"
     ],
     "title": "Smash",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/smash.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/smash.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/smell.gif",
