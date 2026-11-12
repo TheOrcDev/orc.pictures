@@ -16,7 +16,8 @@
     "check": "ultracite check",
     "fix": "ultracite fix",
     "gif:import": "node --experimental-strip-types scripts/import-gif.ts",
-    "gif:imagine": "node --experimental-strip-types scripts/imagine-video.ts",
+    "gif:cursor-image": "zsh scripts/cursor-image.sh",
+    "gif:keyframes": "uv run --with numpy --with pillow scripts/keyframe-animate.py",
     "prepare": "husky"
   },
   "dependencies": {

@@ -1,26 +1,10 @@
-import { spawn } from "node:child_process";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import path from "node:path";
+// Motion prompts behind the orc GIFs, kept as a record of how each one was animated.
+// The orc set and most Videorc GIFs were rendered with xAI Grok Imagine, which is no longer used
+// (cost). New GIFs are animated from Cursor GenerateImage keyframes instead:
+// scripts/cursor-image.sh makes the keyframes and scripts/keyframe-animate.py animates them.
 
-interface CatalogGif {
-  slug: string;
-  tags: string[];
-  title: string;
-}
-
-interface VideoResult {
-  error?: { message?: string };
-  progress?: number;
-  status?: string;
-  video?: { respect_moderation?: boolean; url?: string };
-}
-
-const API_BASE = "https://api.x.ai/v1";
-const MODEL = "grok-imagine-video-1.5";
-const SOURCE_DIR = "/Users/orcdev/Downloads/ai images";
-const VIDEO_DIR = "/tmp/orc-grok-videos";
-const DURATION_SECONDS = 4;
-const DURATIONS: Record<string, number> = {
+// Seconds per Grok render; GIFs not listed used 4.
+export const DURATIONS: Record<string, number> = {
   annoyed: 6,
   celebrate: 6,
   congratulations: 6,
@@ -56,11 +40,8 @@ const DURATIONS: Record<string, number> = {
   "power-up": 6,
   "proud-of-you": 6,
 };
-const POLL_MS = 5000;
-const SKIP_SLUGS = new Set(["orc-smile"]);
-const STYLES = new Set(["orc", "videorc"]);
 
-const PROMPTS: Record<string, string> = {
+export const PROMPTS: Record<string, string> = {
   angry:
     "The orc shouts in anger, a short roar, shoulders heaving, glare holding on the camera. Locked camera.",
   approves:
@@ -225,7 +206,7 @@ const PROMPTS: Record<string, string> = {
 };
 
 // Videorc versions: the dark, photoreal cyber orc. Each still is generated from scratch, so its motion prompt is its own.
-const VIDEORC_DURATIONS: Record<string, number> = {
+export const VIDEORC_DURATIONS: Record<string, number> = {
   angry: 5,
   annoyed: 6,
   approves: 6,
@@ -306,7 +287,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   wave: 4,
 };
 
-const VIDEORC_PROMPTS: Record<string, string> = {
+export const VIDEORC_PROMPTS: Record<string, string> = {
   // Orc smile (Videorc): rendered at 720p; the static opening stare is played at 2x afterwards, then a 0.6 s hold.
   angry:
     "He glares at the viewer, then his fury breaks: he leans forward a little and lets out one short furious roar, mouth wide open, tusks bared, shoulders heaving, his red eyes flaring blazing bright. Then he closes his mouth and holds the furious glare at the viewer, breathing hard. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
@@ -465,332 +446,3 @@ const VIDEORC_PROMPTS: Record<string, string> = {
   wave:
     "He waves hello with his raised hand beside his head, a warm friendly smile holding, a couple of side-to-side waves. His hand never passes in front of his face. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
-
-const parseArgs = (argv: string[]): Record<string, string> => {
-  const result: Record<string, string> = {};
-  const tokens = argv[Symbol.iterator]();
-  let step = tokens.next();
-
-  while (!step.done) {
-    const token = step.value;
-
-    if (!token.startsWith("--")) {
-      step = tokens.next();
-      continue;
-    }
-
-    const key = token.slice(2);
-    const next = tokens.next();
-
-    if (next.done || next.value.startsWith("--")) {
-      result[key] = "true";
-      step = next;
-      continue;
-    }
-
-    result[key] = next.value;
-    step = tokens.next();
-  }
-
-  return result;
-};
-
-const run = async (command: string, args: string[]): Promise<string> => {
-  return await new Promise((resolve, reject) => {
-    const child = spawn(command, args, { stdio: ["ignore", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-
-    child.stdout.on("data", (chunk: Buffer) => {
-      stdout += chunk.toString();
-    });
-    child.stderr.on("data", (chunk: Buffer) => {
-      stderr += chunk.toString();
-    });
-    child.on("error", reject);
-    child.on("exit", (code) => {
-      if (code === 0) {
-        resolve(stdout);
-        return;
-      }
-
-      reject(new Error(`${command} exited with ${code}\n${stderr}`));
-    });
-  });
-};
-
-const apiKey = (): string => {
-  const key = process.env.XAI_API_KEY;
-
-  if (!key) {
-    throw new Error("XAI_API_KEY is not set");
-  }
-
-  return key;
-};
-
-const aspectRatio = (width: number, height: number): string => {
-  const ratio = width / height;
-  const options: [number, string][] = [
-    [1, "1:1"],
-    [16 / 9, "16:9"],
-    [9 / 16, "9:16"],
-    [4 / 3, "4:3"],
-    [3 / 4, "3:4"],
-    [3 / 2, "3:2"],
-    [2 / 3, "2:3"],
-  ];
-  const [closest] = [...options].sort(
-    (left, right) => Math.abs(left[0] - ratio) - Math.abs(right[0] - ratio)
-  );
-
-  return closest?.[1] ?? "1:1";
-};
-
-const prepareStill = async (input: string, slug: string): Promise<string> => {
-  const jpeg = path.join(VIDEO_DIR, `${slug}.still.jpg`);
-  await run("ffmpeg", [
-    "-y",
-    "-i",
-    input,
-    "-vf",
-    "scale='min(1280,iw)':-2:flags=lanczos",
-    "-q:v",
-    "3",
-    jpeg,
-  ]);
-
-  return jpeg;
-};
-
-const probeSize = async (
-  filePath: string
-): Promise<{ height: number; width: number }> => {
-  const output = await run("ffprobe", [
-    "-v",
-    "error",
-    "-select_streams",
-    "v:0",
-    "-show_entries",
-    "stream=width,height",
-    "-of",
-    "json",
-    filePath,
-  ]);
-  const parsed: unknown = JSON.parse(output);
-
-  if (typeof parsed !== "object" || parsed === null || !("streams" in parsed)) {
-    throw new Error(`Could not probe ${filePath}`);
-  }
-
-  const streams = parsed.streams;
-
-  if (!Array.isArray(streams) || streams.length === 0) {
-    throw new Error(`No video stream in ${filePath}`);
-  }
-
-  const stream = streams[0];
-  const width =
-    typeof stream === "object" && stream !== null && "width" in stream
-      ? Number(stream.width)
-      : Number.NaN;
-  const height =
-    typeof stream === "object" && stream !== null && "height" in stream
-      ? Number(stream.height)
-      : Number.NaN;
-
-  if (!Number.isFinite(width) || !Number.isFinite(height)) {
-    throw new Error(`Missing dimensions in ${filePath}`);
-  }
-
-  return { height, width };
-};
-
-const startGeneration = async (
-  imageDataUrl: string,
-  prompt: string,
-  ratio: string,
-  duration: number,
-  resolution: string
-): Promise<string> => {
-  const response = await fetch(`${API_BASE}/videos/generations`, {
-    body: JSON.stringify({
-      aspect_ratio: ratio,
-      duration,
-      image: { url: imageDataUrl },
-      model: MODEL,
-      prompt,
-      resolution,
-    }),
-    headers: {
-      Authorization: `Bearer ${apiKey()}`,
-      "Content-Type": "application/json",
-    },
-    method: "POST",
-  });
-  const body: unknown = await response.json();
-
-  if (!response.ok) {
-    throw new Error(`Video start failed (${response.status}): ${JSON.stringify(body)}`);
-  }
-
-  if (
-    typeof body !== "object" ||
-    body === null ||
-    !("request_id" in body) ||
-    typeof body.request_id !== "string"
-  ) {
-    throw new Error(`Missing request_id: ${JSON.stringify(body)}`);
-  }
-
-  return body.request_id;
-};
-
-const pollVideo = async (requestId: string): Promise<string> => {
-  for (;;) {
-    const response = await fetch(`${API_BASE}/videos/${requestId}`, {
-      headers: { Authorization: `Bearer ${apiKey()}` },
-    });
-    const body = (await response.json()) as VideoResult;
-
-    if (!response.ok) {
-      throw new Error(`Poll failed (${response.status}): ${JSON.stringify(body)}`);
-    }
-
-    if (body.status === "failed" || body.status === "expired") {
-      throw new Error(`Video ${body.status}: ${body.error?.message ?? requestId}`);
-    }
-
-    if (body.status === "done") {
-      const url = body.video?.url;
-
-      if (!url || body.video?.respect_moderation === false) {
-        throw new Error(`Video finished without a usable url (${requestId})`);
-      }
-
-      return url;
-    }
-
-    process.stdout.write(`  ${requestId} ${body.status ?? "pending"} ${body.progress ?? 0}%\n`);
-    await new Promise((resolve) => {
-      setTimeout(resolve, POLL_MS);
-    });
-  }
-};
-
-const downloadFile = async (url: string, dest: string): Promise<void> => {
-  const response = await fetch(url);
-
-  if (!response.ok) {
-    throw new Error(`Download failed (${response.status})`);
-  }
-
-  const bytes = Buffer.from(await response.arrayBuffer());
-  await writeFile(dest, bytes);
-};
-
-const importGif = async (
-  slug: string,
-  videoPath: string,
-  gif: CatalogGif,
-  style: string
-): Promise<void> => {
-  await new Promise<void>((resolve, reject) => {
-    const child = spawn(
-      "node",
-      [
-        "--experimental-strip-types",
-        path.join(process.cwd(), "scripts/import-gif.ts"),
-        "--input",
-        videoPath,
-        "--slug",
-        slug,
-        "--style",
-        style,
-        "--title",
-        gif.title,
-        "--tags",
-        gif.tags.join(","),
-      ],
-      { stdio: "inherit" }
-    );
-    child.on("error", reject);
-    child.on("exit", (code) => {
-      if (code === 0) {
-        resolve();
-        return;
-      }
-
-      reject(new Error(`import failed for ${slug} (${code})`));
-    });
-  });
-};
-
-// Videorc stills live in their own folder, and their videos get a `-videorc` suffix so both styles can sit side by side.
-const sourcePath = (style: string, slug: string): string =>
-  style === "videorc"
-    ? path.join(SOURCE_DIR, "videorc", `${slug}.png`)
-    : path.join(SOURCE_DIR, `${slug}.png`);
-
-const generateOne = async (
-  gif: CatalogGif,
-  input: string,
-  style: string
-): Promise<void> => {
-  const isVideorc = style === "videorc";
-  const prompt = (isVideorc ? VIDEORC_PROMPTS : PROMPTS)[gif.slug];
-
-  if (!prompt) {
-    throw new Error(`No ${style} motion prompt for ${gif.slug}`);
-  }
-
-  const name = isVideorc ? `${gif.slug}-videorc` : gif.slug;
-  process.stdout.write(`Generating ${gif.slug} ${style}\n`);
-  const jpeg = await prepareStill(input, name);
-  const size = await probeSize(jpeg);
-  const imageDataUrl = `data:image/jpeg;base64,${(await readFile(jpeg)).toString("base64")}`;
-  const requestId = await startGeneration(
-    imageDataUrl,
-    prompt,
-    aspectRatio(size.width, size.height),
-    (isVideorc ? VIDEORC_DURATIONS : DURATIONS)[gif.slug] ?? DURATION_SECONDS,
-    isVideorc ? "720p" : "480p"
-  );
-  process.stdout.write(`  request ${requestId}\n`);
-  const videoUrl = await pollVideo(requestId);
-  const videoPath = path.join(VIDEO_DIR, `${name}.mp4`);
-  await downloadFile(videoUrl, videoPath);
-  await importGif(gif.slug, videoPath, gif, style);
-};
-
-const main = async (): Promise<void> => {
-  const args = parseArgs(process.argv.slice(2));
-  const style = args.style ?? "orc";
-
-  if (!STYLES.has(style)) {
-    throw new Error(`Invalid style: ${style}`);
-  }
-
-  const catalog = JSON.parse(
-    await readFile(path.join(process.cwd(), "content/gifs.json"), "utf8")
-  ) as CatalogGif[];
-
-  await mkdir(VIDEO_DIR, { recursive: true });
-
-  const wanted = args.slug
-    ? catalog.filter((gif) => gif.slug === args.slug)
-    : catalog.filter((gif) => !SKIP_SLUGS.has(gif.slug));
-
-  if (wanted.length === 0) {
-    throw new Error("No matching catalog entries");
-  }
-
-  for (const gif of wanted) {
-    const input = args.input
-      ? path.resolve(args.input)
-      : sourcePath(style, gif.slug);
-    await generateOne(gif, input, style);
-  }
-};
-
-await main();
