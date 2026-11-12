@@ -553,7 +553,13 @@
     "slug": "mind-blown",
     "tags": ["mind-blown", "whoa", "amazed", "no-way", "boom"],
     "title": "Mind blown",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/mind-blown.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/mind-blown.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/morning.gif",
