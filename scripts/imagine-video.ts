@@ -233,6 +233,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   "burn-it-with-fire": 6,
   celebrate: 6,
   champagne: 5,
+  clap: 5,
   "orc-smile": 6,
 };
 
@@ -252,6 +253,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He pumps his raised fist in celebration two times with a wide, fierce grin, his red eyes flaring brighter, while the black and red balloons bob beside him and silver and red confetti drifts down. His joyful grin holds. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   champagne:
     "He raises the champagne flute toward the viewer in a toast with a knowing smirk, gives it a small lift, then points at the viewer with one finger of the hand holding the glass. He holds the smug toast, mouth closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  clap:
+    "He claps his hands together four times in applause with a warm, approving grin, then gives one small nod. His hands stay in front of his chest. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "orc-smile":
     "He keeps eye contact with the viewer the whole time. Slow and controlled, like a real actor: his cold, still stare holds for a moment, then a slow, confident, menacing smile spreads across his face, the corners of his mouth pulling up and his lips parting just enough to show his teeth between his big tusks, his cheeks lifting and his eyes narrowing a little. His red eyes flare brighter for a moment as he smiles. He holds the dangerous smile at the end. He does not nod and does not blink, and his eyes stay open. No talking. No text, no captions. His metal skull plates, bolts, cables, tusks, ears, ear rings, face and jacket stay exactly the same. The monitors behind him flicker softly and the red LIVE light glows. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };

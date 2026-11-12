@@ -142,7 +142,13 @@
     "slug": "clap",
     "tags": ["clap", "clapping", "applause", "bravo", "well-done"],
     "title": "Clap",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/clap.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/clap.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/congratulations.gif",
