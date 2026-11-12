@@ -750,7 +750,13 @@
     "slug": "sailing",
     "tags": ["sailing", "ship", "sea", "voyage", "captain", "adventure"],
     "title": "Sailing",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/sailing.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/sailing.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/salute.gif",

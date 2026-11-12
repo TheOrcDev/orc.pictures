@@ -263,6 +263,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   "push-to-main": 5,
   ready: 5,
   sad: 5,
+  sailing: 6,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -341,6 +342,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He tightens his grip on the axe and shifts into a ready combat stance, takes a determined breath, his red eyes flaring brighter. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   sad:
     "He looks downcast, gives a slow sad blink, a small sniff and a heavy slump of his shoulders, his red eyes dimming. The rain keeps falling. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  sailing:
+    "The ship sails steadily forward across the dark sea under full red sails. The deck gently rises and falls with the swell, the sails billow and ripple in the wind, spray flies over the rail and the red lanterns swing. He holds the wheel with a confident look, eyes on the horizon, then glances at the viewer with a small grin. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {
