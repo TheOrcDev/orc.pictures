@@ -259,6 +259,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   popcorn: 5,
   "power-up": 6,
   proud: 5,
+  "proud-of-you": 6,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -329,6 +330,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He pulls the cork out with his thumb, tips his head back and gulps down the glowing red potion in one go, then tosses the empty flask away over his shoulder. He clenches both fists at his sides and tenses his whole body. A blazing red aura bursts up around him like flames, crackling with red sparks, his red eyes blaze brighter and his muscles swell. He ends in a powerful stance, fists clenched, grinning fiercely at the viewer with the red aura still blazing around him. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   proud:
     "He puffs his chest out, his proud smile widening, his coat and the flag moving in the night wind. Heroic but subtle. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  "proud-of-you":
+    "His stern look slowly softens. His eyes grow a little misty and shine, and a warm, proud smile spreads across his face, his tusks showing. He gives one small, slow nod of approval, his eyes open and fixed warmly on the viewer. Then he lifts one hand from his crossed arms and wipes the corner of one eye with his thumb, trying to hide that he is moved, and lets out a small proud chuckle. He keeps smiling at the viewer with his eyes open. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {

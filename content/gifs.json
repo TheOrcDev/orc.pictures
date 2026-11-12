@@ -690,7 +690,13 @@
       "wholesome"
     ],
     "title": "Proud of you",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/proud-of-you.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/proud-of-you.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/push-to-main.gif",
