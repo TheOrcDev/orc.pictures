@@ -1201,7 +1201,13 @@
     "slug": "touch-grass",
     "tags": ["touch-grass", "grass", "outside", "outdoors", "go-outside"],
     "title": "Touch grass",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/touch-grass.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/touch-grass.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/velocity.gif",

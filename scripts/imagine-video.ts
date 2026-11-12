@@ -299,6 +299,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   thankyou: 4,
   thinking: 5,
   toldyou: 4,
+  "touch-grass": 5,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -449,6 +450,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He looks up and to the side, deep in thought, his eyes slowly drifting as he ponders, a slow blink and a small thoughtful purse of the lips. His hands stay down and never touch his face. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   toldyou:
     "He smirks I-told-you-so, gives a smug little nod and a knowing glance at the viewer. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  "touch-grass":
+    "He slowly lowers his hand and presses his palm into the long grass, feels it between his fingers, and his hard face relaxes into a calm, peaceful little smile as the grass sways in the night breeze. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {
