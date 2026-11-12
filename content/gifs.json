@@ -934,7 +934,13 @@
     "slug": "ship-it",
     "tags": ["ship-it", "ship", "deploy", "launch", "release", "shipped"],
     "title": "Ship it",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/ship-it.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/ship-it.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/shrug.gif",
