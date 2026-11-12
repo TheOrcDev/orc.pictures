@@ -217,7 +217,13 @@
     "slug": "damn",
     "tags": ["damn", "impressed", "damn-son", "respect", "woah"],
     "title": "Damn",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/damn.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/damn.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/dance.gif",
