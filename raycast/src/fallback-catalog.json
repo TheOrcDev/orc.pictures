@@ -583,7 +583,13 @@
     "slug": "nod",
     "tags": ["nod", "yes", "approve", "thumbs-up", "ok"],
     "title": "Nod",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/nod.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/nod.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/nope.gif",
