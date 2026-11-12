@@ -247,7 +247,13 @@
     "slug": "doit",
     "tags": ["doit", "do-it", "just-do-it", "you-got-this", "encourage"],
     "title": "Do it",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/doit.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/doit.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/doubt.gif",
