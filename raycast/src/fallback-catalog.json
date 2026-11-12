@@ -187,7 +187,13 @@
     "slug": "crazy-nod",
     "tags": ["crazy-nod", "nod", "yes", "hell-yes", "exactly", "thats-it"],
     "title": "Crazy nod",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/crazy-nod.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/crazy-nod.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/curious.gif",
