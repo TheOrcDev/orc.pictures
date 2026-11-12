@@ -478,7 +478,13 @@
     "slug": "im-out",
     "tags": ["im-out", "bye", "goodbye", "leaving", "later", "peace-out"],
     "title": "I'm out",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/im-out.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/im-out.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/in-love.gif",
