@@ -608,7 +608,13 @@
     "slug": "pickaxe",
     "tags": ["pickaxe", "mine", "mining", "dig", "work"],
     "title": "Pickaxe",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/pickaxe.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/pickaxe.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/please.gif",
