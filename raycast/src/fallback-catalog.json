@@ -60,7 +60,13 @@
     "slug": "beach",
     "tags": ["beach", "cocktail", "drink", "vacation", "cheers"],
     "title": "Beach",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/beach.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/beach.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/beach-lounge.gif",
