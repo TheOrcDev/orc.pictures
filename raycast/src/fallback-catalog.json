@@ -1102,7 +1102,13 @@
       "powerful"
     ],
     "title": "Strong orc",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/strong-orc.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/strong-orc.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/surprise.gif",
