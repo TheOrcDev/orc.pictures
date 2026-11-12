@@ -1216,7 +1216,13 @@
     "slug": "velocity",
     "tags": ["velocity", "run", "running", "sprint", "speed", "goal"],
     "title": "Velocity",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/velocity.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/velocity.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/victory.gif",
