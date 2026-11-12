@@ -598,7 +598,13 @@
     "slug": "nope",
     "tags": ["nope", "no", "denied", "never", "absolutely-not", "head-shake"],
     "title": "Nope",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/nope.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/nope.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/noted.gif",
