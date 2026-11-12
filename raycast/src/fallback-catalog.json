@@ -493,7 +493,13 @@
     "slug": "in-love",
     "tags": ["in-love", "love", "smitten", "crush", "adore"],
     "title": "In love",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/in-love.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/in-love.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/laugh.gif",
