@@ -538,7 +538,13 @@
     "slug": "mic-drop",
     "tags": ["mic-drop", "boom", "nailed-it", "smug", "done"],
     "title": "Mic drop",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/mic-drop.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/mic-drop.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/mind-blown.gif",
