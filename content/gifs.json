@@ -613,7 +613,13 @@
     "slug": "noted",
     "tags": ["noted", "got-it", "will-do", "ok", "writing"],
     "title": "Noted",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/noted.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/noted.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/online.gif",
