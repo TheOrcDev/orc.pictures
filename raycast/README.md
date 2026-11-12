@@ -8,6 +8,8 @@ Browsers cannot put a GIF file on the clipboard. This extension can, so pasting 
 
 ### Search Orc GIFs
 
+Pick a style from the dropdown next to the search bar: **Orc** (the watercolor orcs) or **Videorc** (the dark cyber orc). The extension remembers your choice.
+
 Search the catalog, then:
 
 - `↵` Copy the GIF file
@@ -21,4 +23,4 @@ The first copy of each GIF downloads the file once and caches it.
 
 - **Catalog URL** — JSON catalog. Defaults to `https://orc.pictures/catalog.json`.
 - **Site URL** — Used to resolve GIF and poster paths. Defaults to `https://orc.pictures`.
-- **Local GIFs folder** — Optional. Point this at a folder of `{slug}.gif` files to skip the download.
+- **Local GIFs folder** — Optional. Point this at a folder of `{slug}.gif` files to skip the download. Videorc GIFs are read from its `videorc` subfolder.

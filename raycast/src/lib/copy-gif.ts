@@ -4,7 +4,7 @@ import { isAbsolute, relative, resolve } from "node:path";
 
 import { environment } from "@raycast/api";
 
-import { assetUrl, isSafeSlug, type CatalogGif } from "./catalog";
+import { assetUrl, isSafeSlug, type GifStyle, type StyledGif } from "./catalog";
 
 const gifFileName = (slug: string): string => {
   if (!isSafeSlug(slug)) {
@@ -26,7 +26,12 @@ const pathInside = (root: string, fileName: string): string => {
   return resolved;
 };
 
-const cacheDirectory = (): string => resolve(environment.supportPath, "gifs");
+// Videorc GIFs share slugs with the orc ones, so each style keeps its own folder.
+const styleFolder = (root: string, style: GifStyle): string =>
+  style === "videorc" ? pathInside(root, "videorc") : resolve(root);
+
+const cacheDirectory = (style: GifStyle): string =>
+  styleFolder(resolve(environment.supportPath, "gifs"), style);
 
 const cachedGifName = (slug: string, revision?: string): string => {
   if (!revision) {
@@ -36,13 +41,17 @@ const cachedGifName = (slug: string, revision?: string): string => {
   return `${slug}.${revision}.gif`;
 };
 
-const cachedGifPath = (slug: string, revision?: string): string =>
-  pathInside(cacheDirectory(), cachedGifName(slug, revision));
+const cachedGifPath = (
+  style: GifStyle,
+  slug: string,
+  revision?: string
+): string => pathInside(cacheDirectory(style), cachedGifName(slug, revision));
 
 const belongsToSlug = (fileName: string, slug: string): boolean =>
   fileName === `${slug}.gif` || fileName.startsWith(`${slug}.`);
 
 const localGifPath = (
+  style: GifStyle,
   slug: string,
   localGifsDirectory: string | undefined
 ): string | undefined => {
@@ -50,7 +59,10 @@ const localGifPath = (
     return undefined;
   }
 
-  const path = pathInside(localGifsDirectory, gifFileName(slug));
+  const path = pathInside(
+    styleFolder(localGifsDirectory, style),
+    gifFileName(slug)
+  );
 
   if (!existsSync(path)) {
     return undefined;
@@ -90,11 +102,12 @@ const remoteSize = async (url: string): Promise<number | undefined> => {
 };
 
 const cachedGifIfReady = async (
+  style: GifStyle,
   slug: string,
   remoteUrl: string,
   revision?: string
 ): Promise<string | undefined> => {
-  const path = cachedGifPath(slug, revision);
+  const path = cachedGifPath(style, slug, revision);
   const size = await fileSize(path);
 
   if (size === undefined) {
@@ -114,8 +127,13 @@ const cachedGifIfReady = async (
   return undefined;
 };
 
-const removeStaleCopies = async (slug: string, keep: string): Promise<void> => {
-  const names = await readdir(cacheDirectory()).catch(() => []);
+const removeStaleCopies = async (
+  style: GifStyle,
+  slug: string,
+  keep: string
+): Promise<void> => {
+  const directory = cacheDirectory(style);
+  const names = await readdir(directory).catch(() => []);
 
   await Promise.all(
     names.map(async (name) => {
@@ -123,24 +141,29 @@ const removeStaleCopies = async (slug: string, keep: string): Promise<void> => {
         return;
       }
 
-      await unlink(pathInside(cacheDirectory(), name)).catch(() => undefined);
+      await unlink(pathInside(directory, name)).catch(() => undefined);
     })
   );
 };
 
 export const ensureLocalGif = async (
-  gif: CatalogGif,
+  gif: StyledGif,
   origin: string,
   localGifsDirectory?: string
 ): Promise<string> => {
-  const localPath = localGifPath(gif.slug, localGifsDirectory);
+  const localPath = localGifPath(gif.style, gif.slug, localGifsDirectory);
 
   if (localPath) {
     return localPath;
   }
 
   const remoteUrl = assetUrl(gif.file, origin, gif.revision);
-  const cachedPath = await cachedGifIfReady(gif.slug, remoteUrl, gif.revision);
+  const cachedPath = await cachedGifIfReady(
+    gif.style,
+    gif.slug,
+    remoteUrl,
+    gif.revision
+  );
 
   if (cachedPath) {
     return cachedPath;
@@ -153,11 +176,15 @@ export const ensureLocalGif = async (
   }
 
   const bytes = Buffer.from(await response.arrayBuffer());
-  const dest = cachedGifPath(gif.slug, gif.revision);
+  const dest = cachedGifPath(gif.style, gif.slug, gif.revision);
 
-  await mkdir(cacheDirectory(), { recursive: true });
+  await mkdir(cacheDirectory(gif.style), { recursive: true });
   await writeFile(dest, bytes);
-  await removeStaleCopies(gif.slug, cachedGifName(gif.slug, gif.revision));
+  await removeStaleCopies(
+    gif.style,
+    gif.slug,
+    cachedGifName(gif.slug, gif.revision)
+  );
 
   return dest;
 };

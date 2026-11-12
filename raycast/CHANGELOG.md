@@ -1,5 +1,10 @@
 # orc.pictures Changelog
 
+## [Videorc Style] - {PR_MERGE_DATE}
+
+- Add a style dropdown to switch between the Orc GIFs and the Videorc cyber orc GIFs
+- Remember the last style you picked
+
 ## [1.0.1] - {PR_MERGE_DATE}
 
 - Fix copying GIFs on Windows

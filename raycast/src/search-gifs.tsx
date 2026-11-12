@@ -12,18 +12,22 @@ import {
   Toast,
 } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
+import { useState } from "react";
 
 import {
   absoluteUrl,
   assetUrl,
   bundledCatalog,
+  gifsForStyle,
+  isGifStyle,
   parseCatalog,
-  type CatalogGif,
+  type GifStyle,
+  type StyledGif,
 } from "./lib/catalog";
 import { ensureLocalGif } from "./lib/copy-gif";
 
 const copyGifFile = async (
-  gif: CatalogGif,
+  gif: StyledGif,
   origin: string,
   localGifsDirectory?: string
 ): Promise<void> => {
@@ -45,7 +49,7 @@ const copyGifFile = async (
 };
 
 const pasteGifFile = async (
-  gif: CatalogGif,
+  gif: StyledGif,
   origin: string,
   localGifsDirectory?: string
 ): Promise<void> => {
@@ -65,14 +69,17 @@ const pasteGifFile = async (
 };
 
 interface GifActionsProps {
-  gif: CatalogGif;
+  gif: StyledGif;
   localGifsDirectory?: string;
   origin: string;
 }
 
 const GifActions = ({ gif, localGifsDirectory, origin }: GifActionsProps) => {
   const fileUrl = absoluteUrl(gif.file, origin);
-  const pageUrl = absoluteUrl(`/${gif.slug}`, origin);
+  const pageUrl = absoluteUrl(
+    gif.style === "videorc" ? `/${gif.slug}?style=videorc` : `/${gif.slug}`,
+    origin
+  );
 
   return (
     <ActionPanel>
@@ -118,7 +125,8 @@ const SearchOrcGifs = () => {
       // Bundled catalog covers first launch before /catalog.json is live.
     },
   });
-  const gifs = data ?? bundledCatalog;
+  const [style, setStyle] = useState<GifStyle>("orc");
+  const gifs = gifsForStyle(data ?? bundledCatalog, style);
 
   return (
     <Grid
@@ -127,7 +135,19 @@ const SearchOrcGifs = () => {
       fit={Grid.Fit.Fill}
       inset={Grid.Inset.Zero}
       isLoading={isLoading}
-      searchBarPlaceholder="Search orc GIFs"
+      searchBarAccessory={
+        <Grid.Dropdown
+          onChange={(value) => setStyle(isGifStyle(value) ? value : "orc")}
+          storeValue
+          tooltip="Style"
+        >
+          <Grid.Dropdown.Item title="Orc" value="orc" />
+          <Grid.Dropdown.Item title="Videorc" value="videorc" />
+        </Grid.Dropdown>
+      }
+      searchBarPlaceholder={
+        style === "videorc" ? "Search Videorc GIFs" : "Search orc GIFs"
+      }
     >
       {gifs.length === 0 ? (
         <Grid.EmptyView
@@ -137,7 +157,7 @@ const SearchOrcGifs = () => {
       ) : null}
       {gifs.map((gif) => (
         <Grid.Item
-          key={`${gif.slug}-${gif.revision ?? "current"}`}
+          key={`${gif.style}-${gif.slug}-${gif.revision ?? "current"}`}
           actions={
             <GifActions
               gif={gif}
