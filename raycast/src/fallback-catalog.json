@@ -964,7 +964,13 @@
     "slug": "sir",
     "tags": ["sir", "yes-sir", "respect", "officer"],
     "title": "Sir",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/sir.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/sir.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/sleep.gif",
