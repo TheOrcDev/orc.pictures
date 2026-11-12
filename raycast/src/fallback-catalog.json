@@ -705,7 +705,13 @@
     "slug": "push-to-main",
     "tags": ["push-to-main", "push", "deploy", "merge", "git", "main"],
     "title": "Push to main",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/push-to-main.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/push-to-main.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/ready.gif",
