@@ -352,7 +352,13 @@
     "slug": "flex",
     "tags": ["flex", "flexing", "muscles", "swole", "strong"],
     "title": "Flex",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/flex.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/flex.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/for-the-horde.gif",
