@@ -6,7 +6,13 @@
     "slug": "angry",
     "tags": ["angry", "mad", "rage", "yell", "furious"],
     "title": "Angry",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/angry.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/angry.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/annoyed.gif",
