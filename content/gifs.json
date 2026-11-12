@@ -292,7 +292,13 @@
     "slug": "facepalm",
     "tags": ["facepalm", "ugh", "smh", "disappointed", "really", "cringe"],
     "title": "Facepalm",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/facepalm.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/facepalm.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/fire.gif",
