@@ -255,6 +255,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   "orcish-salute": 5,
   phew: 5,
   pickaxe: 5,
+  please: 5,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -317,6 +318,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "He wipes his forearm across his brow and lowers that arm, lets out a big relieved breath with his shoulders dropping, then beams a big cheerful grin at the viewer with a small happy chuckle. No sweat, no smoke from his mouth, no breath cloud. Eyes open at the end. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   pickaxe:
     "He swings the pickaxe into the rock wall, stone chips and red crystal shards flying, then hauls it back for another strike. Focused work grimace. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  please:
+    "Keeping his palms pressed together in front of his chest, he gives his hands two small hopeful shakes, tilts his head a little to one side, raises his eyebrows a bit higher and widens his warm, charming, hopeful smile, politely asking a friendly favor. Then he holds that hopeful look at the viewer. Friendly and good-natured, not sad and not desperate. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {

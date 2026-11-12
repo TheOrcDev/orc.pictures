@@ -623,7 +623,13 @@
     "slug": "please",
     "tags": ["please", "pls", "pretty-please", "favor", "hopeful"],
     "title": "Please",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/please.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/please.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/popcorn.gif",
