@@ -780,7 +780,13 @@
     "slug": "santa",
     "tags": ["santa", "christmas", "xmas", "gift", "presents", "holidays"],
     "title": "Santa",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/santa.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/santa.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/searching.gif",

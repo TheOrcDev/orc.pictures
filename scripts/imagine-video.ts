@@ -265,6 +265,7 @@ const VIDEORC_DURATIONS: Record<string, number> = {
   sad: 5,
   sailing: 6,
   salute: 4,
+  santa: 4,
 };
 
 const VIDEORC_PROMPTS: Record<string, string> = {
@@ -347,6 +348,8 @@ const VIDEORC_PROMPTS: Record<string, string> = {
     "The ship sails steadily forward across the dark sea under full red sails. The deck gently rises and falls with the swell, the sails billow and ripple in the wind, spray flies over the rail and the red lanterns swing. He holds the wheel with a confident look, eyes on the horizon, then glances at the viewer with a small grin. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   salute:
     "He holds the firm military salute, gives a slight blink, his red eyes glowing steadily. Respectful. Mouth stays closed. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
+  santa:
+    "He holds the red present out toward the viewer and offers it with a small friendly push forward, as if handing it over, with a warm, jolly, closed-mouth grin, his eyes open and twinkling red. Soft snowflakes drift down. He is an orc, not a human: his two big tusks stay clearly visible the whole time and he never grows a long beard. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
 };
 
 const parseArgs = (argv: string[]): Record<string, string> => {
