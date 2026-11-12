@@ -172,7 +172,13 @@
     "slug": "cooked",
     "tags": ["cooked", "done", "finished", "toast"],
     "title": "Cooked",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/cooked.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/cooked.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/crazy-nod.gif",
