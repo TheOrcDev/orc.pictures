@@ -232,7 +232,13 @@
     "slug": "dance",
     "tags": ["dance", "dancing", "groove", "party", "move"],
     "title": "Dance",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/dance.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/dance.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/doit.gif",
