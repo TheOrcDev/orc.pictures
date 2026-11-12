@@ -45,7 +45,13 @@
       "sign-off"
     ],
     "title": "Approves",
-    "width": 544
+    "width": 544,
+    "videorc": {
+      "file": "/gifs/videorc/approves.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/approves.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/beach.gif",
