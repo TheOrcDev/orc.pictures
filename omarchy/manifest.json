@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "orc-pictures",
+  "name": "orc.pictures",
+  "version": "1.0.0",
+  "author": "orcdev",
+  "description": "Search orc and Videorc reaction GIFs from orc.pictures and paste the GIF file into the app in front",
+  "kinds": [
+    "overlay"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "overlay": "OrcPictures.qml"
+  }
+}

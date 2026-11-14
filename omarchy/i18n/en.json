@@ -1,0 +1,11 @@
+{
+  "search": "Search orc GIFs",
+  "searchVideorc": "Search Videorc GIFs",
+  "styleOrc": "Orc",
+  "styleVideorc": "Videorc",
+  "loading": "Loading…",
+  "noCatalog": "Could not load the orc.pictures catalog",
+  "noMatches": "No GIFs match \"%1\"",
+  "hints": "Enter paste · Shift+Enter copy · Ctrl+L copy link · Ctrl+O open · Tab style · Space preview",
+  "hintsPreviewing": "Previewing · Enter paste · Shift+Enter copy · Ctrl+L copy link · Ctrl+O open · Tab style · Space stop"
+}
