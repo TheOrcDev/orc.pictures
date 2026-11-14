@@ -7,5 +7,6 @@ export default defineConfig({
     ...(ultracite.ignorePatterns ?? []),
     "**/.agents",
     "**/scripts",
+    "**/omarchy",
   ],
 });
