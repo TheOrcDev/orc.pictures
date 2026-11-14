@@ -15,6 +15,7 @@ export default defineConfig({
     "**/.agents",
     "**/scripts",
     "**/raycast/**",
+    "**/omarchy/**",
   ],
   jsPlugins: jsPlugins.jsPlugins,
   overrides: [

@@ -29,6 +29,17 @@ Personal [Giphy](https://orc.pictures) for orc reaction GIFs. Search, hover to p
 
 Press `d` to toggle dark mode.
 
+## Use on Omarchy
+
+The [Omarchy](https://omarchy.org) plugin is the picker as a shell overlay. It pastes the GIF file straight into the app in front, so it stays animated.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/TheOrcDev/orc.pictures/main/omarchy/install.sh | bash
+omarchy-shell shell toggle orc-pictures
+```
+
+See [`omarchy/README.md`](omarchy/README.md) for keys and a keybinding.
+
 ## Develop
 
 ```bash
