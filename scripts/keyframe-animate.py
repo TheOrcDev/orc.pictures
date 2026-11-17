@@ -12,6 +12,8 @@
 #   "timeline": [[0, {"wink": 0, "eye": 0}], [1.0, {"wink": 0}], [1.12, {"wink": 1}], ...],
 #   "duration": 4.2, "fps": 24,
 #   "zoom": [1.0, 1.06], "zoomCenter": [512, 420],
+#   "zoomChannel": true,                     # optional: drive the zoom from a "zoom" timeline channel (0 = first, 1 = second
+#                                            # value), e.g. for a crash zoom; otherwise it eases over the whole clip
 #   "out": "anim.mp4", "size": 640
 # }
 # Layers, then glows, then warps are applied in spec order, so a warp carries the glows inside it.
@@ -77,7 +79,8 @@ def warp(img, falloff, offset, scale, center, w):
     return remap(img, sx, sy)
 
 shake = spec.get("shake", {})
-names = list(layers) + list(glows) + list(warps) + (["shake"] if shake else [])
+zoom_channel = spec.get("zoomChannel", False)
+names = list(layers) + list(glows) + list(warps) + (["shake"] if shake else []) + (["zoom"] if zoom_channel else [])
 points = []
 last = {n: 0.0 for n in names}
 for t, vals in spec["timeline"]:
@@ -118,8 +121,11 @@ for i in range(n):
         w = value(name, t)
         if abs(w) > 1e-3:
             frame = warp(frame, falloff, offset, scale, center, w)
-    u = t / dur
-    u = u * u * u * (u * (u * 6 - 15) + 10)  # smootherstep
+    if zoom_channel:
+        u = value("zoom", t)
+    else:
+        u = t / dur
+        u = u * u * u * (u * (u * 6 - 15) + 10)  # smootherstep
     z = z0 + (z1 - z0) * u
     side = W / z
     cx, cy = zcx, zcy
