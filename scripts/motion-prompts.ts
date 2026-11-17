@@ -102,6 +102,8 @@ export const PROMPTS: Record<string, string> = {
     "The orc lifts the vanilla ice cream cone to his mouth and takes one quick, small lick, then lowers it a little and smiles with his mouth closed, a happy yum blink. The tongue shows only briefly during the lick. The ice cream keeps its shape. Locked camera.",
   "im-out":
     "He pushes the swinging door open and walks out of the tavern into the bright sunny street, away from the camera, never turning around. As he steps through the doorway he lazily raises one hand over his shoulder in a casual goodbye wave without looking back, then keeps walking down the street. The swinging doors swing back behind him. His axe stays strapped on his back. Locked camera, no zoom, no cut.",
+  impossible:
+    "Cursor keyframes over the still: a calm stare and his eyes blinking shut. He stares calmly and blinks twice, then a smash cut and crash zoom land on his jaw-dropped face with a jolt, and he slowly shakes his head in disbelief (soft warps). No video model.",
   "in-love":
     "The orc looks smitten, a dreamy sigh, hands over his heart, a warm in-love blink. Locked camera.",
   laugh:
