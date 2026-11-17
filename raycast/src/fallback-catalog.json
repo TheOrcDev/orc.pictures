@@ -501,7 +501,13 @@
       "jaw-drop"
     ],
     "title": "Impossible",
-    "width": 640
+    "width": 640,
+    "videorc": {
+      "file": "/gifs/videorc/impossible.gif",
+      "height": 640,
+      "poster": "/gifs/videorc/impossible.jpg",
+      "width": 640
+    }
   },
   {
     "file": "/gifs/in-love.gif",

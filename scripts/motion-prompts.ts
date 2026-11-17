@@ -353,6 +353,8 @@ export const VIDEORC_PROMPTS: Record<string, string> = {
     "He lifts the vanilla ice cream cone to his mouth and takes one quick, small lick, then lowers it a little and smiles with his mouth closed, a happy yum blink. His tongue only appears for the one quick lick and goes straight back in; it never hangs out. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   "im-out":
     "He keeps walking away from the camera down the corridor toward the red-lit exit, never turning around. As he walks he lazily raises one hand over his shoulder in a casual goodbye wave without looking back, then keeps walking and steps out through the doorway. No talking. No text, no captions. His metal skull plates and coat stay exactly the same. Locked camera, no zoom, no cut.",
+  impossible:
+    "Cursor keyframes over the still: a calm cold stare and his eyes blinking shut. He blinks twice, his red eyes going dark, then a smash cut and crash zoom land on his jaw-dropped face as his red eyes flare, and he slowly shakes his head in disbelief (soft warps).",
   "in-love":
     "He looks smitten, lets out a dreamy sigh with his hands over his heart, his head tilting a little more, and gives a warm, in-love blink, his red eyes glowing softly. No talking. No text, no captions. His face, tusks, metal skull plates, ear rings and clothes stay exactly the same. Locked camera: the framing stays exactly the same, no zoom, no pan, no cut.",
   laugh:
