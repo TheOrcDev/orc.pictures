@@ -21,7 +21,8 @@ for ref in "$@"; do
   cp "$ref" "$work/${ref:t}"
   refs+=("\"$work/${ref:t}\"")
 done
-name="gen-${out:t:r}"
+# The temp dir suffix keeps the name unique, so parallel runs with the same output name can't pick up each other's image.
+name="gen-${out:t:r}-${work:t:e}"
 marker="$work/.start"
 touch "$marker"
 
