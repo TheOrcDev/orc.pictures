@@ -5,6 +5,10 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+# Orc GIF images
+
+GIF images, both stills and keyframes, come from Cozy Studio (the `cozy-studio` MCP tools). Follow the `orc-gif` skill (`.agents/skills/orc-gif/SKILL.md`). Never call xAI or Grok Imagine. Cursor (`scripts/cursor-image.sh`) is a fallback only when Studio is down and the user okays it.
+
 # Ultracite Code Standards
 
 This project uses **Ultracite**, a zero-config preset that enforces strict code quality standards through automated formatting and linting.

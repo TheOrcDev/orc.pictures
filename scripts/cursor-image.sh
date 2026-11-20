@@ -1,8 +1,10 @@
 #!/bin/zsh
-# Generate one image with Cursor's built-in GenerateImage tool (cursor-agent, Auto model).
+# FALLBACK ONLY: orc GIF stills and keyframes come from Cozy Studio (see .agents/skills/orc-gif/SKILL.md).
+# Use this only when Studio is down and the user okays it. Never pick a Cursor grok-* model; never use xAI.
+# Generates one image with Cursor's built-in GenerateImage tool (cursor-agent, Auto model).
 # Pass reference images to edit or vary an existing still, e.g. a keyframe with one eye closed.
 # Usage: scripts/cursor-image.sh <out.png> "<description>" [reference image ...]
-# Needs a logged-in cursor-agent. This replaces the old xAI Grok Imagine path, which is no longer used.
+# Needs a logged-in cursor-agent.
 set -euo pipefail
 
 if (( $# < 2 )); then

@@ -1,7 +1,8 @@
 // Motion prompts behind the orc GIFs, kept as a record of how each one was animated.
 // The orc set and most Videorc GIFs were rendered with xAI Grok Imagine, which is no longer used
-// (cost). New GIFs are animated from Cursor GenerateImage keyframes instead:
-// scripts/cursor-image.sh makes the keyframes and scripts/keyframe-animate.py animates them.
+// (cost). New GIFs are animated from keyframes instead: Cozy Studio makes the still and the edited
+// keyframes (see .agents/skills/orc-gif/SKILL.md) and scripts/keyframe-animate.py animates them.
+// scripts/cursor-image.sh (Cursor GenerateImage) is only a fallback for when Studio is down.
 
 // Seconds per Grok render; GIFs not listed used 4.
 export const DURATIONS: Record<string, number> = {

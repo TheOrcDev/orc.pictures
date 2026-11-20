@@ -1,6 +1,7 @@
-# Animate a still from Cursor keyframes: masked keyframe layers, glow pulses, soft warps, impact shake and an eased push-in, to MP4.
+# Animate a still from edited keyframes: masked keyframe layers, glow pulses, soft warps, impact shake and an eased push-in, to MP4.
 # Usage: pnpm gif:keyframes spec.json (uv run --with numpy --with pillow scripts/keyframe-animate.py spec.json)
-# Keyframes come from Cursor GenerateImage (scripts/cursor-image.sh); the MP4 goes through scripts/import-gif.ts.
+# The still and keyframes come from Cozy Studio (image_edit of the still; see .agents/skills/orc-gif/SKILL.md);
+# scripts/cursor-image.sh is only a fallback. The MP4 goes through scripts/import-gif.ts.
 #
 # spec = {
 #   "base": "base.png",                      # the still (any size; worked at 1024)
