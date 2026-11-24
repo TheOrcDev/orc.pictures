@@ -54,6 +54,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 | `pnpm dev` | Next.js app |
 | `pnpm check` / `pnpm fix` | Ultracite lint and format |
 | `pnpm typecheck` | TypeScript |
+| `pnpm test:oracles` | Run the search oracle and its gap check |
 | `pnpm gif:import` | Convert a still or video into a catalog GIF |
 | `pnpm gif:imagine` | Animate a still with Grok Imagine Video, then import |
 
