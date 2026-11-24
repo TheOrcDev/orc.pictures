@@ -13,6 +13,7 @@
     "lint": "ultracite check",
     "format": "ultracite fix",
     "typecheck": "tsc --noEmit",
+    "test:oracles": "oracle-gaps --package . --source lib/gifs.ts --seed 20261124",
     "check": "ultracite check",
     "fix": "ultracite fix",
     "gif:import": "node --experimental-strip-types scripts/import-gif.ts",
@@ -37,15 +38,18 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@tanstack/oracles": "https://pkg.pr.new/TanStack/oracles/@tanstack/oracles@b3dbde0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "fast-check": "^4.10.2",
     "husky": "^9.1.7",
     "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",
     "oxlint-plugin-react-doctor": "^0.9.13",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "ultracite": "7.11.0"
+    "ultracite": "7.11.0",
+    "vitest": "^4.1.12"
   }
 }
