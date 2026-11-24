@@ -600,6 +600,24 @@
     }
   },
   {
+    "file": "/gifs/my-man.gif",
+    "height": 640,
+    "poster": "/gifs/my-man.jpg",
+    "slug": "my-man",
+    "tags": [
+      "my-man",
+      "nice",
+      "respect",
+      "approval",
+      "finger-gun",
+      "wink",
+      "bro",
+      "good-job"
+    ],
+    "title": "My man",
+    "width": 640
+  },
+  {
     "file": "/gifs/nod.gif",
     "height": 544,
     "poster": "/gifs/nod.jpg",
