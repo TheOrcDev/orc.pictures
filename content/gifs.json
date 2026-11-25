@@ -872,6 +872,15 @@
     }
   },
   {
+    "file": "/gifs/reading.gif",
+    "height": 544,
+    "poster": "/gifs/reading.jpg",
+    "slug": "reading",
+    "tags": ["reading", "book", "study", "focused"],
+    "title": "Reading",
+    "width": 544
+  },
+  {
     "file": "/gifs/sad.gif",
     "height": 544,
     "poster": "/gifs/sad.jpg",
